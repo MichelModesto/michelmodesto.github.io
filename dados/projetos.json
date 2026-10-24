@@ -1,0 +1,1788 @@
+{
+  "gerado_em": "2026-10-23",
+  "total": 34,
+  "projetos": [
+    {
+      "id": "flexaseal-portal",
+      "nome": "Portal Flexaseal",
+      "resumo": {
+        "pt": "Portal web interno (ERP) da Flexaseal Brasil, usado no dia a dia da empresa para gestão comercial, produção e indicadores.",
+        "en": "Internal web portal (ERP) for Flexaseal Brasil, used daily across sales, production and reporting.",
+        "es": "Portal web interno (ERP) de Flexaseal Brasil, usado a diario para gestión comercial, producción e indicadores."
+      },
+      "plataforma": "web",
+      "stack": [
+        "ApexCharts",
+        "Babel",
+        "Bootstrap",
+        "Chart.js",
+        "Claude API (Anthropic)",
+        "CSS",
+        "DataTables",
+        "DeepL API",
+        "EJS",
+        "ESLint",
+        "ExcelJS",
+        "Express",
+        "FullCalendar",
+        "GSAP",
+        "Gulp",
+        "HTML",
+        "i18next",
+        "ImapFlow",
+        "JavaScript",
+        "Jest",
+        "jQuery",
+        "JWT",
+        "Leaflet",
+        "Lucide",
+        "Mapbox GL",
+        "Motion",
+        "Multer",
+        "MySQL",
+        "node-cron",
+        "Node.js",
+        "Nodemailer",
+        "OpenAI API",
+        "PDFKit",
+        "pdfmake",
+        "Prettier",
+        "Prometheus (prom-client)",
+        "Puppeteer",
+        "Python",
+        "Sass",
+        "SheetJS",
+        "Shell",
+        "Sneat (template Bootstrap)",
+        "Socket.IO",
+        "SQL",
+        "SQL Server",
+        "Tesseract.js (OCR)",
+        "Three.js",
+        "Twilio",
+        "Webpack"
+      ],
+      "tipo": "empresa",
+      "confidencial": true,
+      "urls": [
+        {
+          "tipo": "principal",
+          "url": "https://portal.flexaseal.com.br",
+          "rotulo": "portal (login)"
+        },
+        {
+          "tipo": "site",
+          "url": "https://www.flexaseal.com.br",
+          "rotulo": "site institucional do grupo (redireciona para flexaseal.com)"
+        }
+      ],
+      "url_principal": "https://portal.flexaseal.com.br",
+      "repos": [
+        {
+          "nome": "flexasealBR/flexaseal",
+          "publico": false,
+          "url": null
+        }
+      ],
+      "repo_publico": false,
+      "git": {
+        "primeiro_commit": "2024-12-02",
+        "ultimo_commit": "2026-10-23",
+        "commits": 896,
+        "linhas_adicionadas": 420064,
+        "linhas_removidas": 85936,
+        "arquivos_tocados": 803
+      },
+      "destaque": "highlight",
+      "thumb": null,
+      "thumb_mobile": null,
+      "thumbs_extra": [],
+      "thumb_hint": "ERP corporativo: grade de módulos, tabelas e gráficos abstratos em tons de azul industrial, sem dados reais"
+    },
+    {
+      "id": "r4mi-portal",
+      "nome": "Portal R4Mi",
+      "resumo": {
+        "pt": "Portal web da R4Mi para controle de produção, manutenção e performance industrial, com landing page pública.",
+        "en": "R4Mi web portal for production, maintenance and industrial performance control, with a public landing page.",
+        "es": "Portal web de R4Mi para control de producción, mantenimiento y rendimiento industrial, con landing page pública."
+      },
+      "plataforma": "web",
+      "stack": [
+        "ApexCharts",
+        "Babel",
+        "Bootstrap",
+        "Chart.js",
+        "CSS",
+        "DataTables",
+        "EJS",
+        "ESLint",
+        "Express",
+        "FullCalendar",
+        "Gulp",
+        "i18next",
+        "JavaScript",
+        "Jest",
+        "jQuery",
+        "JWT",
+        "Leaflet",
+        "Mapbox GL",
+        "Multer",
+        "MySQL",
+        "node-cron",
+        "Node.js",
+        "Nodemailer",
+        "PDFKit",
+        "pdfmake",
+        "Prettier",
+        "Prometheus (prom-client)",
+        "Puppeteer",
+        "Sass",
+        "Sneat (template Bootstrap)",
+        "Socket.IO",
+        "SQL Server",
+        "Webpack"
+      ],
+      "tipo": "empresa",
+      "confidencial": true,
+      "urls": [
+        {
+          "tipo": "principal",
+          "url": "https://r4mi.com.br",
+          "rotulo": "landing pública"
+        },
+        {
+          "tipo": "portal",
+          "url": "https://portal.r4mi.com.br",
+          "rotulo": "portal (login)"
+        }
+      ],
+      "url_principal": "https://r4mi.com.br",
+      "repos": [
+        {
+          "nome": "flexasealBR/r4mi",
+          "publico": false,
+          "url": null
+        }
+      ],
+      "repo_publico": false,
+      "git": {
+        "primeiro_commit": "2025-04-22",
+        "ultimo_commit": "2026-07-17",
+        "commits": 100,
+        "linhas_adicionadas": 44108,
+        "linhas_removidas": 6255,
+        "arquivos_tocados": 63
+      },
+      "destaque": "showcase",
+      "thumb": null,
+      "thumb_mobile": null,
+      "thumbs_extra": [],
+      "thumb_hint": "Painel industrial: engrenagem estilizada, indicadores de manutenção e linha de produção em ícones",
+      "notas": [
+        "nasceu como cópia do Portal Flexaseal; histórico comum contado só no Portal Flexaseal"
+      ]
+    },
+    {
+      "id": "api-flexaseal",
+      "nome": "API Flexaseal",
+      "resumo": {
+        "pt": "API REST que atende os aplicativos móveis da R4Mi e da Flexaseal, com autenticação JWT e permissões vindas do portal.",
+        "en": "REST API serving the R4Mi and Flexaseal mobile apps, with JWT auth and permissions shared with the portal.",
+        "es": "API REST que atiende las apps móviles de R4Mi y Flexaseal, con autenticación JWT y permisos compartidos con el portal."
+      },
+      "plataforma": "api",
+      "stack": [
+        "Docker",
+        "Express",
+        "Helmet",
+        "JavaScript",
+        "JWT",
+        "Multer",
+        "MySQL",
+        "Node.js",
+        "Nodemailer",
+        "pdf-lib",
+        "Shell",
+        "SQL Server"
+      ],
+      "tipo": "empresa",
+      "confidencial": true,
+      "urls": [
+        {
+          "tipo": "api",
+          "url": "https://api.flexaseal.com.br",
+          "rotulo": "domínio da API"
+        }
+      ],
+      "url_principal": "https://api.flexaseal.com.br",
+      "repos": [
+        {
+          "nome": "flexasealBR/api-flexaseal",
+          "publico": false,
+          "url": null
+        }
+      ],
+      "repo_publico": false,
+      "git": {
+        "primeiro_commit": "2026-01-07",
+        "ultimo_commit": "2026-08-22",
+        "commits": 35,
+        "linhas_adicionadas": 9980,
+        "linhas_removidas": 736,
+        "arquivos_tocados": 70
+      },
+      "destaque": "showcase",
+      "thumb": null,
+      "thumb_mobile": null,
+      "thumbs_extra": [],
+      "thumb_hint": "Diagrama de API: nós conectados entre app, servidor e banco, estilo blueprint"
+    },
+    {
+      "id": "app-r4mi",
+      "nome": "App R4Mi",
+      "resumo": {
+        "pt": "Aplicativo móvel (iOS/Android) da R4Mi para equipes de campo, consumindo a API da empresa.",
+        "en": "R4Mi mobile app (iOS/Android) for field teams, backed by the company API.",
+        "es": "App móvil (iOS/Android) de R4Mi para equipos de campo, conectada a la API de la empresa."
+      },
+      "plataforma": "mobile",
+      "stack": [
+        "Babel",
+        "ESLint",
+        "Expo",
+        "HTML",
+        "Jest",
+        "Lucide",
+        "NativeWind",
+        "React",
+        "React Hook Form",
+        "React Native",
+        "React Navigation",
+        "Tailwind CSS",
+        "Testing Library",
+        "TypeScript"
+      ],
+      "tipo": "empresa",
+      "confidencial": true,
+      "urls": [],
+      "url_principal": null,
+      "repos": [
+        {
+          "nome": "flexasealBR/app-flexaseal",
+          "publico": false,
+          "url": null
+        },
+        {
+          "nome": "r4mi-dev/r4mi-app",
+          "publico": false,
+          "url": null
+        },
+        {
+          "nome": "r4mi-dev/api",
+          "publico": false,
+          "url": null
+        },
+        {
+          "nome": "r4mi-dev/portal-web",
+          "publico": false,
+          "url": null
+        }
+      ],
+      "repo_publico": false,
+      "git": {
+        "primeiro_commit": "2025-11-25",
+        "ultimo_commit": "2026-02-23",
+        "commits": 80,
+        "linhas_adicionadas": 6396,
+        "linhas_removidas": 2997,
+        "arquivos_tocados": 89
+      },
+      "destaque": "showcase",
+      "thumb": null,
+      "thumb_mobile": null,
+      "thumbs_extra": [],
+      "thumb_hint": "Celular com checklist de inspeção e ícone de selo mecânico, ilustração plana",
+      "notas": [
+        "r4mi-dev/api e r4mi-dev/portal-web são esqueletos iniciais (2024) sem commits do Michel; r4mi-dev/r4mi-app tem a mesma raiz de app-flexaseal"
+      ]
+    },
+    {
+      "id": "flexaseal-app",
+      "nome": "App Flexaseal",
+      "resumo": {
+        "pt": "Aplicativo móvel interno para colaboradores da Flexaseal, com dashboard, cotações e registro de visitas (inclusive offline).",
+        "en": "Internal mobile app for Flexaseal staff, with dashboard, quotes and visit logging (including offline).",
+        "es": "App móvil interna para colaboradores de Flexaseal, con dashboard, cotizaciones y registro de visitas (también offline)."
+      },
+      "plataforma": "mobile",
+      "stack": [
+        "Expo",
+        "Expo Notifications",
+        "Expo Router",
+        "HTML",
+        "Lucide",
+        "React",
+        "React Native",
+        "React Native Maps",
+        "React Native Web",
+        "Reanimated",
+        "TypeScript",
+        "Zustand"
+      ],
+      "tipo": "empresa",
+      "confidencial": true,
+      "urls": [],
+      "url_principal": null,
+      "repos": [
+        {
+          "nome": "MichelModesto/flexasealapp",
+          "publico": false,
+          "url": null
+        },
+        {
+          "nome": "flexasealBR/flexasealapp",
+          "publico": false,
+          "url": null
+        }
+      ],
+      "repo_publico": false,
+      "git": {
+        "primeiro_commit": "2026-06-18",
+        "ultimo_commit": "2026-09-28",
+        "commits": 13,
+        "linhas_adicionadas": 29724,
+        "linhas_removidas": 4893,
+        "arquivos_tocados": 183
+      },
+      "destaque": "showcase",
+      "thumb": null,
+      "thumb_mobile": null,
+      "thumbs_extra": [],
+      "thumb_hint": "Dois celulares lado a lado com cards de dashboard e mapa de visitas, sem dados reais"
+    },
+    {
+      "id": "rh-flexaseal",
+      "nome": "RH Flexaseal",
+      "resumo": {
+        "pt": "Plataforma de RH da Flexaseal com painel web, aplicativo móvel e API (cadastro de colaboradores e primeiro acesso por PIN).",
+        "en": "Flexaseal HR platform with web dashboard, mobile app and API (employee onboarding and PIN first access).",
+        "es": "Plataforma de RRHH de Flexaseal con panel web, app móvil y API (alta de colaboradores y primer acceso con PIN)."
+      },
+      "plataforma": "web+mobile",
+      "stack": [
+        "CSS",
+        "Expo",
+        "Expo Router",
+        "Express",
+        "HTML",
+        "JavaScript",
+        "MySQL",
+        "Node.js",
+        "Nodemailer",
+        "React",
+        "React Native",
+        "Reanimated",
+        "SQL",
+        "Tailwind CSS",
+        "TypeScript",
+        "Vite",
+        "Zustand"
+      ],
+      "tipo": "empresa",
+      "confidencial": true,
+      "urls": [],
+      "url_principal": null,
+      "repos": [
+        {
+          "nome": "flexasealBR/rh_flexaseal-web",
+          "publico": false,
+          "url": null
+        },
+        {
+          "nome": "flexasealBR/rh_flexaseal-mobile",
+          "publico": false,
+          "url": null
+        },
+        {
+          "nome": "flexasealBR/rh_flexaseal-api",
+          "publico": false,
+          "url": null
+        }
+      ],
+      "repo_publico": false,
+      "git": {
+        "primeiro_commit": null,
+        "ultimo_commit": null,
+        "commits": 0,
+        "linhas_adicionadas": 0,
+        "linhas_removidas": 0,
+        "arquivos_tocados": 0
+      },
+      "destaque": "archive",
+      "thumb": null,
+      "thumb_mobile": null,
+      "thumbs_extra": [],
+      "thumb_hint": "Crachá estilizado e lista de pessoas em silhueta, tons neutros",
+      "notas": [
+        "sem commits das identidades do Michel neste(s) repositório(s)"
+      ]
+    },
+    {
+      "id": "site-flexaseal",
+      "nome": "Site Flexaseal Brasil",
+      "resumo": {
+        "pt": "Site institucional da Flexaseal Brasil em React e Vite, com formulário de contato enviado por servidor Express.",
+        "en": "Corporate website for Flexaseal Brasil built with React and Vite, with a contact form sent through an Express server.",
+        "es": "Sitio institucional de Flexaseal Brasil en React y Vite, con formulario de contacto enviado por un servidor Express."
+      },
+      "plataforma": "web",
+      "stack": [
+        "CSS",
+        "ESLint",
+        "Express",
+        "JavaScript",
+        "Lenis",
+        "Node.js",
+        "Nodemailer",
+        "Prettier",
+        "React",
+        "Tailwind CSS",
+        "TypeScript",
+        "Vite"
+      ],
+      "tipo": "empresa",
+      "confidencial": false,
+      "urls": [],
+      "url_principal": null,
+      "repos": [
+        {
+          "nome": "MichelModesto/site-flexaseal",
+          "publico": false,
+          "url": null
+        }
+      ],
+      "repo_publico": false,
+      "git": {
+        "primeiro_commit": "2026-03-13",
+        "ultimo_commit": "2026-03-26",
+        "commits": 2,
+        "linhas_adicionadas": 6749,
+        "linhas_removidas": 469,
+        "arquivos_tocados": 68
+      },
+      "destaque": "showcase",
+      "thumb": null,
+      "thumb_mobile": null,
+      "thumbs_extra": [],
+      "thumb_hint": "Hero institucional com selo mecânico em corte e fundo industrial"
+    },
+    {
+      "id": "michel-code-house",
+      "nome": "Michel Code House",
+      "resumo": {
+        "pt": "Escritório 3D local que mostra os agentes do Claude Code trabalhando em cada repositório, uma sala por projeto, com eventos em tempo real.",
+        "en": "Local 3D office that shows Claude Code agents working in each repository, one room per project, with live events.",
+        "es": "Oficina 3D local que muestra a los agentes de Claude Code trabajando en cada repositorio, una sala por proyecto, con eventos en tiempo real."
+      },
+      "plataforma": "web",
+      "stack": [
+        "Claude Code",
+        "JavaScript",
+        "Node.js",
+        "Three.js"
+      ],
+      "tipo": "pessoal",
+      "confidencial": false,
+      "urls": [
+        {
+          "tipo": "local",
+          "url": "http://127.0.0.1:4777",
+          "rotulo": "roda local (LaunchAgent)"
+        }
+      ],
+      "url_principal": "http://127.0.0.1:4777",
+      "repos": [
+        {
+          "nome": "local: Dev/michel-code-house",
+          "publico": false,
+          "url": null
+        }
+      ],
+      "repo_publico": false,
+      "git": {
+        "primeiro_commit": null,
+        "ultimo_commit": null,
+        "commits": 0,
+        "linhas_adicionadas": 0,
+        "linhas_removidas": 0,
+        "arquivos_tocados": 0
+      },
+      "destaque": "highlight",
+      "thumb": "thumbs/michel-code-house.jpg",
+      "thumb_mobile": null,
+      "thumbs_extra": [],
+      "thumb_hint": null,
+      "notas": [
+        "repositório local ainda sem nenhum commit; código atual (sem node_modules): 4806 linhas"
+      ]
+    },
+    {
+      "id": "planejador-viagens",
+      "nome": "Planejador de Viagens",
+      "resumo": {
+        "pt": "Planejador de viagens inspirado no Wanderlog: roteiros, mapas e agenda por dia, com web, iOS e Android num código só.",
+        "en": "Trip planner inspired by Wanderlog: itineraries, maps and day-by-day plans, with web, iOS and Android from one codebase.",
+        "es": "Planificador de viajes inspirado en Wanderlog: itinerarios, mapas y agenda por día, con web, iOS y Android en un solo código."
+      },
+      "plataforma": "web+mobile",
+      "stack": [
+        "axe-core",
+        "date-fns",
+        "dnd-kit",
+        "Expo",
+        "Expo Router",
+        "FlashList",
+        "GitHub Actions",
+        "Google Maps",
+        "JavaScript",
+        "Lucide",
+        "MapLibre GL",
+        "Playwright",
+        "PostgreSQL",
+        "React",
+        "React Native",
+        "React Native Web",
+        "Reanimated",
+        "SQL",
+        "Supabase",
+        "TanStack Query",
+        "TypeScript",
+        "Vercel",
+        "Vitest"
+      ],
+      "tipo": "pessoal",
+      "confidencial": false,
+      "urls": [
+        {
+          "tipo": "principal",
+          "url": "https://www.planejaviagem.com.br",
+          "rotulo": "domínio próprio"
+        },
+        {
+          "tipo": "vercel",
+          "url": "https://planejador-viagens-nine.vercel.app",
+          "rotulo": "deploy Vercel"
+        }
+      ],
+      "url_principal": "https://www.planejaviagem.com.br",
+      "repos": [
+        {
+          "nome": "MichelModesto/planejador-viagens",
+          "publico": false,
+          "url": null
+        }
+      ],
+      "repo_publico": false,
+      "git": {
+        "primeiro_commit": "2026-10-13",
+        "ultimo_commit": "2026-10-14",
+        "commits": 62,
+        "linhas_adicionadas": 19708,
+        "linhas_removidas": 2814,
+        "arquivos_tocados": 177
+      },
+      "destaque": "highlight",
+      "thumb": "thumbs/planejador-viagens.jpg",
+      "thumb_mobile": "thumbs/planejador-viagens-mobile.jpg",
+      "thumbs_extra": [],
+      "thumb_hint": null
+    },
+    {
+      "id": "geoalmoco",
+      "nome": "Games Lunch (GeoAlmoço)",
+      "resumo": {
+        "pt": "Coleção de jogos multiplayer para o almoço da equipe, cada um no próprio celular: GeoAlmoço (estilo GeoGuessr), Craque do Almoço, Impostor e Toque no Verde.",
+        "en": "Multiplayer lunch-break games played on each person's phone: GeoAlmoço (GeoGuessr-style), Craque do Almoço, Impostor and Toque no Verde.",
+        "es": "Colección de juegos multijugador para el almuerzo del equipo, cada uno en su celular: GeoAlmoço (estilo GeoGuessr), Craque do Almoço, Impostor y Toque no Verde."
+      },
+      "plataforma": "web",
+      "stack": [
+        "CSS",
+        "Google Street View (embed)",
+        "HTML",
+        "JavaScript",
+        "Leaflet",
+        "Node.js",
+        "Pannellum",
+        "Vercel",
+        "Vercel Functions"
+      ],
+      "tipo": "pessoal",
+      "confidencial": false,
+      "urls": [
+        {
+          "tipo": "principal",
+          "url": "https://gameslunch.vercel.app",
+          "rotulo": "home dos jogos"
+        },
+        {
+          "tipo": "geoalmoco",
+          "url": "https://geoalmoco.vercel.app",
+          "rotulo": "GeoAlmoço"
+        },
+        {
+          "tipo": "craque",
+          "url": "https://craque-do-almoco.vercel.app",
+          "rotulo": "Craque do Almoço"
+        },
+        {
+          "tipo": "impostor",
+          "url": "https://impostor-almoco.vercel.app",
+          "rotulo": "Impostor do Almoço"
+        },
+        {
+          "tipo": "toque",
+          "url": "https://toque-no-verde.vercel.app",
+          "rotulo": "Toque no Verde"
+        }
+      ],
+      "url_principal": "https://gameslunch.vercel.app",
+      "repos": [
+        {
+          "nome": "MichelModesto/gameslunchMM",
+          "publico": false,
+          "url": null
+        }
+      ],
+      "repo_publico": false,
+      "git": {
+        "primeiro_commit": "2026-10-16",
+        "ultimo_commit": "2026-10-23",
+        "commits": 19,
+        "linhas_adicionadas": 18654,
+        "linhas_removidas": 2450,
+        "arquivos_tocados": 71
+      },
+      "destaque": "highlight",
+      "thumb": "thumbs/gameslunch-home.jpg",
+      "thumb_mobile": "thumbs/geoalmoco-mobile.jpg",
+      "thumbs_extra": [
+        "thumbs/geoalmoco.jpg"
+      ],
+      "thumb_hint": null
+    },
+    {
+      "id": "studoworldcup",
+      "nome": "StudoWorldCup",
+      "resumo": {
+        "pt": "Plataforma de estatísticas da Copa do Mundo 2026 com bolão entre amigos, painel com login e dados atualizados por automação.",
+        "en": "FIFA World Cup 2026 stats platform with a friends' prediction pool, a logged-in dashboard and data refreshed by automation.",
+        "es": "Plataforma de estadísticas del Mundial 2026 con quiniela entre amigos, panel con login y datos actualizados por automatización."
+      },
+      "plataforma": "web",
+      "stack": [
+        "CSS",
+        "ESLint",
+        "Framer Motion",
+        "GitHub Actions",
+        "JavaScript",
+        "Lucide",
+        "Neon Postgres",
+        "Next.js",
+        "React",
+        "Recharts",
+        "Tailwind CSS",
+        "TypeScript",
+        "Vercel",
+        "Vercel Analytics",
+        "Web Push"
+      ],
+      "tipo": "pessoal",
+      "confidencial": false,
+      "urls": [
+        {
+          "tipo": "principal",
+          "url": "https://studoworldcup.vercel.app",
+          "rotulo": "demo"
+        }
+      ],
+      "url_principal": "https://studoworldcup.vercel.app",
+      "repos": [
+        {
+          "nome": "MichelModesto/studoworldcup",
+          "publico": true,
+          "url": "https://github.com/MichelModesto/studoworldcup"
+        }
+      ],
+      "repo_publico": true,
+      "git": {
+        "primeiro_commit": "2026-06-10",
+        "ultimo_commit": "2026-06-30",
+        "commits": 36,
+        "linhas_adicionadas": 14304,
+        "linhas_removidas": 1131,
+        "arquivos_tocados": 141
+      },
+      "destaque": "highlight",
+      "thumb": "thumbs/studoworldcup.jpg",
+      "thumb_mobile": null,
+      "thumbs_extra": [],
+      "thumb_hint": null
+    },
+    {
+      "id": "afiliados-auto",
+      "nome": "Afiliados Auto",
+      "resumo": {
+        "pt": "Sistema autônomo que coleta promoções, gera links de afiliado e distribui as ofertas em grupos de WhatsApp e Telegram por nicho.",
+        "en": "Autonomous system that collects deals, generates affiliate links and posts offers to niche WhatsApp and Telegram groups.",
+        "es": "Sistema autónomo que recolecta promociones, genera enlaces de afiliado y distribuye las ofertas en grupos de WhatsApp y Telegram por nicho."
+      },
+      "plataforma": "tool/automation",
+      "stack": [
+        "Claude API (Anthropic)",
+        "grammY (Telegram)",
+        "Neon Postgres",
+        "Next.js",
+        "PostgreSQL",
+        "React",
+        "SQL",
+        "TypeScript",
+        "Vercel"
+      ],
+      "tipo": "pessoal",
+      "confidencial": false,
+      "urls": [],
+      "url_principal": null,
+      "repos": [
+        {
+          "nome": "MichelModesto/afiliados",
+          "publico": false,
+          "url": null
+        }
+      ],
+      "repo_publico": false,
+      "git": {
+        "primeiro_commit": "2026-05-14",
+        "ultimo_commit": "2026-07-30",
+        "commits": 46,
+        "linhas_adicionadas": 5169,
+        "linhas_removidas": 963,
+        "arquivos_tocados": 53
+      },
+      "destaque": "highlight",
+      "thumb": null,
+      "thumb_mobile": null,
+      "thumbs_extra": [],
+      "thumb_hint": "Funil de ofertas: etiquetas de preço viram mensagens em balões de chat, estilo flat"
+    },
+    {
+      "id": "miniparke",
+      "nome": "Carretinha Mini Parke",
+      "resumo": {
+        "pt": "Site e sistema de reservas de um mini parque infantil móvel, com área do cliente, autenticação e API serverless.",
+        "en": "Website and booking system for a mobile kids' playground, with customer area, authentication and serverless API.",
+        "es": "Sitio y sistema de reservas de un mini parque infantil móvil, con área de cliente, autenticación y API serverless."
+      },
+      "plataforma": "web",
+      "stack": [
+        "Clerk",
+        "CSS",
+        "date-fns",
+        "ESLint",
+        "JavaScript",
+        "Lucide",
+        "Neon Postgres",
+        "Nodemailer",
+        "React",
+        "React Hook Form",
+        "Resend",
+        "SQL",
+        "Tailwind CSS",
+        "TypeScript",
+        "Vercel",
+        "Vercel Blob",
+        "Vercel Functions",
+        "Vite",
+        "Zod",
+        "Zustand"
+      ],
+      "tipo": "cliente",
+      "confidencial": false,
+      "urls": [
+        {
+          "tipo": "principal",
+          "url": "https://miniparke.vercel.app",
+          "rotulo": "site"
+        }
+      ],
+      "url_principal": "https://miniparke.vercel.app",
+      "repos": [
+        {
+          "nome": "MichelModesto/miniparke",
+          "publico": false,
+          "url": null
+        }
+      ],
+      "repo_publico": false,
+      "git": {
+        "primeiro_commit": "2026-07-24",
+        "ultimo_commit": "2026-10-21",
+        "commits": 102,
+        "linhas_adicionadas": 19685,
+        "linhas_removidas": 5377,
+        "arquivos_tocados": 179
+      },
+      "destaque": "showcase",
+      "thumb": "thumbs/miniparke.jpg",
+      "thumb_mobile": "thumbs/miniparke-mobile.jpg",
+      "thumbs_extra": [],
+      "thumb_hint": null,
+      "notas": [
+        "homepage do GitHub (miniparke-neon.vercel.app) responde 404; usado miniparke.vercel.app"
+      ]
+    },
+    {
+      "id": "projetoh",
+      "nome": "Projeto H",
+      "resumo": {
+        "pt": "App para um grupo de saxofone marcar ensaios: convidados confirmam ou propõem outra data, com notificações push e backend próprio.",
+        "en": "App for a saxophone group to schedule rehearsals: members confirm or propose another date, with push notifications and its own backend.",
+        "es": "App para que un grupo de saxofón agende ensayos: los invitados confirman o proponen otra fecha, con notificaciones push y backend propio."
+      },
+      "plataforma": "mobile",
+      "stack": [
+        "Babel",
+        "Better Auth",
+        "CSS",
+        "Drizzle ORM",
+        "Expo",
+        "Expo Notifications",
+        "Expo Router",
+        "JavaScript",
+        "Neon Postgres",
+        "Next.js",
+        "Nodemailer",
+        "Prettier",
+        "React",
+        "React Native",
+        "React Native Web",
+        "Resend",
+        "Tailwind CSS",
+        "Turborepo",
+        "TypeScript",
+        "Vercel",
+        "Web Push",
+        "Zod"
+      ],
+      "tipo": "cliente",
+      "confidencial": false,
+      "urls": [
+        {
+          "tipo": "backend",
+          "url": "https://projeto-h-web.vercel.app",
+          "rotulo": "página do backend"
+        }
+      ],
+      "url_principal": "https://projeto-h-web.vercel.app",
+      "repos": [
+        {
+          "nome": "MichelModesto/projetoH",
+          "publico": false,
+          "url": null
+        }
+      ],
+      "repo_publico": false,
+      "git": {
+        "primeiro_commit": "2026-07-13",
+        "ultimo_commit": "2026-07-15",
+        "commits": 12,
+        "linhas_adicionadas": 11006,
+        "linhas_removidas": 2085,
+        "arquivos_tocados": 117
+      },
+      "destaque": "showcase",
+      "thumb": "thumbs/projetoh.jpg",
+      "thumb_mobile": null,
+      "thumbs_extra": [],
+      "thumb_hint": null
+    },
+    {
+      "id": "nickyfotografa",
+      "nome": "Nicky Fotógrafa",
+      "resumo": {
+        "pt": "Site público, portal do cliente e painel admin para uma fotógrafa, em fase de demonstração com dados simulados.",
+        "en": "Public site, client portal and admin panel for a photographer, currently a demo with mock data.",
+        "es": "Sitio público, portal del cliente y panel admin para una fotógrafa, en fase demo con datos simulados."
+      },
+      "plataforma": "web",
+      "stack": [
+        "ESLint",
+        "Next.js",
+        "React",
+        "Tailwind CSS",
+        "TypeScript"
+      ],
+      "tipo": "cliente",
+      "confidencial": false,
+      "urls": [],
+      "url_principal": null,
+      "repos": [
+        {
+          "nome": "MichelModesto/nickyfotografa",
+          "publico": false,
+          "url": null
+        }
+      ],
+      "repo_publico": false,
+      "git": {
+        "primeiro_commit": "2026-09-18",
+        "ultimo_commit": "2026-09-18",
+        "commits": 1,
+        "linhas_adicionadas": 308,
+        "linhas_removidas": 0,
+        "arquivos_tocados": 17
+      },
+      "destaque": "showcase",
+      "thumb": null,
+      "thumb_mobile": null,
+      "thumbs_extra": [],
+      "thumb_hint": "Galeria de fotos em grade com câmera estilizada e tons quentes"
+    },
+    {
+      "id": "splend-closet",
+      "nome": "Splend Closet",
+      "resumo": {
+        "pt": "Landing page de uma marca de vestidos, com quatro variações de hero animado.",
+        "en": "Landing page for a dress brand, with four animated hero variations.",
+        "es": "Landing page de una marca de vestidos, con cuatro variaciones de hero animado."
+      },
+      "plataforma": "web",
+      "stack": [
+        "ESLint",
+        "Framer Motion",
+        "Next.js",
+        "React",
+        "Tailwind CSS",
+        "TypeScript"
+      ],
+      "tipo": "cliente",
+      "confidencial": false,
+      "urls": [],
+      "url_principal": null,
+      "repos": [
+        {
+          "nome": "MichelModesto/splend-closet",
+          "publico": false,
+          "url": null
+        }
+      ],
+      "repo_publico": false,
+      "git": {
+        "primeiro_commit": "2026-08-18",
+        "ultimo_commit": "2026-08-18",
+        "commits": 1,
+        "linhas_adicionadas": 1124,
+        "linhas_removidas": 0,
+        "arquivos_tocados": 28
+      },
+      "destaque": "showcase",
+      "thumb": null,
+      "thumb_mobile": null,
+      "thumbs_extra": [],
+      "thumb_hint": "Vestidos em cabides com paleta de cores suaves, estilo editorial"
+    },
+    {
+      "id": "tarso",
+      "nome": "Camisas Sem Nome — votação",
+      "resumo": {
+        "pt": "Site de votação das propostas de camisa de um time amador, com placar público e um voto por IP (guardado só como hash).",
+        "en": "Voting site for an amateur team's jersey proposals, with a public scoreboard and one vote per IP (stored only as a hash).",
+        "es": "Sitio de votación de las propuestas de camiseta de un equipo amateur, con marcador público y un voto por IP (guardado solo como hash)."
+      },
+      "plataforma": "web",
+      "stack": [
+        "Cloudflare D1",
+        "Cloudflare Pages Functions",
+        "Cloudflare Workers/Pages",
+        "CSS",
+        "GitHub Actions",
+        "HTML",
+        "JavaScript"
+      ],
+      "tipo": "pessoal",
+      "confidencial": false,
+      "urls": [],
+      "url_principal": null,
+      "repos": [
+        {
+          "nome": "MichelModesto/tarso",
+          "publico": true,
+          "url": "https://github.com/MichelModesto/tarso"
+        }
+      ],
+      "repo_publico": true,
+      "git": {
+        "primeiro_commit": "2026-10-07",
+        "ultimo_commit": "2026-10-07",
+        "commits": 3,
+        "linhas_adicionadas": 922,
+        "linhas_removidas": 25,
+        "arquivos_tocados": 19
+      },
+      "destaque": "archive",
+      "thumb": null,
+      "thumb_mobile": null,
+      "thumbs_extra": [],
+      "thumb_hint": "Grade de camisas de futebol com urna de votação e barras de placar"
+    },
+    {
+      "id": "pathfinders",
+      "nome": "Pathfinders",
+      "resumo": {
+        "pt": "Marketplace P2P de contas de jogos (foco em Rainbow Six Siege), implementado em Next.js a partir de 23 telas de referência.",
+        "en": "P2P marketplace for game accounts (focused on Rainbow Six Siege), built in Next.js from 23 reference screens.",
+        "es": "Marketplace P2P de cuentas de juegos (foco en Rainbow Six Siege), hecho en Next.js a partir de 23 pantallas de referencia."
+      },
+      "plataforma": "web",
+      "stack": [
+        "CSS",
+        "ESLint",
+        "GitHub Actions",
+        "Husky",
+        "JavaScript",
+        "Lucide",
+        "next-safe-action",
+        "Next.js",
+        "PGlite",
+        "Playwright",
+        "Prettier",
+        "React",
+        "SQL",
+        "Supabase",
+        "Tailwind CSS",
+        "TypeScript",
+        "Vitest",
+        "Zod",
+        "Zustand"
+      ],
+      "tipo": "pessoal",
+      "confidencial": false,
+      "urls": [],
+      "url_principal": null,
+      "repos": [
+        {
+          "nome": "MichelModesto/Pathfinders",
+          "publico": false,
+          "url": null
+        }
+      ],
+      "repo_publico": false,
+      "git": {
+        "primeiro_commit": "2026-08-18",
+        "ultimo_commit": "2026-08-18",
+        "commits": 4,
+        "linhas_adicionadas": 14818,
+        "linhas_removidas": 46,
+        "arquivos_tocados": 148
+      },
+      "destaque": "showcase",
+      "thumb": null,
+      "thumb_mobile": null,
+      "thumbs_extra": [],
+      "thumb_hint": "Vitrine de cards de contas de jogo com badges de rank, tema escuro"
+    },
+    {
+      "id": "opsprimer",
+      "nome": "OpsPrimer",
+      "resumo": {
+        "pt": "Site de conteúdo em inglês sobre CRM e operações de agências, estático em Astro.",
+        "en": "English content site about CRM and agency operations, built as a static Astro site.",
+        "es": "Sitio de contenido en inglés sobre CRM y operaciones de agencias, estático en Astro."
+      },
+      "plataforma": "web",
+      "stack": [
+        "Astro",
+        "CSS",
+        "MDX",
+        "TypeScript"
+      ],
+      "tipo": "pessoal",
+      "confidencial": false,
+      "urls": [
+        {
+          "tipo": "principal",
+          "url": "https://opsprimer.com",
+          "rotulo": "domínio próprio"
+        }
+      ],
+      "url_principal": "https://opsprimer.com",
+      "repos": [
+        {
+          "nome": "MichelModesto/opsprimer",
+          "publico": true,
+          "url": "https://github.com/MichelModesto/opsprimer"
+        }
+      ],
+      "repo_publico": true,
+      "git": {
+        "primeiro_commit": "2026-08-14",
+        "ultimo_commit": "2026-08-14",
+        "commits": 24,
+        "linhas_adicionadas": 3872,
+        "linhas_removidas": 779,
+        "arquivos_tocados": 41
+      },
+      "destaque": "showcase",
+      "thumb": "thumbs/opsprimer.jpg",
+      "thumb_mobile": null,
+      "thumbs_extra": [],
+      "thumb_hint": null
+    },
+    {
+      "id": "cotacoesmoedas",
+      "nome": "Cotações de Moedas",
+      "resumo": {
+        "pt": "Cotações de moedas e cripto sempre à vista: app de barra de menus no Mac, página web que escreve os valores no título da aba e widget de iPhone.",
+        "en": "Always-visible currency and crypto quotes: a Mac menu bar app, a web page that writes rates into the tab title, and an iPhone widget.",
+        "es": "Cotizaciones de monedas y cripto siempre a la vista: app de barra de menús en Mac, página web que escribe los valores en el título de la pestaña y widget de iPhone."
+      },
+      "plataforma": "desktop",
+      "stack": [
+        "GitHub Pages",
+        "HTML",
+        "JavaScript",
+        "Scriptable (widget iOS)",
+        "Shell",
+        "Swift",
+        "SwiftUI"
+      ],
+      "tipo": "pessoal",
+      "confidencial": false,
+      "urls": [
+        {
+          "tipo": "principal",
+          "url": "https://michelmodesto.github.io/cotacoesmoedas/",
+          "rotulo": "página web (GitHub Pages)"
+        }
+      ],
+      "url_principal": "https://michelmodesto.github.io/cotacoesmoedas/",
+      "repos": [
+        {
+          "nome": "MichelModesto/cotacoesmoedas",
+          "publico": true,
+          "url": "https://github.com/MichelModesto/cotacoesmoedas"
+        }
+      ],
+      "repo_publico": true,
+      "git": {
+        "primeiro_commit": "2026-09-23",
+        "ultimo_commit": "2026-09-23",
+        "commits": 3,
+        "linhas_adicionadas": 447,
+        "linhas_removidas": 17,
+        "arquivos_tocados": 11
+      },
+      "destaque": "showcase",
+      "thumb": "thumbs/cotacoesmoedas.jpg",
+      "thumb_mobile": null,
+      "thumbs_extra": [],
+      "thumb_hint": null
+    },
+    {
+      "id": "analista-cambio",
+      "nome": "Analista de Câmbio",
+      "resumo": {
+        "pt": "Agente em Python que acompanha cotações de euro, dólar e franco suíço e manda análise por e-mail para decidir quando comprar moeda.",
+        "en": "Python agent that tracks euro, dollar and Swiss franc rates and emails an analysis to help decide when to buy currency.",
+        "es": "Agente en Python que sigue las cotizaciones de euro, dólar y franco suizo y envía un análisis por e-mail para decidir cuándo comprar moneda."
+      },
+      "plataforma": "tool/automation",
+      "stack": [
+        "cron",
+        "Python",
+        "Requests",
+        "SMTP"
+      ],
+      "tipo": "pessoal",
+      "confidencial": false,
+      "urls": [],
+      "url_principal": null,
+      "repos": [
+        {
+          "nome": "MichelModesto/analista-financeiro-cambio",
+          "publico": false,
+          "url": null
+        }
+      ],
+      "repo_publico": false,
+      "git": {
+        "primeiro_commit": "2026-07-02",
+        "ultimo_commit": "2026-07-30",
+        "commits": 10,
+        "linhas_adicionadas": 7567,
+        "linhas_removidas": 175,
+        "arquivos_tocados": 38
+      },
+      "destaque": "showcase",
+      "thumb": null,
+      "thumb_mobile": null,
+      "thumbs_extra": [],
+      "thumb_hint": "Gráfico de linha de câmbio com setas e envelope de e-mail"
+    },
+    {
+      "id": "biblioteca-agentes",
+      "nome": "Biblioteca de agentes e skills",
+      "resumo": {
+        "pt": "Biblioteca privada dos agentes, personas, skills e regras que uso com Claude Code e Cursor em todos os projetos.",
+        "en": "Private library of the agents, personas, skills and rules I use with Claude Code and Cursor across all projects.",
+        "es": "Biblioteca privada de los agentes, personas, skills y reglas que uso con Claude Code y Cursor en todos los proyectos."
+      },
+      "plataforma": "tool/automation",
+      "stack": [
+        "Claude Code",
+        "Cursor",
+        "Markdown"
+      ],
+      "tipo": "pessoal",
+      "confidencial": true,
+      "urls": [],
+      "url_principal": null,
+      "repos": [],
+      "repo_publico": false,
+      "git": {
+        "primeiro_commit": "2026-07-29",
+        "ultimo_commit": "2026-10-19",
+        "commits": 5,
+        "linhas_adicionadas": 14066,
+        "linhas_removidas": 158,
+        "arquivos_tocados": 118
+      },
+      "destaque": "showcase",
+      "thumb": null,
+      "thumb_mobile": null,
+      "thumbs_extra": [],
+      "thumb_hint": "Organograma de agentes em cartões conectados, estilo diagrama"
+    },
+    {
+      "id": "instagram-daniela",
+      "nome": "Influenciadora virtual (pipeline)",
+      "resumo": {
+        "pt": "Pipeline em Python para uma persona virtual declarada no Instagram: gera prompts e legendas e publica com aprovação humana item a item.",
+        "en": "Python pipeline for a declared virtual persona on Instagram: builds prompts and captions and publishes with item-by-item human approval.",
+        "es": "Pipeline en Python para una persona virtual declarada en Instagram: genera prompts y textos y publica con aprobación humana uno a uno."
+      },
+      "plataforma": "tool/automation",
+      "stack": [
+        "Geração de imagem por IA",
+        "Python"
+      ],
+      "tipo": "pessoal",
+      "confidencial": false,
+      "urls": [],
+      "url_principal": null,
+      "repos": [
+        {
+          "nome": "MichelModesto/instagramDaniela",
+          "publico": false,
+          "url": null
+        }
+      ],
+      "repo_publico": false,
+      "git": {
+        "primeiro_commit": "2026-08-18",
+        "ultimo_commit": "2026-08-18",
+        "commits": 1,
+        "linhas_adicionadas": 1500,
+        "linhas_removidas": 0,
+        "arquivos_tocados": 31
+      },
+      "destaque": "archive",
+      "thumb": null,
+      "thumb_mobile": null,
+      "thumbs_extra": [],
+      "thumb_hint": "Fila de posts com selo de aprovação humana, estilo cartões"
+    },
+    {
+      "id": "financeiro",
+      "nome": "Planilha financeira",
+      "resumo": {
+        "pt": "Gerador em Python da planilha financeira pessoal e da publicação criptografada dos dados para o painel.",
+        "en": "Python generator for a personal finance spreadsheet and the encrypted publishing of its data to a dashboard.",
+        "es": "Generador en Python de la planilla financiera personal y de la publicación cifrada de los datos al panel."
+      },
+      "plataforma": "tool/automation",
+      "stack": [
+        "cryptography",
+        "openpyxl",
+        "Python",
+        "Shell"
+      ],
+      "tipo": "pessoal",
+      "confidencial": true,
+      "urls": [],
+      "url_principal": null,
+      "repos": [
+        {
+          "nome": "MichelModesto/financeiro",
+          "publico": false,
+          "url": null
+        }
+      ],
+      "repo_publico": false,
+      "git": {
+        "primeiro_commit": "2026-09-16",
+        "ultimo_commit": "2026-09-16",
+        "commits": 2,
+        "linhas_adicionadas": 1087,
+        "linhas_removidas": 7,
+        "arquivos_tocados": 4
+      },
+      "destaque": "archive",
+      "thumb": null,
+      "thumb_mobile": null,
+      "thumbs_extra": [],
+      "thumb_hint": "Planilha com cadeado e gráfico de pizza abstrato"
+    },
+    {
+      "id": "perfil-github",
+      "nome": "Perfil GitHub + painel pessoal",
+      "resumo": {
+        "pt": "README de perfil em três idiomas e um painel pessoal estático (PWA no GitHub Pages) com dados criptografados no navegador.",
+        "en": "Profile README in three languages plus a static personal dashboard (PWA on GitHub Pages) with data encrypted in the browser.",
+        "es": "README de perfil en tres idiomas y un panel personal estático (PWA en GitHub Pages) con datos cifrados en el navegador."
+      },
+      "plataforma": "web",
+      "stack": [
+        "CSS",
+        "GitHub Pages",
+        "HTML",
+        "JavaScript",
+        "PWA",
+        "Swift",
+        "SwiftUI",
+        "Web Crypto API"
+      ],
+      "tipo": "pessoal",
+      "confidencial": false,
+      "urls": [
+        {
+          "tipo": "perfil",
+          "url": "https://github.com/MichelModesto",
+          "rotulo": "perfil GitHub"
+        }
+      ],
+      "url_principal": "https://github.com/MichelModesto",
+      "repos": [
+        {
+          "nome": "MichelModesto/MichelModesto",
+          "publico": true,
+          "url": "https://github.com/MichelModesto/MichelModesto"
+        }
+      ],
+      "repo_publico": true,
+      "git": {
+        "primeiro_commit": "2024-10-25",
+        "ultimo_commit": "2026-10-06",
+        "commits": 17,
+        "linhas_adicionadas": 1693,
+        "linhas_removidas": 156,
+        "arquivos_tocados": 17
+      },
+      "destaque": "archive",
+      "thumb": null,
+      "thumb_mobile": null,
+      "thumbs_extra": [],
+      "thumb_hint": "Cartão de perfil com bandeiras BR/US/ES e cadeado sobre gráfico"
+    },
+    {
+      "id": "testeautomacaox",
+      "nome": "Dossiê afiliados com IA",
+      "resumo": {
+        "pt": "Dossiê de estudo que traduz e verifica um artigo japonês sobre afiliados com Claude.",
+        "en": "Study dossier translating and fact-checking a Japanese article about affiliate marketing with Claude.",
+        "es": "Dossier de estudio que traduce y verifica un artículo japonés sobre afiliados con Claude."
+      },
+      "plataforma": "tool/automation",
+      "stack": [
+        "Markdown"
+      ],
+      "tipo": "estudo",
+      "confidencial": false,
+      "urls": [],
+      "url_principal": null,
+      "repos": [
+        {
+          "nome": "MichelModesto/testeautomacaoX",
+          "publico": true,
+          "url": "https://github.com/MichelModesto/testeautomacaoX"
+        }
+      ],
+      "repo_publico": true,
+      "git": {
+        "primeiro_commit": "2026-08-18",
+        "ultimo_commit": "2026-08-18",
+        "commits": 1,
+        "linhas_adicionadas": 4185,
+        "linhas_removidas": 0,
+        "arquivos_tocados": 14
+      },
+      "destaque": "archive",
+      "thumb": null,
+      "thumb_mobile": null,
+      "thumbs_extra": [],
+      "thumb_hint": "Pilha de documentos com lupa e caracteres japoneses estilizados"
+    },
+    {
+      "id": "pixel-architects",
+      "nome": "Michel Dev — landing de serviços",
+      "resumo": {
+        "pt": "Landing page de serviços de criação de sites, gerada no Lovable.",
+        "en": "Landing page for website-building services, generated with Lovable.",
+        "es": "Landing page de servicios de creación de sitios, generada con Lovable."
+      },
+      "plataforma": "web",
+      "stack": [
+        "CSS",
+        "date-fns",
+        "ESLint",
+        "HTML",
+        "JavaScript",
+        "Lovable",
+        "Lucide",
+        "Radix UI",
+        "React",
+        "React Hook Form",
+        "Recharts",
+        "shadcn/ui",
+        "Tailwind CSS",
+        "TanStack Query",
+        "TypeScript",
+        "Vite",
+        "Zod"
+      ],
+      "tipo": "pessoal",
+      "confidencial": false,
+      "urls": [],
+      "url_principal": null,
+      "repos": [
+        {
+          "nome": "MichelModesto/pixel-architects",
+          "publico": false,
+          "url": null
+        }
+      ],
+      "repo_publico": false,
+      "git": {
+        "primeiro_commit": null,
+        "ultimo_commit": null,
+        "commits": 0,
+        "linhas_adicionadas": 0,
+        "linhas_removidas": 0,
+        "arquivos_tocados": 0
+      },
+      "destaque": "archive",
+      "thumb": null,
+      "thumb_mobile": null,
+      "thumbs_extra": [],
+      "thumb_hint": "Mockup de navegador com blocos de landing page",
+      "notas": [
+        "sem commits das identidades do Michel neste(s) repositório(s)"
+      ]
+    },
+    {
+      "id": "planyourtripitinerary",
+      "nome": "Plan Your Trip Itinerary",
+      "resumo": {
+        "pt": "Repositório reservado para um planejador de roteiros; está vazio no GitHub.",
+        "en": "Repository reserved for an itinerary planner; it is empty on GitHub.",
+        "es": "Repositorio reservado para un planificador de itinerarios; está vacío en GitHub."
+      },
+      "plataforma": "web",
+      "stack": [],
+      "tipo": "pessoal",
+      "confidencial": false,
+      "urls": [],
+      "url_principal": null,
+      "repos": [
+        {
+          "nome": "MichelModesto/planyourtripitinerary",
+          "publico": true,
+          "url": "https://github.com/MichelModesto/planyourtripitinerary"
+        }
+      ],
+      "repo_publico": true,
+      "git": {
+        "primeiro_commit": null,
+        "ultimo_commit": null,
+        "commits": 0,
+        "linhas_adicionadas": 0,
+        "linhas_removidas": 0,
+        "arquivos_tocados": 0
+      },
+      "destaque": "archive",
+      "thumb": null,
+      "thumb_mobile": null,
+      "thumbs_extra": [],
+      "thumb_hint": "Mapa dobrado com alfinetes",
+      "notas": [
+        "sem commits das identidades do Michel neste(s) repositório(s)"
+      ]
+    },
+    {
+      "id": "devlinks",
+      "nome": "DevLinks (Rocketseat)",
+      "resumo": {
+        "pt": "Página de links pessoal feita no programa gratuito Discover da Rocketseat.",
+        "en": "Personal links page built in Rocketseat's free Discover program.",
+        "es": "Página de enlaces personal hecha en el programa gratuito Discover de Rocketseat."
+      },
+      "plataforma": "web",
+      "stack": [
+        "CSS",
+        "HTML",
+        "JavaScript"
+      ],
+      "tipo": "estudo",
+      "confidencial": false,
+      "urls": [],
+      "url_principal": null,
+      "repos": [
+        {
+          "nome": "MichelModesto/projeto-rocketseat",
+          "publico": true,
+          "url": "https://github.com/MichelModesto/projeto-rocketseat"
+        },
+        {
+          "nome": "MichelModesto/Acorda-Devinho",
+          "publico": true,
+          "url": "https://github.com/MichelModesto/Acorda-Devinho"
+        }
+      ],
+      "repo_publico": true,
+      "git": {
+        "primeiro_commit": "2023-12-05",
+        "ultimo_commit": "2024-08-01",
+        "commits": 10,
+        "linhas_adicionadas": 634,
+        "linhas_removidas": 59,
+        "arquivos_tocados": 9
+      },
+      "destaque": "archive",
+      "thumb": null,
+      "thumb_mobile": null,
+      "thumbs_extra": [],
+      "thumb_hint": "Cartão de links empilhados com avatar"
+    },
+    {
+      "id": "rede-social",
+      "nome": "Rede social (Ignite)",
+      "resumo": {
+        "pt": "Feed de rede social com posts e comentários, exercício de React com Vite.",
+        "en": "Social feed with posts and comments, a React + Vite exercise.",
+        "es": "Feed de red social con posts y comentarios, ejercicio de React con Vite."
+      },
+      "plataforma": "web",
+      "stack": [
+        "CSS",
+        "date-fns",
+        "ESLint",
+        "GitHub Pages",
+        "JavaScript",
+        "Phosphor Icons",
+        "React",
+        "Vite"
+      ],
+      "tipo": "estudo",
+      "confidencial": false,
+      "urls": [],
+      "url_principal": null,
+      "repos": [
+        {
+          "nome": "MichelModesto/rede-social",
+          "publico": true,
+          "url": "https://github.com/MichelModesto/rede-social"
+        }
+      ],
+      "repo_publico": true,
+      "git": {
+        "primeiro_commit": "2024-08-09",
+        "ultimo_commit": "2024-09-12",
+        "commits": 8,
+        "linhas_adicionadas": 923,
+        "linhas_removidas": 73,
+        "arquivos_tocados": 26
+      },
+      "destaque": "archive",
+      "thumb": null,
+      "thumb_mobile": null,
+      "thumbs_extra": [],
+      "thumb_hint": "Feed com cartões de post e balões de comentário"
+    },
+    {
+      "id": "react-ts",
+      "nome": "Feed em React + TypeScript",
+      "resumo": {
+        "pt": "Versão em TypeScript do exercício de feed em React.",
+        "en": "TypeScript version of the React feed exercise.",
+        "es": "Versión en TypeScript del ejercicio de feed en React."
+      },
+      "plataforma": "web",
+      "stack": [
+        "CSS",
+        "date-fns",
+        "ESLint",
+        "JavaScript",
+        "Phosphor Icons",
+        "React",
+        "TypeScript",
+        "Vite"
+      ],
+      "tipo": "estudo",
+      "confidencial": false,
+      "urls": [],
+      "url_principal": null,
+      "repos": [
+        {
+          "nome": "MichelModesto/react-ts",
+          "publico": true,
+          "url": "https://github.com/MichelModesto/react-ts"
+        }
+      ],
+      "repo_publico": true,
+      "git": {
+        "primeiro_commit": "2024-09-12",
+        "ultimo_commit": "2024-09-12",
+        "commits": 3,
+        "linhas_adicionadas": 955,
+        "linhas_removidas": 40,
+        "arquivos_tocados": 34
+      },
+      "destaque": "archive",
+      "thumb": null,
+      "thumb_mobile": null,
+      "thumbs_extra": [],
+      "thumb_hint": "Logo TS sobre cartões de feed"
+    },
+    {
+      "id": "calculadora",
+      "nome": "Calculadora",
+      "resumo": {
+        "pt": "Calculadora em HTML, CSS e JavaScript.",
+        "en": "Calculator in HTML, CSS and JavaScript.",
+        "es": "Calculadora en HTML, CSS y JavaScript."
+      },
+      "plataforma": "web",
+      "stack": [
+        "CSS",
+        "HTML",
+        "JavaScript"
+      ],
+      "tipo": "estudo",
+      "confidencial": false,
+      "urls": [],
+      "url_principal": null,
+      "repos": [
+        {
+          "nome": "MichelModesto/calculadora",
+          "publico": true,
+          "url": "https://github.com/MichelModesto/calculadora"
+        }
+      ],
+      "repo_publico": true,
+      "git": {
+        "primeiro_commit": "2024-09-25",
+        "ultimo_commit": "2024-09-26",
+        "commits": 6,
+        "linhas_adicionadas": 571,
+        "linhas_removidas": 146,
+        "arquivos_tocados": 5
+      },
+      "destaque": "archive",
+      "thumb": null,
+      "thumb_mobile": null,
+      "thumbs_extra": [],
+      "thumb_hint": "Teclado de calculadora flat"
+    },
+    {
+      "id": "chat-responsivo",
+      "nome": "Chat responsivo",
+      "resumo": {
+        "pt": "Layout de chat responsivo em HTML, CSS e JavaScript.",
+        "en": "Responsive chat layout in HTML, CSS and JavaScript.",
+        "es": "Layout de chat responsivo en HTML, CSS y JavaScript."
+      },
+      "plataforma": "web",
+      "stack": [
+        "CSS",
+        "HTML",
+        "JavaScript"
+      ],
+      "tipo": "estudo",
+      "confidencial": false,
+      "urls": [],
+      "url_principal": null,
+      "repos": [
+        {
+          "nome": "MichelModesto/chat-responsivo",
+          "publico": true,
+          "url": "https://github.com/MichelModesto/chat-responsivo"
+        }
+      ],
+      "repo_publico": true,
+      "git": {
+        "primeiro_commit": "2024-09-24",
+        "ultimo_commit": "2024-09-24",
+        "commits": 1,
+        "linhas_adicionadas": 285,
+        "linhas_removidas": 0,
+        "arquivos_tocados": 4
+      },
+      "destaque": "archive",
+      "thumb": null,
+      "thumb_mobile": null,
+      "thumbs_extra": [],
+      "thumb_hint": "Balões de conversa em tela de celular"
+    },
+    {
+      "id": "todolist-fullstack",
+      "nome": "To-do list full stack",
+      "resumo": {
+        "pt": "Back-end de lista de tarefas em Node.js, Express e MySQL.",
+        "en": "To-do list back end in Node.js, Express and MySQL.",
+        "es": "Back-end de lista de tareas en Node.js, Express y MySQL."
+      },
+      "plataforma": "api",
+      "stack": [
+        "Express",
+        "MySQL",
+        "Node.js"
+      ],
+      "tipo": "estudo",
+      "confidencial": false,
+      "urls": [],
+      "url_principal": null,
+      "repos": [
+        {
+          "nome": "MichelModesto/todolist-fullstack",
+          "publico": true,
+          "url": "https://github.com/MichelModesto/todolist-fullstack"
+        }
+      ],
+      "repo_publico": true,
+      "git": {
+        "primeiro_commit": "2023-12-01",
+        "ultimo_commit": "2023-12-01",
+        "commits": 1,
+        "linhas_adicionadas": 17,
+        "linhas_removidas": 0,
+        "arquivos_tocados": 1
+      },
+      "destaque": "archive",
+      "thumb": null,
+      "thumb_mobile": null,
+      "thumbs_extra": [],
+      "thumb_hint": "Checklist com engrenagem de servidor"
+    }
+  ]
+}

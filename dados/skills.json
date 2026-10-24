@@ -1,0 +1,1162 @@
+{
+  "gerado_em": "2026-10-23",
+  "total_projetos": 34,
+  "categorias": {
+    "linguagens": [
+      {
+        "nome": "JavaScript",
+        "projetos": 21,
+        "ids": [
+          "flexaseal-portal",
+          "r4mi-portal",
+          "api-flexaseal",
+          "rh-flexaseal",
+          "site-flexaseal",
+          "michel-code-house",
+          "planejador-viagens",
+          "geoalmoco",
+          "studoworldcup",
+          "miniparke",
+          "projetoh",
+          "tarso",
+          "pathfinders",
+          "cotacoesmoedas",
+          "perfil-github",
+          "pixel-architects",
+          "devlinks",
+          "rede-social",
+          "react-ts",
+          "calculadora",
+          "chat-responsivo"
+        ]
+      },
+      {
+        "nome": "CSS",
+        "projetos": 18,
+        "ids": [
+          "flexaseal-portal",
+          "r4mi-portal",
+          "rh-flexaseal",
+          "site-flexaseal",
+          "geoalmoco",
+          "studoworldcup",
+          "miniparke",
+          "projetoh",
+          "tarso",
+          "pathfinders",
+          "opsprimer",
+          "perfil-github",
+          "pixel-architects",
+          "devlinks",
+          "rede-social",
+          "react-ts",
+          "calculadora",
+          "chat-responsivo"
+        ]
+      },
+      {
+        "nome": "TypeScript",
+        "projetos": 15,
+        "ids": [
+          "app-r4mi",
+          "flexaseal-app",
+          "rh-flexaseal",
+          "site-flexaseal",
+          "planejador-viagens",
+          "studoworldcup",
+          "afiliados-auto",
+          "miniparke",
+          "projetoh",
+          "nickyfotografa",
+          "splend-closet",
+          "pathfinders",
+          "opsprimer",
+          "pixel-architects",
+          "react-ts"
+        ]
+      },
+      {
+        "nome": "HTML",
+        "projetos": 12,
+        "ids": [
+          "flexaseal-portal",
+          "app-r4mi",
+          "flexaseal-app",
+          "rh-flexaseal",
+          "geoalmoco",
+          "tarso",
+          "cotacoesmoedas",
+          "perfil-github",
+          "pixel-architects",
+          "devlinks",
+          "calculadora",
+          "chat-responsivo"
+        ]
+      },
+      {
+        "nome": "SQL",
+        "projetos": 6,
+        "ids": [
+          "flexaseal-portal",
+          "rh-flexaseal",
+          "planejador-viagens",
+          "afiliados-auto",
+          "miniparke",
+          "pathfinders"
+        ]
+      },
+      {
+        "nome": "Python",
+        "projetos": 4,
+        "ids": [
+          "flexaseal-portal",
+          "analista-cambio",
+          "instagram-daniela",
+          "financeiro"
+        ]
+      },
+      {
+        "nome": "Shell",
+        "projetos": 4,
+        "ids": [
+          "flexaseal-portal",
+          "api-flexaseal",
+          "cotacoesmoedas",
+          "financeiro"
+        ]
+      },
+      {
+        "nome": "Swift",
+        "projetos": 2,
+        "ids": [
+          "cotacoesmoedas",
+          "perfil-github"
+        ]
+      }
+    ],
+    "front-end web": [
+      {
+        "nome": "React",
+        "projetos": 15,
+        "ids": [
+          "app-r4mi",
+          "flexaseal-app",
+          "rh-flexaseal",
+          "site-flexaseal",
+          "planejador-viagens",
+          "studoworldcup",
+          "afiliados-auto",
+          "miniparke",
+          "projetoh",
+          "nickyfotografa",
+          "splend-closet",
+          "pathfinders",
+          "pixel-architects",
+          "rede-social",
+          "react-ts"
+        ]
+      },
+      {
+        "nome": "Tailwind CSS",
+        "projetos": 10,
+        "ids": [
+          "app-r4mi",
+          "rh-flexaseal",
+          "site-flexaseal",
+          "studoworldcup",
+          "miniparke",
+          "projetoh",
+          "nickyfotografa",
+          "splend-closet",
+          "pathfinders",
+          "pixel-architects"
+        ]
+      },
+      {
+        "nome": "Lucide",
+        "projetos": 8,
+        "ids": [
+          "flexaseal-portal",
+          "app-r4mi",
+          "flexaseal-app",
+          "planejador-viagens",
+          "studoworldcup",
+          "miniparke",
+          "pathfinders",
+          "pixel-architects"
+        ]
+      },
+      {
+        "nome": "Next.js",
+        "projetos": 6,
+        "ids": [
+          "studoworldcup",
+          "afiliados-auto",
+          "projetoh",
+          "nickyfotografa",
+          "splend-closet",
+          "pathfinders"
+        ]
+      },
+      {
+        "nome": "Zustand",
+        "projetos": 4,
+        "ids": [
+          "flexaseal-app",
+          "rh-flexaseal",
+          "miniparke",
+          "pathfinders"
+        ]
+      },
+      {
+        "nome": "React Hook Form",
+        "projetos": 3,
+        "ids": [
+          "app-r4mi",
+          "miniparke",
+          "pixel-architects"
+        ]
+      },
+      {
+        "nome": "Bootstrap",
+        "projetos": 2,
+        "ids": [
+          "flexaseal-portal",
+          "r4mi-portal"
+        ]
+      },
+      {
+        "nome": "DataTables",
+        "projetos": 2,
+        "ids": [
+          "flexaseal-portal",
+          "r4mi-portal"
+        ]
+      },
+      {
+        "nome": "EJS",
+        "projetos": 2,
+        "ids": [
+          "flexaseal-portal",
+          "r4mi-portal"
+        ]
+      },
+      {
+        "nome": "Framer Motion",
+        "projetos": 2,
+        "ids": [
+          "studoworldcup",
+          "splend-closet"
+        ]
+      },
+      {
+        "nome": "FullCalendar",
+        "projetos": 2,
+        "ids": [
+          "flexaseal-portal",
+          "r4mi-portal"
+        ]
+      },
+      {
+        "nome": "i18next",
+        "projetos": 2,
+        "ids": [
+          "flexaseal-portal",
+          "r4mi-portal"
+        ]
+      },
+      {
+        "nome": "jQuery",
+        "projetos": 2,
+        "ids": [
+          "flexaseal-portal",
+          "r4mi-portal"
+        ]
+      },
+      {
+        "nome": "Phosphor Icons",
+        "projetos": 2,
+        "ids": [
+          "rede-social",
+          "react-ts"
+        ]
+      },
+      {
+        "nome": "Sass",
+        "projetos": 2,
+        "ids": [
+          "flexaseal-portal",
+          "r4mi-portal"
+        ]
+      },
+      {
+        "nome": "Sneat (template Bootstrap)",
+        "projetos": 2,
+        "ids": [
+          "flexaseal-portal",
+          "r4mi-portal"
+        ]
+      },
+      {
+        "nome": "TanStack Query",
+        "projetos": 2,
+        "ids": [
+          "planejador-viagens",
+          "pixel-architects"
+        ]
+      },
+      {
+        "nome": "Astro",
+        "projetos": 1,
+        "ids": [
+          "opsprimer"
+        ]
+      },
+      {
+        "nome": "dnd-kit",
+        "projetos": 1,
+        "ids": [
+          "planejador-viagens"
+        ]
+      },
+      {
+        "nome": "Lenis",
+        "projetos": 1,
+        "ids": [
+          "site-flexaseal"
+        ]
+      },
+      {
+        "nome": "MDX",
+        "projetos": 1,
+        "ids": [
+          "opsprimer"
+        ]
+      },
+      {
+        "nome": "Motion",
+        "projetos": 1,
+        "ids": [
+          "flexaseal-portal"
+        ]
+      },
+      {
+        "nome": "PWA",
+        "projetos": 1,
+        "ids": [
+          "perfil-github"
+        ]
+      },
+      {
+        "nome": "Radix UI",
+        "projetos": 1,
+        "ids": [
+          "pixel-architects"
+        ]
+      },
+      {
+        "nome": "shadcn/ui",
+        "projetos": 1,
+        "ids": [
+          "pixel-architects"
+        ]
+      },
+      {
+        "nome": "Web Crypto API",
+        "projetos": 1,
+        "ids": [
+          "perfil-github"
+        ]
+      }
+    ],
+    "mobile": [
+      {
+        "nome": "Expo",
+        "projetos": 5,
+        "ids": [
+          "app-r4mi",
+          "flexaseal-app",
+          "rh-flexaseal",
+          "planejador-viagens",
+          "projetoh"
+        ]
+      },
+      {
+        "nome": "React Native",
+        "projetos": 5,
+        "ids": [
+          "app-r4mi",
+          "flexaseal-app",
+          "rh-flexaseal",
+          "planejador-viagens",
+          "projetoh"
+        ]
+      },
+      {
+        "nome": "Expo Router",
+        "projetos": 4,
+        "ids": [
+          "flexaseal-app",
+          "rh-flexaseal",
+          "planejador-viagens",
+          "projetoh"
+        ]
+      },
+      {
+        "nome": "React Native Web",
+        "projetos": 3,
+        "ids": [
+          "flexaseal-app",
+          "planejador-viagens",
+          "projetoh"
+        ]
+      },
+      {
+        "nome": "Reanimated",
+        "projetos": 3,
+        "ids": [
+          "flexaseal-app",
+          "rh-flexaseal",
+          "planejador-viagens"
+        ]
+      },
+      {
+        "nome": "Expo Notifications",
+        "projetos": 2,
+        "ids": [
+          "flexaseal-app",
+          "projetoh"
+        ]
+      },
+      {
+        "nome": "SwiftUI",
+        "projetos": 2,
+        "ids": [
+          "cotacoesmoedas",
+          "perfil-github"
+        ]
+      },
+      {
+        "nome": "FlashList",
+        "projetos": 1,
+        "ids": [
+          "planejador-viagens"
+        ]
+      },
+      {
+        "nome": "NativeWind",
+        "projetos": 1,
+        "ids": [
+          "app-r4mi"
+        ]
+      },
+      {
+        "nome": "React Native Maps",
+        "projetos": 1,
+        "ids": [
+          "flexaseal-app"
+        ]
+      },
+      {
+        "nome": "React Navigation",
+        "projetos": 1,
+        "ids": [
+          "app-r4mi"
+        ]
+      },
+      {
+        "nome": "Scriptable (widget iOS)",
+        "projetos": 1,
+        "ids": [
+          "cotacoesmoedas"
+        ]
+      }
+    ],
+    "back-end": [
+      {
+        "nome": "Node.js",
+        "projetos": 8,
+        "ids": [
+          "flexaseal-portal",
+          "r4mi-portal",
+          "api-flexaseal",
+          "rh-flexaseal",
+          "site-flexaseal",
+          "michel-code-house",
+          "geoalmoco",
+          "todolist-fullstack"
+        ]
+      },
+      {
+        "nome": "Nodemailer",
+        "projetos": 7,
+        "ids": [
+          "flexaseal-portal",
+          "r4mi-portal",
+          "api-flexaseal",
+          "rh-flexaseal",
+          "site-flexaseal",
+          "miniparke",
+          "projetoh"
+        ]
+      },
+      {
+        "nome": "Express",
+        "projetos": 6,
+        "ids": [
+          "flexaseal-portal",
+          "r4mi-portal",
+          "api-flexaseal",
+          "rh-flexaseal",
+          "site-flexaseal",
+          "todolist-fullstack"
+        ]
+      },
+      {
+        "nome": "JWT",
+        "projetos": 3,
+        "ids": [
+          "flexaseal-portal",
+          "r4mi-portal",
+          "api-flexaseal"
+        ]
+      },
+      {
+        "nome": "Multer",
+        "projetos": 3,
+        "ids": [
+          "flexaseal-portal",
+          "r4mi-portal",
+          "api-flexaseal"
+        ]
+      },
+      {
+        "nome": "node-cron",
+        "projetos": 2,
+        "ids": [
+          "flexaseal-portal",
+          "r4mi-portal"
+        ]
+      },
+      {
+        "nome": "PDFKit",
+        "projetos": 2,
+        "ids": [
+          "flexaseal-portal",
+          "r4mi-portal"
+        ]
+      },
+      {
+        "nome": "pdfmake",
+        "projetos": 2,
+        "ids": [
+          "flexaseal-portal",
+          "r4mi-portal"
+        ]
+      },
+      {
+        "nome": "Resend",
+        "projetos": 2,
+        "ids": [
+          "miniparke",
+          "projetoh"
+        ]
+      },
+      {
+        "nome": "Socket.IO",
+        "projetos": 2,
+        "ids": [
+          "flexaseal-portal",
+          "r4mi-portal"
+        ]
+      },
+      {
+        "nome": "Web Push",
+        "projetos": 2,
+        "ids": [
+          "studoworldcup",
+          "projetoh"
+        ]
+      },
+      {
+        "nome": "Better Auth",
+        "projetos": 1,
+        "ids": [
+          "projetoh"
+        ]
+      },
+      {
+        "nome": "Clerk",
+        "projetos": 1,
+        "ids": [
+          "miniparke"
+        ]
+      },
+      {
+        "nome": "cryptography",
+        "projetos": 1,
+        "ids": [
+          "financeiro"
+        ]
+      },
+      {
+        "nome": "ExcelJS",
+        "projetos": 1,
+        "ids": [
+          "flexaseal-portal"
+        ]
+      },
+      {
+        "nome": "grammY (Telegram)",
+        "projetos": 1,
+        "ids": [
+          "afiliados-auto"
+        ]
+      },
+      {
+        "nome": "Helmet",
+        "projetos": 1,
+        "ids": [
+          "api-flexaseal"
+        ]
+      },
+      {
+        "nome": "ImapFlow",
+        "projetos": 1,
+        "ids": [
+          "flexaseal-portal"
+        ]
+      },
+      {
+        "nome": "next-safe-action",
+        "projetos": 1,
+        "ids": [
+          "pathfinders"
+        ]
+      },
+      {
+        "nome": "pdf-lib",
+        "projetos": 1,
+        "ids": [
+          "api-flexaseal"
+        ]
+      },
+      {
+        "nome": "Requests",
+        "projetos": 1,
+        "ids": [
+          "analista-cambio"
+        ]
+      },
+      {
+        "nome": "SheetJS",
+        "projetos": 1,
+        "ids": [
+          "flexaseal-portal"
+        ]
+      },
+      {
+        "nome": "SMTP",
+        "projetos": 1,
+        "ids": [
+          "analista-cambio"
+        ]
+      },
+      {
+        "nome": "Twilio",
+        "projetos": 1,
+        "ids": [
+          "flexaseal-portal"
+        ]
+      }
+    ],
+    "banco": [
+      {
+        "nome": "MySQL",
+        "projetos": 5,
+        "ids": [
+          "flexaseal-portal",
+          "r4mi-portal",
+          "api-flexaseal",
+          "rh-flexaseal",
+          "todolist-fullstack"
+        ]
+      },
+      {
+        "nome": "Neon Postgres",
+        "projetos": 4,
+        "ids": [
+          "studoworldcup",
+          "afiliados-auto",
+          "miniparke",
+          "projetoh"
+        ]
+      },
+      {
+        "nome": "SQL Server",
+        "projetos": 3,
+        "ids": [
+          "flexaseal-portal",
+          "r4mi-portal",
+          "api-flexaseal"
+        ]
+      },
+      {
+        "nome": "PostgreSQL",
+        "projetos": 2,
+        "ids": [
+          "planejador-viagens",
+          "afiliados-auto"
+        ]
+      },
+      {
+        "nome": "Supabase",
+        "projetos": 2,
+        "ids": [
+          "planejador-viagens",
+          "pathfinders"
+        ]
+      },
+      {
+        "nome": "Cloudflare D1",
+        "projetos": 1,
+        "ids": [
+          "tarso"
+        ]
+      },
+      {
+        "nome": "Drizzle ORM",
+        "projetos": 1,
+        "ids": [
+          "projetoh"
+        ]
+      },
+      {
+        "nome": "PGlite",
+        "projetos": 1,
+        "ids": [
+          "pathfinders"
+        ]
+      }
+    ],
+    "infra/deploy": [
+      {
+        "nome": "Vercel",
+        "projetos": 6,
+        "ids": [
+          "planejador-viagens",
+          "geoalmoco",
+          "studoworldcup",
+          "afiliados-auto",
+          "miniparke",
+          "projetoh"
+        ]
+      },
+      {
+        "nome": "GitHub Actions",
+        "projetos": 4,
+        "ids": [
+          "planejador-viagens",
+          "studoworldcup",
+          "tarso",
+          "pathfinders"
+        ]
+      },
+      {
+        "nome": "GitHub Pages",
+        "projetos": 3,
+        "ids": [
+          "cotacoesmoedas",
+          "perfil-github",
+          "rede-social"
+        ]
+      },
+      {
+        "nome": "Prometheus (prom-client)",
+        "projetos": 2,
+        "ids": [
+          "flexaseal-portal",
+          "r4mi-portal"
+        ]
+      },
+      {
+        "nome": "Vercel Functions",
+        "projetos": 2,
+        "ids": [
+          "geoalmoco",
+          "miniparke"
+        ]
+      },
+      {
+        "nome": "Cloudflare Pages Functions",
+        "projetos": 1,
+        "ids": [
+          "tarso"
+        ]
+      },
+      {
+        "nome": "Cloudflare Workers/Pages",
+        "projetos": 1,
+        "ids": [
+          "tarso"
+        ]
+      },
+      {
+        "nome": "cron",
+        "projetos": 1,
+        "ids": [
+          "analista-cambio"
+        ]
+      },
+      {
+        "nome": "Docker",
+        "projetos": 1,
+        "ids": [
+          "api-flexaseal"
+        ]
+      },
+      {
+        "nome": "Vercel Analytics",
+        "projetos": 1,
+        "ids": [
+          "studoworldcup"
+        ]
+      },
+      {
+        "nome": "Vercel Blob",
+        "projetos": 1,
+        "ids": [
+          "miniparke"
+        ]
+      }
+    ],
+    "IA": [
+      {
+        "nome": "Claude API (Anthropic)",
+        "projetos": 2,
+        "ids": [
+          "flexaseal-portal",
+          "afiliados-auto"
+        ]
+      },
+      {
+        "nome": "Claude Code",
+        "projetos": 2,
+        "ids": [
+          "michel-code-house",
+          "biblioteca-agentes"
+        ]
+      },
+      {
+        "nome": "Cursor",
+        "projetos": 1,
+        "ids": [
+          "biblioteca-agentes"
+        ]
+      },
+      {
+        "nome": "DeepL API",
+        "projetos": 1,
+        "ids": [
+          "flexaseal-portal"
+        ]
+      },
+      {
+        "nome": "Geração de imagem por IA",
+        "projetos": 1,
+        "ids": [
+          "instagram-daniela"
+        ]
+      },
+      {
+        "nome": "Lovable",
+        "projetos": 1,
+        "ids": [
+          "pixel-architects"
+        ]
+      },
+      {
+        "nome": "OpenAI API",
+        "projetos": 1,
+        "ids": [
+          "flexaseal-portal"
+        ]
+      },
+      {
+        "nome": "Tesseract.js (OCR)",
+        "projetos": 1,
+        "ids": [
+          "flexaseal-portal"
+        ]
+      }
+    ],
+    "3D/gráficos": [
+      {
+        "nome": "Leaflet",
+        "projetos": 3,
+        "ids": [
+          "flexaseal-portal",
+          "r4mi-portal",
+          "geoalmoco"
+        ]
+      },
+      {
+        "nome": "ApexCharts",
+        "projetos": 2,
+        "ids": [
+          "flexaseal-portal",
+          "r4mi-portal"
+        ]
+      },
+      {
+        "nome": "Chart.js",
+        "projetos": 2,
+        "ids": [
+          "flexaseal-portal",
+          "r4mi-portal"
+        ]
+      },
+      {
+        "nome": "Mapbox GL",
+        "projetos": 2,
+        "ids": [
+          "flexaseal-portal",
+          "r4mi-portal"
+        ]
+      },
+      {
+        "nome": "Recharts",
+        "projetos": 2,
+        "ids": [
+          "studoworldcup",
+          "pixel-architects"
+        ]
+      },
+      {
+        "nome": "Three.js",
+        "projetos": 2,
+        "ids": [
+          "flexaseal-portal",
+          "michel-code-house"
+        ]
+      },
+      {
+        "nome": "Google Maps",
+        "projetos": 1,
+        "ids": [
+          "planejador-viagens"
+        ]
+      },
+      {
+        "nome": "Google Street View (embed)",
+        "projetos": 1,
+        "ids": [
+          "geoalmoco"
+        ]
+      },
+      {
+        "nome": "GSAP",
+        "projetos": 1,
+        "ids": [
+          "flexaseal-portal"
+        ]
+      },
+      {
+        "nome": "MapLibre GL",
+        "projetos": 1,
+        "ids": [
+          "planejador-viagens"
+        ]
+      },
+      {
+        "nome": "Pannellum",
+        "projetos": 1,
+        "ids": [
+          "geoalmoco"
+        ]
+      }
+    ],
+    "testes": [
+      {
+        "nome": "Jest",
+        "projetos": 3,
+        "ids": [
+          "flexaseal-portal",
+          "r4mi-portal",
+          "app-r4mi"
+        ]
+      },
+      {
+        "nome": "Playwright",
+        "projetos": 2,
+        "ids": [
+          "planejador-viagens",
+          "pathfinders"
+        ]
+      },
+      {
+        "nome": "Vitest",
+        "projetos": 2,
+        "ids": [
+          "planejador-viagens",
+          "pathfinders"
+        ]
+      },
+      {
+        "nome": "axe-core",
+        "projetos": 1,
+        "ids": [
+          "planejador-viagens"
+        ]
+      },
+      {
+        "nome": "Testing Library",
+        "projetos": 1,
+        "ids": [
+          "app-r4mi"
+        ]
+      }
+    ],
+    "ferramentas": [
+      {
+        "nome": "ESLint",
+        "projetos": 12,
+        "ids": [
+          "flexaseal-portal",
+          "r4mi-portal",
+          "app-r4mi",
+          "site-flexaseal",
+          "studoworldcup",
+          "miniparke",
+          "nickyfotografa",
+          "splend-closet",
+          "pathfinders",
+          "pixel-architects",
+          "rede-social",
+          "react-ts"
+        ]
+      },
+      {
+        "nome": "Vite",
+        "projetos": 6,
+        "ids": [
+          "rh-flexaseal",
+          "site-flexaseal",
+          "miniparke",
+          "pixel-architects",
+          "rede-social",
+          "react-ts"
+        ]
+      },
+      {
+        "nome": "date-fns",
+        "projetos": 5,
+        "ids": [
+          "planejador-viagens",
+          "miniparke",
+          "pixel-architects",
+          "rede-social",
+          "react-ts"
+        ]
+      },
+      {
+        "nome": "Prettier",
+        "projetos": 5,
+        "ids": [
+          "flexaseal-portal",
+          "r4mi-portal",
+          "site-flexaseal",
+          "projetoh",
+          "pathfinders"
+        ]
+      },
+      {
+        "nome": "Babel",
+        "projetos": 4,
+        "ids": [
+          "flexaseal-portal",
+          "r4mi-portal",
+          "app-r4mi",
+          "projetoh"
+        ]
+      },
+      {
+        "nome": "Zod",
+        "projetos": 4,
+        "ids": [
+          "miniparke",
+          "projetoh",
+          "pathfinders",
+          "pixel-architects"
+        ]
+      },
+      {
+        "nome": "Gulp",
+        "projetos": 2,
+        "ids": [
+          "flexaseal-portal",
+          "r4mi-portal"
+        ]
+      },
+      {
+        "nome": "Markdown",
+        "projetos": 2,
+        "ids": [
+          "biblioteca-agentes",
+          "testeautomacaox"
+        ]
+      },
+      {
+        "nome": "Puppeteer",
+        "projetos": 2,
+        "ids": [
+          "flexaseal-portal",
+          "r4mi-portal"
+        ]
+      },
+      {
+        "nome": "Webpack",
+        "projetos": 2,
+        "ids": [
+          "flexaseal-portal",
+          "r4mi-portal"
+        ]
+      },
+      {
+        "nome": "Husky",
+        "projetos": 1,
+        "ids": [
+          "pathfinders"
+        ]
+      },
+      {
+        "nome": "openpyxl",
+        "projetos": 1,
+        "ids": [
+          "financeiro"
+        ]
+      },
+      {
+        "nome": "Turborepo",
+        "projetos": 1,
+        "ids": [
+          "projetoh"
+        ]
+      }
+    ]
+  },
+  "idiomas": [
+    {
+      "idioma": "Português",
+      "nivel": "nativo"
+    },
+    {
+      "idioma": "Espanhol",
+      "nivel": "intermediário"
+    },
+    {
+      "idioma": "Inglês",
+      "nivel": "básico"
+    }
+  ]
+}

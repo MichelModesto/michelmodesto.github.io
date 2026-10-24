@@ -1,0 +1,1648 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Michel Modesto — Full Stack Developer</title>
+<meta name="description" content="Michel Modesto, full stack developer in São Paulo, open to relocating to Europe, Australia and North America. A portfolio told in nine chapters.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://michelmodesto.github.io/">
+<meta property="og:title" content="Michel Modesto — Full Stack Developer">
+<meta property="og:description" content="Full stack developer in São Paulo, open to relocating to Europe, Australia and North America.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --blue:#2b31d4; --blue-hi:#4950f2; --blue-deep:#141a8c;
+  --ink:#08090d; --ink-2:#121419; --ink-3:#1b1e26;
+  --paper:#f2f3ff; --muted:#9aa0b4; --line:rgba(255,255,255,.12);
+  --or:#ff6b2c; --or-ink:#170a03;
+  --r:22px;
+  --sans:"Inter Tight",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,Menlo,monospace;
+  --ease:cubic-bezier(.2,0,0,1);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+[hidden]{display:none !important}
+html{background:var(--ink);color:var(--paper);-webkit-text-size-adjust:100%}
+body{font-family:var(--sans);font-weight:400;line-height:1.5;background:var(--ink);overflow-x:clip}
+a{color:inherit}
+img{max-width:100%}
+:focus-visible{outline:2px solid var(--or);outline-offset:3px;border-radius:6px}
+.mono{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase}
+.label{display:flex;align-items:center;gap:10px;color:var(--or)}
+.label::before{content:"";width:7px;height:7px;background:var(--or);transform:rotate(45deg);flex:none}
+.wrap{width:min(1320px,100% - 32px);margin-inline:auto}
+@media (min-width:861px){.wrap{width:min(1320px,100% - 80px)}}
+
+/* NAV + LANGUAGE */
+.nav{position:fixed;inset:0 0 auto;z-index:50;display:flex;align-items:center;justify-content:space-between;padding:16px;gap:12px;pointer-events:none}
+.nav>*{pointer-events:auto}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:#fff}
+.mark{width:40px;height:40px;border-radius:50%;background:#fff;display:grid;place-items:center;flex:none}
+.brand small{display:none;font-size:12px;line-height:1.25;font-weight:500;text-shadow:0 1px 8px rgba(0,0,0,.25)}
+.nav-r{display:flex;align-items:center;gap:8px}
+.links{display:none;gap:22px;font-size:14px;font-weight:500}
+.links a{text-decoration:none;opacity:.9;text-shadow:0 1px 8px rgba(0,0,0,.3)}
+.links a:hover{opacity:1;text-decoration:underline;text-underline-offset:4px}
+.lang{display:flex;gap:2px;padding:3px;border-radius:999px;background:rgba(8,9,13,.6);border:1px solid rgba(255,255,255,.24);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+.lang button{font:500 11px/1 var(--mono);letter-spacing:.08em;color:#fff;background:none;border:0;border-radius:999px;padding:10px 8px;min-width:34px;cursor:pointer;transition:background .2s,color .2s}
+.lang button:hover{background:rgba(255,255,255,.14)}
+.lang button[aria-pressed="true"]{background:#fff;color:var(--blue)}
+.pill{display:inline-flex;align-items:center;gap:8px;background:var(--or);color:var(--or-ink);font-weight:600;font-size:13px;border-radius:999px;padding:10px 14px;text-decoration:none;white-space:nowrap;transition:transform .15s var(--ease),background .15s}
+.pill:hover{background:#ff8550;transform:translateY(-1px)}
+@media (min-width:600px){.pill{font-size:14px;padding:10px 18px}.nav-r{gap:14px}}
+@media (min-width:861px){.brand small{display:block}.nav{padding:20px 40px}}
+@media (min-width:1180px){.links{display:flex}.nav-r{gap:26px}}
+
+/* CH 01 DESKTOP: macOS-style home screen, project files with hand-written physics (from the Física model, dk- scoped) */
+:root{--dk-paper-2:#ebe7dd;--dk-win:#faf8f4;--dk-bar:#e9e6df;--dk-ink:#17171a;--dk-muted:#6b6963;--dk-line:#d9d4c8;--dk-blue:#2f6fe4;--dk-coral:#e5533d;--dk-green:#1f8a55;--dk-sky-1:#070b1d;--dk-sky-2:#121d45;--dk-sky-3:#2a3a73}
+:where(.dk,.dk-pop) button{font:inherit;color:inherit;background:none;border:0;cursor:pointer;text-align:inherit}
+.dk-g{width:13px;height:13px;flex:none;fill:none;stroke:currentColor;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round}
+.dk{position:relative;min-height:100vh;min-height:100svh;overflow:hidden;color:#fff;isolation:isolate;line-height:1.5;
+  background:radial-gradient(120% 80% at 70% 110%,#3b4f8f 0%,transparent 55%),linear-gradient(180deg,var(--dk-sky-1) 0%,var(--dk-sky-2) 55%,var(--dk-sky-3) 100%)}
+html.pinned .dk{height:100vh}
+.dk-stars{position:absolute;inset:-10%;z-index:-2;opacity:.85;
+  background-image:radial-gradient(1px 1px at 23px 41px,#fff 50%,transparent 51%),radial-gradient(1px 1px at 151px 97px,#dfe6ff 50%,transparent 51%),radial-gradient(1.5px 1.5px at 88px 203px,#fff 50%,transparent 51%),radial-gradient(1px 1px at 262px 249px,#c9d4ff 50%,transparent 51%),radial-gradient(1px 1px at 197px 12px,#fff 50%,transparent 51%),radial-gradient(1.2px 1.2px at 301px 160px,#fff 50%,transparent 51%),radial-gradient(1px 1px at 47px 290px,#b8c6ff 50%,transparent 51%);
+  background-size:317px 317px;animation:dk-drift 120s linear infinite}
+.dk-stars.b{background-size:523px 461px;opacity:.55;animation-duration:200s;animation-direction:reverse;transform:rotate(17deg)}
+@keyframes dk-drift{to{transform:translate3d(-240px,-60px,0)}}
+.dk-moon{position:absolute;z-index:-2;top:31%;right:5%;width:clamp(64px,7vw,104px);aspect-ratio:1;border-radius:50%;
+  background:radial-gradient(circle at 38% 35%,#f4f1e6 0%,#d8d6cc 55%,#aeb3c4 100%);box-shadow:0 0 60px 18px rgba(170,190,255,.18)}
+.dk-hills{position:absolute;z-index:-1;left:0;right:0;bottom:0;width:100%;height:46%}
+.dk-shade{position:absolute;inset:0;z-index:40;background:#05060c;opacity:0;pointer-events:none}
+
+.dk-menu{position:absolute;top:0;left:0;right:0;z-index:30;height:30px;display:flex;align-items:center;gap:18px;padding:0 14px;
+  font-size:13px;background:rgba(10,14,32,.38);backdrop-filter:blur(18px) saturate(1.4);-webkit-backdrop-filter:blur(18px) saturate(1.4)}
+.dk-mark{width:16px;height:16px;flex:none}
+.dk-menu strong{font-weight:600;white-space:nowrap}
+.dk-menu nav{display:flex;gap:16px;min-width:0;overflow:hidden}
+.dk-menu nav a{text-decoration:none;opacity:.86;white-space:nowrap}
+.dk-menu nav a:hover{opacity:1}
+.dk-right{margin-left:auto;display:flex;gap:12px;align-items:center}
+.dk-clean{opacity:.86;font-size:13px;padding:2px 6px;border-radius:5px;white-space:nowrap}
+.dk-clean:hover,.dk-clean[aria-pressed="true"]{background:rgba(255,255,255,.16);opacity:1}
+.dk-lang{display:flex;border:1px solid rgba(255,255,255,.28);border-radius:6px;overflow:hidden;font-family:var(--mono);font-size:11px}
+.dk-lang button{padding:2px 7px;opacity:.8;letter-spacing:.04em}
+.dk-lang button+button{border-left:1px solid rgba(255,255,255,.2)}
+.dk-lang button[aria-pressed="true"]{background:#fff;color:#121d45;opacity:1;font-weight:500}
+.dk-clock{font-variant-numeric:tabular-nums;opacity:.86;white-space:pre}
+
+.dk-intro{position:absolute;z-index:6;left:clamp(16px,6vw,96px);bottom:clamp(120px,15vh,150px);max-width:min(680px,58vw);pointer-events:none}
+.dk-kick{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;opacity:.75;margin-bottom:14px}
+.dk-intro h1{font-size:clamp(46px,6.4vw,104px);line-height:.95;letter-spacing:-.035em;font-weight:600}
+.dk-intro p{margin-top:16px;font-size:clamp(16px,1.35vw,19px);max-width:46ch;opacity:.86}
+.dk-stat{margin-top:18px;font-family:var(--mono);font-size:12px;opacity:.75}
+.dk-hint{position:absolute;z-index:1;right:clamp(16px,3vw,40px);bottom:clamp(120px,15vh,150px);font-family:var(--mono);font-size:11px;opacity:.6;text-align:right;line-height:1.7}
+.dk-hint .dk-ht{display:none}
+
+.dk-icons{position:absolute;inset:0;z-index:5}
+.dk-file{position:absolute;left:0;top:0;width:92px;display:flex;flex-direction:column;align-items:center;gap:6px;padding:6px 2px;
+  touch-action:pan-y;user-select:none;-webkit-user-select:none;-webkit-touch-callout:none;will-change:transform;cursor:grab}
+.dk-tile{position:relative;width:64px;height:64px;border-radius:15px;display:block;box-shadow:0 2px 4px rgba(0,0,0,.25),0 8px 18px rgba(0,0,0,.25);transition:box-shadow .16s var(--ease),transform .16s var(--ease)}
+.dk-tile svg{width:100%;height:100%;display:block}
+.dk-file.plain .dk-tile,.dk-tile.img{box-shadow:none;filter:drop-shadow(0 6px 10px rgba(0,0,0,.35))}
+.dk-tile.img{display:grid;place-items:center}
+.dk-tile.img img{display:block;max-width:64px;max-height:64px;border:3px solid #fff;border-radius:3px;pointer-events:none}
+.dk-lk{position:absolute;right:-6px;bottom:-6px;width:22px;height:22px;border-radius:50%;background:#fff;display:grid;place-items:center;box-shadow:0 1px 4px rgba(0,0,0,.4)}
+.dk-lk svg{width:12px;height:12px}
+.dk-name{font-size:12px;font-weight:500;line-height:1.25;padding:1px 6px;border-radius:4px;max-width:92px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;text-shadow:0 1px 3px rgba(0,0,0,.7);transition:opacity .2s}
+.dk-file:hover .dk-tile{transform:translateY(-2px)}
+.dk-file.held{cursor:grabbing}
+.dk-file.held .dk-tile{transform:scale(1.07);box-shadow:0 4px 8px rgba(0,0,0,.25),0 22px 40px rgba(0,0,0,.45)}
+.dk-file.held .dk-tile.img,.dk-file.plain.held .dk-tile{box-shadow:none}
+.dk-icons.piled .dk-name{opacity:0}
+.dk-file.held .dk-name,.dk-file:focus-visible .dk-name{background:var(--dk-blue);text-shadow:none}
+.dk-file:focus-visible{outline:none}
+.dk-heap{position:absolute;left:0;top:0;display:inline-flex;align-items:center;gap:6px;padding:4px 10px;border-radius:999px;font-size:12px;font-weight:500;white-space:nowrap;
+  background:rgba(14,18,40,.62);border:1px solid rgba(255,255,255,.2);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);opacity:0;pointer-events:none;transition:opacity .25s;z-index:1}
+.dk-heap b{font-family:var(--mono);font-weight:500;opacity:.7}
+.dk-heap.big{font-size:15px;padding:6px 14px;background:rgba(47,111,228,.55)}
+.dk-icons.sorted .dk-heap.on{opacity:1;pointer-events:auto}
+
+.dk-dock{position:absolute;z-index:20;left:50%;bottom:16px;transform:translateX(-50%);display:flex;align-items:flex-end;gap:8px;padding:8px 10px;border-radius:22px;
+  background:rgba(30,34,52,.42);border:1px solid rgba(255,255,255,.16);backdrop-filter:blur(22px) saturate(1.5);-webkit-backdrop-filter:blur(22px) saturate(1.5)}
+.dk-app{--s:1;position:relative;width:calc(52px*var(--s));height:calc(52px*var(--s));transition:width .09s linear,height .09s linear;display:block;border-radius:12px}
+.dk-app svg{width:100%;height:100%;display:block}
+.dk-app::after{content:attr(data-tip);position:absolute;bottom:calc(100% + 10px);left:50%;transform:translateX(-50%);white-space:nowrap;font-size:12px;padding:3px 9px;border-radius:6px;background:rgba(20,22,34,.82);color:#fff;opacity:0;pointer-events:none;transition:opacity .12s}
+.dk-app:hover::after,.dk-app:focus-visible::after{opacity:1}
+.dk-sep{width:1px;align-self:stretch;margin:4px 2px;background:rgba(255,255,255,.22)}
+
+/* project window (dialog) */
+dialog.dk-pop{border:0;padding:0;background:transparent;max-width:none;max-height:none;width:100%;height:100%;inset:0;color:var(--dk-ink);font-family:var(--sans);line-height:1.5}
+dialog.dk-pop::backdrop{background:rgba(8,10,20,.35);backdrop-filter:blur(3px);-webkit-backdrop-filter:blur(3px)}
+.dk-win{position:absolute;left:50%;top:50%;width:min(980px,calc(100vw - 32px));max-height:min(84vh,780px);transform:translate(-50%,-50%);display:flex;flex-direction:column;
+  background:var(--dk-win);border-radius:12px;overflow:hidden;box-shadow:0 1px 0 rgba(0,0,0,.04),0 24px 60px -24px rgba(30,25,10,.28),0 0 0 1px rgba(0,0,0,.06)}
+.dk-wbar{height:34px;display:flex;align-items:center;gap:8px;padding:0 12px;background:var(--dk-bar);border-bottom:1px solid var(--dk-line);font-size:13px;color:#4b4a46;position:relative;flex:none}
+.dk-dots{display:flex;gap:7px}
+.dk-dots i{width:12px;height:12px;border-radius:50%;background:#febc2e;display:block}
+.dk-dots i:last-child{background:#28c840}
+.dk-close{width:12px;height:12px;border-radius:50%;background:#ff5f57 !important}
+.dk-wbar .dk-t{position:absolute;left:50%;transform:translateX(-50%);white-space:nowrap;max-width:60%;overflow:hidden;text-overflow:ellipsis}
+.dk-scroll{overflow:auto;overscroll-behavior:contain;padding:clamp(20px,3vw,40px)}
+.dk-lead{display:grid;grid-template-columns:160px 1fr;gap:24px;padding-bottom:22px;border-bottom:1px solid var(--dk-line);align-items:start}
+.dk-pic{width:160px;border-radius:10px;overflow:hidden}
+.dk-pic img{width:100%;display:block}
+.dk-pic svg{width:96px;height:96px;display:block}
+.dk-eye{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--dk-muted)}
+.dk-pop h2{font-size:clamp(28px,3.6vw,44px);letter-spacing:-.03em;line-height:1.02;font-weight:600}
+.dk-lead p{margin-top:10px;color:#3d3c39;font-size:17px}
+.dk-grid4{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:24px;padding:22px 0}
+.dk-pop h4{font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--dk-muted);font-weight:500;margin-bottom:8px}
+.dk-pop dl{display:grid;grid-template-columns:auto 1fr;gap:4px 12px;font-size:14px}
+.dk-pop dt{color:var(--dk-muted)}
+.dk-pop dd{font-family:var(--mono);font-size:13px}
+.dk-pop dd.add{color:var(--dk-green)}.dk-pop dd.rem{color:var(--dk-coral)}
+.dk-ul{list-style:none;display:grid;gap:6px;font-size:14px}
+.dk-ul a,.dk-a{color:var(--dk-blue) !important;text-decoration:none;border-bottom:1px solid currentColor;word-break:break-all}
+.dk-mut{color:var(--dk-muted)}
+.dk-rec{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;align-items:start}
+.dk-rec img{width:100%;border-radius:8px;display:block;box-shadow:0 0 0 1px var(--dk-line)}
+.dk-rec img.tall{max-height:420px;width:auto;margin:0 auto}
+.dk-phd{aspect-ratio:4/3;border-radius:8px;display:grid;place-items:center;text-align:center;padding:10px;font-family:var(--mono);font-size:11px;color:var(--dk-muted);border:1px dashed #c9c3b5;background:repeating-linear-gradient(135deg,#f3f0e9 0 10px,#efebe3 10px 20px)}
+.dk-cnote{font-size:14px;color:#9a3a26;background:#f6e3dc;padding:10px 14px;border-radius:8px}
+.dk-facts{display:flex;flex-wrap:wrap;gap:8px 12px;margin-top:14px}
+.dk-plat{display:inline-flex;align-items:center;gap:5px;font-family:var(--mono);font-size:11px;letter-spacing:.04em;padding:3px 8px;border-radius:6px;background:#e3ecfb;color:#24489a;white-space:nowrap}
+.dk-plat.mobile{background:#e2f3e8;color:#1b6b43}
+.dk-plat.both{background:linear-gradient(90deg,#e3ecfb 50%,#e2f3e8 50%);color:#1d3f6e}
+.dk-plat.api,.dk-plat.tool,.dk-plat.desktop{background:var(--dk-paper-2);color:#45443f}
+.dk-tag{display:inline-block;font-family:var(--mono);font-size:10px;letter-spacing:.06em;text-transform:uppercase;padding:2px 6px;border-radius:4px;background:var(--dk-paper-2);color:#5b5a55;margin-left:8px;vertical-align:2px;white-space:nowrap}
+.dk-tag.conf{background:#f6e3dc;color:#9a3a26}
+.dk-chips{display:flex;flex-wrap:wrap;gap:6px}
+.dk-chips span{font-family:var(--mono);font-size:11px;padding:4px 8px;border-radius:6px;background:var(--dk-paper-2);color:#45443f}
+.dk-btn{display:inline-flex;align-items:center;gap:8px;padding:11px 18px;border-radius:999px;font-weight:500;font-size:15px;text-decoration:none;border:1px solid var(--dk-line);background:#fff;color:var(--dk-ink)}
+
+@media (max-width:1240px){.dk-clock{display:none}}
+@media (max-width:1100px){.dk-menu nav .dk-x{display:none}}
+@media (max-width:760px){
+  .dk-menu{gap:12px}
+  .dk-menu nav,.dk-clean,.dk-clock{display:none}
+  .dk-intro{position:relative;left:auto;bottom:auto;max-width:none;padding:calc(var(--grid-h,420px) + 24px) 16px 132px}
+  .dk-intro h1{font-size:44px}
+  .dk-hint{display:none}
+  .dk-file.donly{display:none}
+  .dk-moon{top:calc(var(--grid-h,420px) - 92px);right:10%;width:56px}
+  .dk-dock{gap:6px;padding:7px 8px;border-radius:20px}
+  .dk-app{width:42px;height:42px}
+  .dk-sep{display:none}
+  .dk-lead,.dk-grid4{grid-template-columns:1fr;gap:14px}
+  .dk-pic{width:120px}
+  .dk-rec{grid-template-columns:1fr}
+  .dk-win{max-height:86vh}
+}
+@media (hover:none){.dk-hint .dk-ht{display:inline}.dk-hint .dk-hm{display:none}}
+@media (prefers-reduced-motion:reduce){.dk-stars{animation:none}.dk-file{cursor:pointer}.dk-hint{display:none}}
+html.dk-on .nav{opacity:0;transform:translateY(-24px);visibility:hidden;transition:opacity .25s,transform .35s var(--ease),visibility 0s .35s}
+.nav{transition:opacity .35s var(--ease),transform .45s var(--ease),visibility 0s}
+
+
+/* CH 01b MANIFESTO SHEET */
+.sheet{position:relative;z-index:5;border-radius:28px 28px 0 0;box-shadow:0 -30px 60px -20px rgba(0,0,0,.5)}
+.sheet::before{content:"";position:absolute;top:12px;left:50%;width:44px;height:4px;border-radius:4px;background:rgba(255,255,255,.35);transform:translateX(-50%)}
+.mf{background:var(--ink);padding:88px 0 0;overflow:hidden}
+.mf-grid{display:grid;gap:40px}
+.mf p.big{font-size:clamp(22px,2.7vw,38px);line-height:1.28;letter-spacing:-.015em;font-weight:400;margin-top:20px;max-width:30ch}
+.mf u{text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:5px;text-decoration-color:var(--blue-hi);font-weight:500;color:#fff}
+.idcard{border:1px solid var(--line);border-radius:var(--r);padding:18px;background:linear-gradient(160deg,#151a5e,#0b0d16 70%);max-width:380px;justify-self:end;width:100%}
+.photo{aspect-ratio:4/5;border-radius:14px;border:1px dashed rgba(255,255,255,.28);display:grid;place-items:center;text-align:center;color:var(--muted);margin-bottom:16px;background:repeating-linear-gradient(135deg,rgba(255,255,255,.03) 0 10px,transparent 10px 20px)}
+.idcard dl{display:grid;grid-template-columns:auto 1fr;gap:6px 14px;font-size:14px}
+.idcard dt{color:var(--muted)}
+.marquee{margin-top:72px;border-top:1px solid var(--line);padding:22px 0;overflow:hidden;white-space:nowrap}
+.mq{display:inline-flex;gap:34px;padding-right:34px;animation:mq 46s linear infinite;font-size:clamp(15px,1.6vw,20px);letter-spacing:.06em;text-transform:uppercase;color:#d7dbef}
+.mq span{display:inline-flex;align-items:center;gap:34px}
+.mq span::after{content:"";width:7px;height:7px;background:var(--or);transform:rotate(45deg)}
+@keyframes mq{to{transform:translateX(-50%)}}
+@media (min-width:861px){.mf{padding-top:120px}.mf-grid{grid-template-columns:1.4fr .8fr;align-items:end}}
+html.pinned #manifesto{margin-top:-100vh}
+
+/* shared: illustrations, thumbs, badges */
+.il{display:block;width:100%;height:100%;fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.il .w{stroke:rgba(255,255,255,.72)} .il .d{stroke:rgba(255,255,255,.28)} .il .o{stroke:var(--or);stroke-width:2}
+.il .of{fill:var(--or);stroke:none} .il .wf{fill:rgba(255,255,255,.85);stroke:none} .il .df{fill:rgba(255,255,255,.07)}
+.il text{fill:rgba(255,255,255,.78);stroke:none;font-family:var(--mono);font-size:10px;letter-spacing:.12em}
+.th{position:relative;aspect-ratio:16/10;border-radius:12px;overflow:hidden;border:1px solid var(--line);background:radial-gradient(90% 80% at 50% 60%,#1d2490,#0b0d1c 80%)}
+.th img{display:block;width:100%;height:100%;object-fit:cover;object-position:top}
+.cbadge{position:absolute;left:10px;top:10px;font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;background:rgba(8,9,13,.78);color:var(--or);border:1px solid rgba(255,107,44,.55);border-radius:999px;padding:3px 9px}
+.badges{display:flex;flex-wrap:wrap;gap:6px}
+.badge{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;border:1px solid var(--line);color:#c5c9d8;border-radius:999px;padding:2px 8px}
+.badge.or{border-color:rgba(255,107,44,.55);color:var(--or)}
+.badge.pl{border-color:rgba(124,131,255,.6);color:#b9bdff}
+.more{font-family:var(--mono);font-size:11px;color:var(--or);cursor:help}
+.meta{color:var(--muted);letter-spacing:.06em;text-transform:none;font-size:11.5px}
+.go{display:inline-flex;gap:8px;align-items:center;font-size:14px;font-weight:500;overflow-wrap:anywhere}
+.go[aria-disabled]{opacity:.65;text-decoration:none}
+.own{display:inline-flex;align-items:center;gap:10px;flex-wrap:wrap}
+.own .go{font-size:18px;text-decoration-color:var(--or);text-decoration-thickness:2px;text-underline-offset:5px}
+.own .badge{border-color:var(--or);color:var(--or)}
+
+/* CH 02 HIGHLIGHTS */
+.work{background:var(--ink);padding:110px 0 40px;position:relative;z-index:5}
+.sec-head{display:grid;gap:18px;margin-bottom:48px}
+.sec-head h2{font-size:clamp(34px,5vw,68px);font-weight:400;letter-spacing:-.035em;line-height:1;margin-top:14px}
+.sec-head .note{color:var(--muted);max-width:44ch;font-size:15px}
+@media (min-width:861px){.sec-head{grid-template-columns:1fr auto;align-items:end}}
+.work-grid{display:grid;gap:28px}
+.acc{list-style:none;display:grid;gap:14px}
+.item{border-radius:var(--r);padding:22px 22px 20px;background:var(--ink-2);border:1px solid var(--line);transition:background .4s var(--ease),color .4s var(--ease),opacity .4s,transform .4s var(--ease)}
+.item .top{display:flex;align-items:baseline;gap:18px}
+.item .n{font-family:var(--mono);font-size:13px;color:var(--or)}
+.item h3{font-size:clamp(24px,2.4vw,34px);font-weight:400;letter-spacing:-.02em;line-height:1.1}
+.item p{margin:12px 0 14px;color:#c5c9d8;max-width:52ch}
+.item .badges{margin-bottom:10px}
+.tags{display:flex;flex-wrap:wrap;gap:6px}
+.tags span{font-size:12px;border:1px solid var(--line);border-radius:999px;padding:3px 10px}
+.item .meta{margin-top:12px}
+.item .lk{margin-top:14px}
+.ithumb{margin-top:16px}
+.item.on{background:var(--or);color:var(--or-ink);border-color:transparent}
+.item.on .n{color:var(--or-ink)}
+.item.on p,.item.on .meta{color:#3a1a08}
+.item.on .tags span,.item.on .badge{border-color:rgba(23,10,3,.3);color:var(--or-ink)}
+.item.on .own .go{text-decoration-color:var(--or-ink)}
+.frame{display:none}
+@media (min-width:861px){
+  .work-grid{grid-template-columns:1.05fr .95fr;gap:48px;align-items:start}
+  .acc{gap:18px;padding-bottom:30vh}
+  .item{opacity:.4}
+  .item.on{opacity:1}
+  .ithumb{display:none}
+  .frame{display:block;position:sticky;top:96px;height:calc(100vh - 140px);max-height:720px}
+}
+.fbox{position:relative;height:calc(100% - 22px);border-radius:26px;border:1.5px solid var(--or);overflow:hidden;background:radial-gradient(90% 70% at 50% 60%,#1d2490,#0b0d1c 75%)}
+.fbox .vis{position:absolute;inset:0;display:grid;place-items:center;opacity:0;transform:scale(.96);transition:opacity .5s var(--ease),transform .7s var(--ease)}
+.fbox .vis.on{opacity:1;transform:none}
+.fbox .vis>.il{width:84%;height:auto;max-height:66%}
+.shot{position:relative;width:82%;margin-top:-6%}
+.shot>img{display:block;width:100%;height:auto;border-radius:12px;border:1px solid rgba(255,255,255,.22);box-shadow:0 30px 60px -24px rgba(0,0,0,.7)}
+.shot .ph{position:absolute;right:-5%;bottom:-18%;width:23%;aspect-ratio:390/844;border-radius:16px;overflow:hidden;border:4px solid #0b0d16;box-shadow:0 20px 40px -12px rgba(0,0,0,.7)}
+.shot .ph img{display:block;width:100%;height:100%;object-fit:cover}
+.bignum{position:absolute;top:-.12em;right:.15em;font-size:clamp(90px,10vw,150px);font-weight:300;line-height:1;color:transparent;-webkit-text-stroke:1.5px var(--or);letter-spacing:-.04em;pointer-events:none}
+.cap{position:absolute;left:14px;right:14px;bottom:14px;display:flex;justify-content:space-between;gap:14px;align-items:center;background:rgba(10,12,30,.7);backdrop-filter:blur(10px);border-radius:14px;padding:14px 16px}
+.cap .t{font-size:14px;font-weight:500}
+.cap .mono{color:var(--or);text-align:right}
+.segs{display:flex;gap:6px;margin-top:12px}
+.segs i{flex:1;height:3px;border-radius:3px;background:rgba(255,255,255,.18);transition:background .3s}
+.segs i.on{background:var(--or)}
+.pulse{animation:pulse 2.4s ease-in-out infinite}
+.pulse:nth-of-type(2n){animation-delay:-1.2s}
+@keyframes pulse{50%{opacity:.25}}
+.dash{stroke-dasharray:6 7;animation:dash 6s linear infinite}
+@keyframes dash{to{stroke-dashoffset:-130}}
+
+/* CH 03 WEB + CATALOG */
+.cat{background:var(--ink);padding:90px 0 120px;position:relative;z-index:5}
+.tabs{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
+.tabs button{font:500 14px/1 var(--sans);color:var(--paper);background:var(--ink-2);border:1px solid var(--line);border-radius:999px;padding:11px 16px;cursor:pointer;display:inline-flex;gap:8px;align-items:baseline;transition:background .2s,color .2s,border-color .2s}
+.tabs button:hover{border-color:rgba(255,107,44,.6)}
+.tabs button b{font:500 11px/1 var(--mono);color:var(--or)}
+.tabs button[aria-pressed="true"]{background:var(--or);color:var(--or-ink);border-color:transparent}
+.tabs button[aria-pressed="true"] b{color:var(--or-ink)}
+.fstat{margin-top:14px;color:var(--muted)}
+.grp{margin-top:64px}
+.grp-h{display:flex;align-items:baseline;gap:16px;border-top:1px solid var(--line);padding-top:24px;margin-bottom:24px}
+.grp-h h3{font-size:clamp(26px,3vw,40px);font-weight:400;letter-spacing:-.025em;line-height:1}
+.grp-h .mono{color:var(--or)}
+.vgrid{display:grid;gap:12px;grid-template-columns:repeat(auto-fill,minmax(min(100%,290px),1fr))}
+.vcard{border:1px solid var(--line);border-radius:18px;padding:12px 12px 18px;background:var(--ink-2);display:flex;flex-direction:column;gap:10px;min-width:0}
+.vcard>*:not(.th){margin-inline:6px}
+.vcard header{display:flex;justify-content:space-between;gap:10px;align-items:baseline;margin-top:6px}
+.vcard h4{font-size:19px;font-weight:500;letter-spacing:-.01em;line-height:1.2}
+.vcard .when{color:var(--muted);white-space:nowrap;letter-spacing:.06em}
+.vcard p{color:#c5c9d8;font-size:15px;flex:1}
+.stk{font-family:var(--mono);font-size:11.5px;color:#aab0c8;line-height:1.6;overflow-wrap:anywhere}
+@media (min-width:861px){.vcard.hl{grid-column:span 2;display:grid;grid-template-columns:1.15fr 1fr;column-gap:12px;align-content:start}.vcard.hl .th{grid-row:1 / span 7;align-self:start}.vcard.hl>*:not(.th){margin-inline:8px}}
+.arch-h{color:var(--muted);margin:30px 0 4px}
+.row{display:grid;grid-template-columns:72px minmax(0,1fr);gap:6px 16px;padding:14px 0;border-top:1px solid var(--line);align-items:center}
+.row .mini{grid-row:span 3;align-self:start;width:72px;aspect-ratio:16/10;border-radius:8px;overflow:hidden;border:1px solid var(--line);background:radial-gradient(90% 80% at 50% 60%,#1d2490,#0b0d1c 80%)}
+.row .mini img{display:block;width:100%;height:100%;object-fit:cover}
+.row .mini .il *{vector-effect:non-scaling-stroke}
+.row .nm{font-size:17px;font-weight:500;display:flex;flex-wrap:wrap;gap:6px 10px;align-items:baseline}
+.row .rs{color:#aab0c8;font-size:14px;margin-top:2px}
+.row .lk{display:flex;flex-wrap:wrap;gap:4px 14px;align-items:baseline}
+@media (min-width:861px){.row{grid-template-columns:96px 1.5fr 1fr .9fr;gap:6px 24px}.row .mini{grid-row:auto;width:96px;align-self:center}.row .lk{flex-direction:column;gap:4px}}
+
+/* FILM CHAPTERS (Mobile, AI): pinned decks */
+.film{position:relative;z-index:5;overflow:hidden;padding:100px 0 90px}
+.film .bg1,.film .bg2{position:absolute;inset:0;pointer-events:none}
+.ai{background:#140b06}
+.ai .bg1{background:radial-gradient(70% 60% at 20% 80%,rgba(255,107,44,.35),transparent 70%)}
+.ai .bg2{opacity:0;background:
+  radial-gradient(1.5px 1.5px at 20px 30px,rgba(255,255,255,.55),transparent 2px) 0 0/90px 110px,
+  radial-gradient(1px 1px at 60px 80px,rgba(255,255,255,.4),transparent 2px) 0 0/140px 130px,
+  radial-gradient(80% 70% at 70% 30%,#1c2a8a,#070a1f 75%)}
+.mob{background:#05071a}
+.mob .bg1{background:
+  radial-gradient(60% 60% at 85% 20%,rgba(73,80,242,.5),transparent 70%),
+  repeating-linear-gradient(90deg,rgba(255,255,255,.045) 0 1px,transparent 1px 80px),
+  repeating-linear-gradient(0deg,rgba(255,255,255,.045) 0 1px,transparent 1px 80px)}
+.mob .bg2{opacity:0;background:radial-gradient(60% 60% at 15% 85%,rgba(255,107,44,.28),transparent 70%)}
+.film-grid{position:relative;display:grid;gap:36px}
+.deck-vp{min-width:0}
+.film h2{font-size:clamp(34px,4.6vw,64px);font-weight:400;letter-spacing:-.035em;line-height:1;margin:16px 0 14px}
+.film .sub{color:#d3d6e6;max-width:36ch}
+.gauge{display:flex;gap:18px;align-items:flex-end;margin-top:36px}
+.rail{position:relative;width:4px;height:150px;border-radius:4px;background:rgba(255,255,255,.18);flex:none}
+.rail i{position:absolute;inset:0;border-radius:4px;background:linear-gradient(var(--blue-hi),var(--or));transform-origin:bottom;transform:scaleY(.25)}
+.rail::after{content:"";position:absolute;left:50%;bottom:-8px;width:16px;height:16px;border-radius:50%;background:var(--or);transform:translateX(-50%)}
+.step-n{font-size:clamp(70px,8vw,120px);font-weight:300;line-height:.9;letter-spacing:-.04em}
+.step-w{color:var(--or);margin-top:10px}
+.deck{display:grid;gap:14px;grid-template-columns:repeat(auto-fill,minmax(min(100%,280px),1fr))}
+.dcard{border-radius:24px;border:1px solid rgba(255,255,255,.18);background:rgba(12,14,30,.55);backdrop-filter:blur(8px);padding:14px;display:flex;flex-direction:column;transition:opacity .4s,transform .5s var(--ease),border-color .4s;min-width:0}
+.dcard .art{position:relative;border-radius:16px;aspect-ratio:4/3;background:radial-gradient(80% 80% at 50% 60%,#262f9a,#0c0f26);display:grid;place-items:center;margin-bottom:16px;overflow:hidden}
+.dcard .art>svg{width:70%;height:auto}
+.dcard .hd{display:flex;gap:14px;align-items:baseline;padding:0 6px}
+.dcard .hd span{font-size:28px;font-weight:300;color:rgba(255,255,255,.4)}
+.dcard h3{font-size:21px;font-weight:500;letter-spacing:-.01em;line-height:1.15}
+.dcard p{padding:8px 6px 6px;color:#c9cde0;font-size:15px}
+.pcard .art{aspect-ratio:4/5}
+.pcard .art>.il{width:100%;height:auto}
+.pcard .badges,.pcard .stk,.pcard .lk{padding:6px 6px 0}
+.phone{height:88%;aspect-ratio:9/19.5;border-radius:24px;border:5px solid #0b0d16;outline:1px solid rgba(255,255,255,.28);overflow:hidden;background:#0a0a0a;box-shadow:0 30px 50px -20px rgba(0,0,0,.8)}
+.phone img{display:block;width:100%;height:100%;object-fit:cover;object-position:top}
+.pcard .th.wide{width:92%}
+.dcount{margin-top:20px;color:#c9cde0}
+@media (min-width:861px){.film-grid{grid-template-columns:.8fr 1.6fr;align-items:center}}
+html.pinned .film{height:100vh;padding:0;display:flex;align-items:center}
+html.pinned .deck-vp{clip-path:inset(-60px -100vw -60px 0)}
+.gauge,.dcount{display:none}
+html.pinned .gauge{display:flex}html.pinned .dcount{display:block}
+html.pinned .deck{display:flex;gap:18px;width:max-content}
+html.pinned .dcard{width:min(360px,30vw);opacity:.45;transform:scale(.94)}
+html.pinned .pcard{width:min(300px,22vw)}
+html.pinned .pcard .art{aspect-ratio:auto;height:min(46vh,400px)}
+html.pinned .dcard.on{opacity:1;transform:none;border-color:var(--or)}
+
+/* CH 05 SKILLS */
+.skills{position:relative;z-index:5;background:var(--ink);padding:110px 0 110px;overflow:hidden}
+.skills::before{content:"";position:absolute;inset:0;pointer-events:none;background:
+  radial-gradient(50% 40% at 90% 0%,rgba(73,80,242,.35),transparent 70%),
+  repeating-linear-gradient(90deg,rgba(255,255,255,.035) 0 1px,transparent 1px 80px)}
+.sk-grid{position:relative;display:grid;gap:14px;grid-template-columns:repeat(auto-fill,minmax(min(100%,330px),1fr))}
+.scat{border:1px solid var(--line);border-radius:var(--r);padding:20px;background:rgba(18,20,25,.88)}
+.scat h3{display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin-bottom:16px;font-weight:400}
+.scat h3 .cnt{color:var(--muted)}
+.pills{list-style:none;display:flex;flex-wrap:wrap;gap:6px}
+.pills li{display:inline-flex;align-items:center;gap:8px;font-size:14px;border:1px solid var(--line);border-radius:999px;padding:4px 5px 4px 12px;background:rgba(73,80,242,calc(var(--k) * .6));max-width:100%}
+.pills li span{overflow-wrap:anywhere}
+.pills b{flex:none;font:500 11px/1 var(--mono);min-width:22px;height:22px;padding:0 6px;border-radius:999px;display:grid;place-items:center;background:rgba(255,255,255,.12)}
+.pills li.top b{background:var(--or);color:var(--or-ink)}
+.speak{position:relative;margin-top:64px;display:grid;gap:22px}
+.speak h3{font-weight:400}
+.spk-list{display:grid;gap:14px}
+@media (min-width:861px){.spk-list{grid-template-columns:repeat(3,1fr);gap:24px}}
+.spk{border-top:1px solid var(--line);padding-top:16px}
+.spk strong{display:block;font-size:clamp(24px,2.6vw,34px);font-weight:400;letter-spacing:-.02em}
+.spk .mono{color:var(--or);margin-top:4px}
+
+/* CH 07 COMMITS + CH 08 CODE */
+.commits,.code{position:relative;z-index:5;background:var(--ink);padding:100px 0;overflow:hidden}
+.glow{position:absolute;inset:0;pointer-events:none;opacity:.35;background:radial-gradient(80% 60% at 60% 110%,rgba(73,80,242,.75),transparent 70%)}
+.code .glow{background:radial-gradient(70% 60% at 30% -10%,rgba(255,107,44,.45),transparent 70%)}
+.c-grid{position:relative;display:grid;gap:40px}
+.counter{display:flex;gap:22px;align-items:flex-end}
+.thermo{position:relative;width:6px;height:clamp(140px,22vh,220px);border-radius:6px;background:rgba(255,255,255,.14);flex:none;margin-bottom:24px}
+.thermo i{position:absolute;inset:0;border-radius:6px;background:linear-gradient(var(--or),var(--blue-hi));transform-origin:bottom}
+.thermo::after{content:"";position:absolute;left:50%;bottom:-12px;width:22px;height:22px;border-radius:50%;background:var(--blue-hi);transform:translateX(-50%)}
+.thermo small{position:absolute;left:16px;font-family:var(--mono);font-size:10px;color:var(--muted);white-space:nowrap}
+.big-n{font-size:clamp(84px,14vw,210px);font-weight:300;line-height:.85;letter-spacing:-.05em;font-variant-numeric:tabular-nums}
+.status{display:flex;gap:10px;align-items:center;margin-top:16px;color:#d7dbef}
+.status::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--or);flex:none}
+.chart{display:flex;align-items:flex-end;gap:3px;height:clamp(180px,34vh,320px);border-bottom:1px solid var(--line);position:relative}
+.chart i{flex:1;background:var(--blue-hi);border-radius:3px 3px 0 0;transform-origin:bottom;min-width:0;position:relative}
+.chart i.on{background:var(--or)}
+.ticks{display:flex;justify-content:space-between;margin-top:10px;color:var(--muted)}
+.peak{position:absolute;top:-4px;color:var(--or);white-space:nowrap;transform:translateX(-100%)}
+.c-note{margin-top:22px;color:var(--muted);font-size:14px;max-width:52ch}
+@media (min-width:861px){.c-grid{grid-template-columns:.95fr 1.05fr;align-items:center}}
+html.pinned .commits,html.pinned .code{height:100vh;padding:0;display:flex;align-items:center}
+.lc{display:grid;gap:10px;margin-top:26px}
+.lc .n2{font-size:clamp(52px,7vw,104px);font-weight:300;line-height:.9;letter-spacing:-.045em;font-variant-numeric:tabular-nums;overflow-wrap:anywhere}
+.lc .rem{color:var(--or)}
+.lc .mono{color:var(--muted);margin-top:4px}
+.tiles{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:26px}
+.tile{border:1px solid var(--line);border-radius:16px;padding:12px 14px;background:rgba(18,20,25,.7);min-width:0}
+.tile b{display:block;font-size:clamp(22px,2.2vw,30px);font-weight:400;letter-spacing:-.02em;line-height:1.1;font-variant-numeric:tabular-nums}
+.tile .mono{color:var(--muted);display:block;margin-top:4px}
+.tile.wide{grid-column:1/-1}
+.tile.wide small{display:block;color:#c5c9d8;font-size:13px;margin-top:4px}
+.mchart{position:relative;height:clamp(220px,46vh,420px);display:grid}
+.mchart .half{display:flex;gap:3px}
+.mchart .up{align-items:flex-end;border-bottom:1px solid rgba(255,255,255,.4)}
+.mchart .dn{align-items:flex-start}
+.mchart i{flex:1;min-width:0}
+.mchart .up i{background:var(--blue-hi);border-radius:3px 3px 0 0;transform-origin:bottom}
+.mchart .dn i{background:var(--or);border-radius:0 0 3px 3px;transform-origin:top}
+.mchart .up i.on{background:#fff}
+.mlab{display:flex;justify-content:space-between;color:var(--muted);margin-bottom:8px}
+.mlab span:first-child{color:#b9bdff}.mlab span:last-child{color:var(--or)}
+
+/* BREAKDOWN SHEET (slides over the pinned code chapter) */
+.bd{background:#0d0f16;padding:88px 0 110px}
+.bd-grid{display:grid;gap:56px}
+@media (min-width:861px){.bd-grid{grid-template-columns:1.35fr .9fr;gap:64px}}
+.bd h3.sub{font-size:clamp(26px,3vw,40px);font-weight:400;letter-spacing:-.025em;margin:14px 0 24px}
+.prow{display:grid;gap:7px;padding:12px 0;border-top:1px solid var(--line)}
+.prow .nm{display:flex;justify-content:space-between;gap:12px;font-weight:500;font-size:15px}
+.prow .nm .mono{color:var(--muted);letter-spacing:.04em;text-transform:none;white-space:nowrap}
+.bars{display:grid;gap:3px}
+.bar{height:6px;border-radius:3px;background:rgba(255,255,255,.06);overflow:hidden}
+.bar i{display:block;height:100%;min-width:2px;border-radius:3px;background:var(--blue-hi);transform-origin:left}
+.bar.r i{background:var(--or)}
+.prow .meta{overflow-wrap:anywhere}
+html.pinned #breakdown{margin-top:-100vh}
+
+/* CH 09 CONTACT */
+.contact{background:var(--blue);padding:90px 0 0;overflow:hidden;color:#fff}
+.contact .wrap{position:relative}
+.ct-grid{display:grid;gap:36px;position:relative}
+.contact h2{font-size:clamp(30px,4vw,54px);font-weight:400;letter-spacing:-.03em;line-height:1.08;margin:16px 0 30px;max-width:20ch}
+.contact .label{color:#fff}
+.contact .label::before{background:#fff}
+.cl{list-style:none;max-width:620px}
+.cl li{border-top:1px solid rgba(255,255,255,.28)}
+.cl li:last-child{border-bottom:1px solid rgba(255,255,255,.28)}
+.cl a{display:grid;grid-template-columns:84px 1fr auto;gap:12px;align-items:center;padding:16px 4px;text-decoration:none;transition:background .2s,padding .2s var(--ease)}
+.cl a:hover{background:rgba(255,255,255,.08);padding-left:12px}
+.cl .k{opacity:.75}
+.cl .v{font-size:17px;font-weight:500;overflow-wrap:anywhere}
+.cl [data-todo] .v{opacity:.8;font-style:italic;font-weight:400}
+.ct-cta{display:flex;flex-wrap:wrap;gap:14px;align-items:center;margin-top:26px}
+.ct-cta small{opacity:.8}
+.seal{justify-self:center;width:min(220px,60vw)}
+.seal svg{width:100%;height:auto;display:block}
+.seal .ring{transform-origin:110px 110px;animation:spin 22s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+@media (min-width:600px){.cl a{grid-template-columns:110px 1fr auto}}
+@media (min-width:861px){.ct-grid{grid-template-columns:1.4fr .6fr;align-items:center}.seal{justify-self:end}}
+.bye{display:flex;justify-content:center;font-size:15.6vw;font-weight:500;letter-spacing:-.05em;line-height:.8;margin-top:60px;white-space:nowrap;overflow:hidden;padding-top:.04em}
+.bye span{display:inline-block}
+.foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;padding:18px 0 22px;border-top:1px solid rgba(255,255,255,.25);opacity:.85}
+
+@media (prefers-reduced-motion:reduce){
+  .mq,.seal .ring,.pulse,.dash{animation:none}
+  *{transition-duration:.01ms !important}
+}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <a class="brand" href="#story" data-ta="aria-label:nav.home" aria-label="Michel Modesto, back to top">
+    <span class="mark" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24"><path d="M3 18V6l4.5 7L12 6l4.5 7L21 6v12" fill="none" stroke="#2b31d4" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/></svg></span>
+    <small data-th="nav.brand">Full stack developer.<br>São Paulo, Brazil.<br>Open to relocate.</small>
+  </a>
+  <div class="nav-r">
+    <nav class="links" data-ta="aria-label:nav.aria" aria-label="Chapters">
+      <a href="#manifesto" data-t="nav.who">Who</a><a href="#work" data-t="nav.work">Work</a><a href="#web" data-t="nav.web">Web</a><a href="#mobile" data-t="nav.mobile">Mobile</a><a href="#skills" data-t="nav.skills">Skills</a><a href="#ai" data-t="nav.ai">AI</a><a href="#code" data-t="nav.code">Code</a><a href="#contact" data-t="nav.contact">Contact</a>
+    </nav>
+    <div class="lang" role="group" data-ta="aria-label:nav.lang" aria-label="Language">
+      <button type="button" data-lang="pt" lang="pt-BR" aria-label="Português">PT</button><button type="button" data-lang="en" lang="en" aria-label="English">EN</button><button type="button" data-lang="es" lang="es" aria-label="Español">ES</button>
+    </div>
+    <a class="pill" href="#contact" data-t="nav.cta">Get in touch</a>
+  </div>
+</header>
+
+<main>
+<!-- CHAPTER 01 — DESKTOP (the home screen: throw the files around, open a window, or use the menu bar) -->
+<section class="dk" id="story" aria-labelledby="h-hero">
+  <div class="dk-stars" aria-hidden="true"></div><div class="dk-stars b" aria-hidden="true"></div>
+  <div class="dk-moon" aria-hidden="true"></div>
+  <svg class="dk-hills" viewBox="0 0 1440 400" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0 210 C 220 150 420 170 640 205 S 1100 150 1440 175 V400 H0Z" fill="#1d2a52" opacity=".9"/>
+    <path d="M0 270 C 260 220 520 250 760 280 S 1180 230 1440 255 V400 H0Z" fill="#141d3a"/>
+    <path d="M0 330 C 300 300 640 320 900 340 S 1260 310 1440 325 V400 H0Z" fill="#0c1228"/>
+  </svg>
+
+  <div class="dk-menu">
+    <svg class="dk-mark" viewBox="0 0 16 16" aria-hidden="true"><rect x="1" y="1" width="14" height="14" rx="4" fill="#fff"/><path d="M4 11V5l2.2 3L8 5l1.8 3L12 5v6" fill="none" stroke="#121d45" stroke-width="1.4" stroke-linejoin="round"/></svg>
+    <strong>Michel Modesto</strong>
+    <nav data-ta="aria-label:dk.sections" aria-label="Sections"><a href="#work" data-t="dk.m.work">Work</a><a href="#web" data-t="dk.m.archive">Archive</a><a class="dk-x" href="#mobile" data-t="dk.m.mobile">Mobile</a><a href="#skills" data-t="dk.m.skills">Skills</a><a href="#commits" data-t="dk.m.commits">Commits</a><a class="dk-x" href="#code" data-t="dk.m.code">Code</a><a href="#contact" data-t="dk.m.contact">Contact</a></nav>
+    <div class="dk-right">
+      <button class="dk-clean" type="button" id="dk-sort" aria-pressed="false" data-t="dk.sort"></button>
+      <button class="dk-clean" type="button" id="dk-tidy" data-t="dk.clean"></button>
+      <button class="dk-clean" type="button" id="dk-pile" data-t="dk.pile"></button>
+      <div class="dk-lang" role="group" data-ta="aria-label:nav.lang" aria-label="Language"><button type="button" data-lang="pt" lang="pt-BR" aria-label="Português">PT</button><button type="button" data-lang="en" lang="en" aria-label="English">EN</button><button type="button" data-lang="es" lang="es" aria-label="Español">ES</button></div>
+      <span class="dk-clock" id="dk-clock"></span>
+    </div>
+  </div>
+
+  <div class="dk-intro">
+    <div class="dk-kick" data-t="dk.kick"></div>
+    <h1 id="h-hero">Michel Modesto</h1>
+    <p data-t="dk.intro"></p>
+    <div class="dk-stat" id="dk-stat" data-t="dk.stat"></div>
+  </div>
+  <div class="dk-hint" aria-hidden="true"><span class="dk-hm" data-th="dk.hintM"></span><span class="dk-ht" data-t="dk.hintT"></span></div>
+
+  <div class="dk-icons" id="dk-icons" role="list"></div>
+
+  <nav class="dk-dock" id="dk-dock" data-ta="aria-label:dk.dock" aria-label="Dock">
+    <a class="dk-app" href="#web" data-icon="finder" data-ta="aria-label:dk.dock.finder;data-tip:dk.dock.finder"></a>
+    <button class="dk-app" type="button" data-icon="notes" data-open="cv" data-ta="aria-label:dk.dock.notes;data-tip:dk.dock.notes"></button>
+    <a class="dk-app" href="#commits" data-icon="term" data-ta="aria-label:dk.dock.term;data-tip:dk.dock.term"></a>
+    <a class="dk-app" href="#skills" data-icon="settings" data-ta="aria-label:dk.dock.skills;data-tip:dk.dock.skills"></a>
+    <span class="dk-sep"></span>
+    <a class="dk-app" href="mailto:michel.mx10@gmail.com" data-icon="mail" data-ta="aria-label:dk.dock.mail;data-tip:dk.dock.mail"></a>
+    <a class="dk-app" href="https://www.linkedin.com/in/michelmodesto/" target="_blank" rel="noopener" data-icon="li" aria-label="LinkedIn" data-tip="LinkedIn"></a>
+  </nav>
+  <div class="dk-shade" aria-hidden="true"></div>
+</section>
+
+<!-- CHAPTER 01b — MANIFESTO SHEET (slides over the pinned desktop) -->
+<section class="sheet mf" id="manifesto" aria-labelledby="h-mf">
+  <div class="wrap mf-grid">
+    <div>
+      <h2 class="label mono" id="h-mf" data-t="mf.label">Who I am</h2>
+      <p class="big" id="mfp"></p>
+    </div>
+    <aside class="idcard" data-ta="aria-label:id.aria">
+      <div class="photo" data-todo="portrait-photo"><span class="mono" data-th="id.photo"></span></div>
+      <dl>
+        <dt data-t="id.name"></dt><dd>Michel Modesto</dd>
+        <dt data-t="id.role"></dt><dd data-t="id.roleV"></dd>
+        <dt data-t="id.base"></dt><dd data-t="id.baseV"></dd>
+        <dt data-t="id.next"></dt><dd data-t="id.nextV"></dd>
+        <dt data-t="id.speaks"></dt><dd id="speaksV"></dd>
+      </dl>
+    </aside>
+  </div>
+  <div class="marquee" id="marquee"><div class="mq" aria-hidden="true"></div></div>
+</section>
+
+<!-- CHAPTER 02 — HIGHLIGHTS (sticky frame follows the scroll) -->
+<section class="work" id="work" aria-labelledby="h-work">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><div class="label mono" data-t="w.label">Chapter 02 — Highlights</div><h2 id="h-work" data-th="w.h2"></h2></div>
+      <p class="note" id="wnote" data-t="w.note"></p>
+    </div>
+    <div class="work-grid">
+      <ol class="acc" id="hl"></ol>
+      <div class="frame" aria-hidden="true">
+        <div class="fbox" id="fbox">
+          <div class="bignum">01</div>
+          <div class="cap"><span class="t" id="capt"></span><span class="mono" id="capname"></span></div>
+        </div>
+        <div class="segs" id="segs"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CHAPTER 03 — WEB: every project, by platform (filter) -->
+<section class="cat" id="web" aria-labelledby="h-web">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><div class="label mono" data-t="c.label">Chapter 03 — Web</div><h2 id="h-web" data-th="c.h2"></h2></div>
+      <p class="note" id="cnote" data-t="c.note"></p>
+    </div>
+    <div class="tabs" id="tabs" role="group" data-ta="aria-label:c.filter"></div>
+    <p class="fstat mono" id="fstat" data-t="c.showing" aria-live="polite"></p>
+    <div id="groups"></div>
+  </div>
+</section>
+
+<!-- CHAPTER 04 — MOBILE (pinned deck of phones) -->
+<section class="film mob" id="mobile" aria-labelledby="h-mob">
+  <div class="bg1"></div><div class="bg2"></div>
+  <div class="wrap film-grid">
+    <div>
+      <div class="label mono" data-t="mb.label">Chapter 04 — Mobile</div>
+      <h2 id="h-mob" data-th="mb.h2"></h2>
+      <p class="sub" data-t="mb.sub"></p>
+      <div class="gauge" aria-hidden="true"><div class="rail"><i></i></div><div><div class="step-n">01</div><div class="step-w mono"></div></div></div>
+    </div>
+    <div class="deck-vp">
+      <div class="deck" id="mdeck"></div>
+      <div class="dcount mono"><span class="dnum">01</span> / <span id="mtotal"></span></div>
+    </div>
+  </div>
+</section>
+
+<!-- CHAPTER 05 — SKILLS -->
+<section class="skills" id="skills" aria-labelledby="h-sk">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><div class="label mono" data-t="sk.label">Chapter 05 — Skills</div><h2 id="h-sk" data-th="sk.h2"></h2></div>
+      <p class="note" id="sknote" data-t="sk.note"></p>
+    </div>
+    <div class="sk-grid" id="skgrid"></div>
+    <div class="speak">
+      <h3 class="label mono" data-t="sk.speak">Languages I speak</h3>
+      <div class="spk-list" id="spk"></div>
+    </div>
+  </div>
+</section>
+
+<!-- CHAPTER 06 — HOW I WORK WITH AI (pinned deck, warm to cool) -->
+<section class="film ai" id="ai" aria-labelledby="h-ai">
+  <div class="bg1"></div><div class="bg2"></div>
+  <div class="wrap film-grid">
+    <div>
+      <div class="label mono" data-t="ai.label">Chapter 06 — How I work with AI</div>
+      <h2 id="h-ai" data-th="ai.h2"></h2>
+      <p class="sub" data-t="ai.sub"></p>
+      <div class="gauge" aria-hidden="true"><div class="rail"><i></i></div><div><div class="step-n">01</div><div class="step-w mono"></div></div></div>
+    </div>
+    <div class="deck-vp">
+      <div class="deck">
+        <article class="dcard on"><div class="art" aria-hidden="true"><svg viewBox="0 0 200 150" fill="none" stroke-width="1.6"><rect x="55" y="18" width="90" height="114" rx="8" stroke="rgba(255,255,255,.7)"/><g stroke="rgba(255,255,255,.4)"><path d="M88 44h44M88 68h44M88 92h30"/></g><g stroke="#ff6b2c" stroke-width="2"><path d="M68 44l5 5 8-10M68 68l5 5 8-10"/><rect x="67" y="86" width="12" height="12" rx="2"/></g></svg></div>
+          <div class="hd"><span>01</span><h3 data-t="ai.t1"></h3></div><p data-t="ai.p1"></p></article>
+        <article class="dcard"><div class="art" aria-hidden="true"><svg viewBox="0 0 200 150" fill="none" stroke-width="1.6"><g stroke="rgba(255,255,255,.45)"><path d="M100 75 50 35M100 75l50-40M100 75l-50 40M100 75l50 40"/></g><circle cx="100" cy="75" r="16" stroke="#ff6b2c" stroke-width="2"/><g stroke="rgba(255,255,255,.75)"><circle cx="50" cy="35" r="10"/><circle cx="150" cy="35" r="10"/><circle cx="50" cy="115" r="10"/><circle cx="150" cy="115" r="10"/></g></svg></div>
+          <div class="hd"><span>02</span><h3 data-t="ai.t2"></h3></div><p data-t="ai.p2"></p></article>
+        <article class="dcard"><div class="art" aria-hidden="true"><svg viewBox="0 0 200 150" fill="none" stroke-width="1.6"><rect x="30" y="25" width="140" height="100" rx="8" stroke="rgba(255,255,255,.7)"/><path d="M30 45h140" stroke="rgba(255,255,255,.4)"/><g fill="rgba(255,255,255,.5)"><circle cx="42" cy="35" r="3"/><circle cx="52" cy="35" r="3"/></g><path d="M78 86l16 16 30-34" stroke="#ff6b2c" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div class="hd"><span>03</span><h3 data-t="ai.t3"></h3></div><p data-t="ai.p3"></p></article>
+        <article class="dcard"><div class="art" aria-hidden="true"><svg viewBox="0 0 200 150" fill="none" stroke-width="1.6"><g stroke="rgba(255,255,255,.6)"><path d="M100 20l70 35-70 35-70-35Z"/><path d="M30 55v40l70 35 70-35V55M100 90v40"/></g><circle class="pulse" cx="80" cy="58" r="4" fill="#ff6b2c"/><circle class="pulse" cx="122" cy="52" r="4" fill="#fff"/></svg></div>
+          <div class="hd"><span>04</span><h3 data-t="ai.t4"></h3></div><p data-t="ai.p4"></p></article>
+      </div>
+      <div class="dcount mono"><span class="dnum">01</span> / 04</div>
+    </div>
+  </div>
+</section>
+
+<!-- CHAPTER 07 — COMMITS (pinned counter, real monthly numbers) -->
+<section class="commits" id="commits" aria-labelledby="h-commits">
+  <div class="glow"></div>
+  <div class="wrap c-grid">
+    <div>
+      <h2 class="label mono" id="h-commits" data-t="cm.label">Chapter 07 — Commits</h2>
+      <div class="counter" style="margin-top:26px">
+        <div class="thermo" aria-hidden="true"><i id="therm"></i><small style="top:-4px" id="thtop"></small><small style="bottom:-2px">0</small></div>
+        <div>
+          <div class="big-n" id="cnum"></div>
+          <div class="status mono"><span id="cmonth"></span></div>
+        </div>
+      </div>
+      <p class="c-note" id="cmnote" data-t="cm.note"></p>
+    </div>
+    <div>
+      <div class="chart" id="chart" role="img" data-ta="aria-label:cm.aria"><span class="peak mono" id="peak"></span></div>
+      <div class="ticks mono" id="ticks" aria-hidden="true"></div>
+    </div>
+  </div>
+</section>
+
+<!-- CHAPTER 08 — CODE (pinned: lines added and removed, month by month) -->
+<section class="code" id="code" aria-labelledby="h-code">
+  <div class="glow"></div>
+  <div class="wrap c-grid">
+    <div>
+      <h2 class="label mono" id="h-code" data-t="cd.label">Chapter 08 — Code</h2>
+      <div class="lc">
+        <div><div class="n2" id="ladd"></div><div class="mono" data-t="cd.added"></div></div>
+        <div><div class="n2 rem" id="lrem"></div><div class="mono" data-t="cd.removed"></div></div>
+      </div>
+      <div class="status mono"><span id="lmonth"></span></div>
+      <div class="tiles" id="tiles"></div>
+    </div>
+    <div>
+      <div class="mlab mono" aria-hidden="true"><span data-t="cd.added"></span><span data-t="cd.removed"></span></div>
+      <div class="mchart" id="mchart" role="img" data-ta="aria-label:cd.aria"><div class="half up"></div><div class="half dn"></div></div>
+      <div class="ticks mono" id="ticks2" aria-hidden="true"></div>
+      <p class="c-note" data-t="cd.note"></p>
+    </div>
+  </div>
+</section>
+
+<!-- CHAPTER 08b — BREAKDOWN SHEET (slides over the pinned code chapter) -->
+<section class="sheet bd" id="breakdown" aria-labelledby="h-bd">
+  <div class="wrap bd-grid">
+    <div>
+      <div class="label mono" data-t="bd.label">Lines by project</div>
+      <h3 class="sub" id="h-bd" data-t="bd.h">Where the code went.</h3>
+      <div id="prows"></div>
+    </div>
+    <div>
+      <div class="label mono" data-t="bd.lang">Languages, by lines added</div>
+      <h3 class="sub" data-t="bd.langh"></h3>
+      <div id="lrows"></div>
+    </div>
+  </div>
+</section>
+
+<!-- CHAPTER 09 — CONTACT -->
+<section class="sheet contact" id="contact" aria-labelledby="h-ct">
+  <div class="wrap">
+    <div class="ct-grid">
+      <div>
+        <div class="label mono" data-t="ct.label">Chapter 09 — Contact</div>
+        <h2 id="h-ct" data-t="ct.h2">Hiring in Europe, Australia and North America? The door is open.</h2>
+        <ul class="cl">
+          <li class="rv"><a href="mailto:michel.mx10@gmail.com"><span class="k mono">E-mail</span><span class="v">michel.mx10@gmail.com</span><span aria-hidden="true">→</span></a></li>
+          <li class="rv"><a href="https://wa.me/5511932004481" target="_blank" rel="noopener"><span class="k mono">WhatsApp</span><span class="v">+55 11 93200-4481</span><span aria-hidden="true">→</span></a></li>
+          <li class="rv"><a href="tel:+5511932004481"><span class="k mono" data-t="ct.phone">Phone</span><span class="v">+55 11 93200-4481</span><span aria-hidden="true">→</span></a></li>
+          <li class="rv"><a href="https://www.linkedin.com/in/michelmodesto/" target="_blank" rel="noopener"><span class="k mono">LinkedIn</span><span class="v">linkedin.com/in/michelmodesto</span><span aria-hidden="true">→</span></a></li>
+          <li class="rv"><a href="#" data-todo="cv-pdf"><span class="k mono" data-t="ct.cv">CV (PDF)</span><span class="v" data-t="ct.todo">to be added</span><span aria-hidden="true">→</span></a></li>
+          <li class="rv"><a href="https://github.com/MichelModesto" target="_blank" rel="noopener"><span class="k mono">GitHub</span><span class="v">github.com/MichelModesto</span><span aria-hidden="true">→</span></a></li>
+        </ul>
+        <div class="ct-cta"><a class="pill" href="mailto:michel.mx10@gmail.com" data-t="ct.write">Write to me</a><small data-t="ct.tz">São Paulo, Brazil · UTC−3</small></div>
+      </div>
+      <div class="seal" aria-hidden="true">
+        <svg viewBox="0 0 220 220">
+          <defs><path id="circ" d="M110 110m-82 0a82 82 0 1 1 164 0a82 82 0 1 1-164 0"/></defs>
+          <circle cx="110" cy="110" r="106" fill="#fff"/>
+          <g class="ring"><text font-family="JetBrains Mono" font-size="11" letter-spacing="1" fill="#2b31d4"><textPath href="#circ" textLength="508" lengthAdjust="spacing" data-t="ct.seal">OPEN TO RELOCATE · EUROPE · AUSTRALIA · NORTH AMERICA ·</textPath></text></g>
+          <circle cx="110" cy="110" r="56" fill="#2b31d4"/>
+          <path d="M80 128V92l15 21 15-21 15 21 15-21v36" fill="none" stroke="#fff" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+  <div class="bye" id="bye" aria-hidden="true"></div>
+  <div class="wrap foot mono"><span>Michel Modesto · 2026</span><span data-t="ct.foot">Full stack developer · São Paulo</span></div>
+</section>
+</main>
+
+<dialog class="dk-pop" id="dk-pop" aria-labelledby="dk-pop-title">
+  <div class="dk-win" id="dk-win">
+    <div class="dk-wbar"><div class="dk-dots"><button class="dk-close" type="button" id="dk-close" data-ta="aria-label:dk.close" aria-label="Close window"></button><i></i><i></i></div><span class="dk-t" id="dk-bar"></span></div>
+    <div class="dk-scroll" id="dk-body" data-lenis-prevent></div>
+  </div>
+</dialog>
+
+<script src="dados/dados.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+<script>
+(() => {
+  const D = window.PORTFOLIO;
+  if (!D) { console.error('dados/dados.js did not load'); return; }
+  const P = D.projetos.projetos, S = D.estatisticas, K = D.skills;
+  const TOT = S[S.usar], PRE = S.antes_de_2024_10, MONTHS = S.por_mes;
+  const byId = Object.fromEntries(P.map(p => [p.id, p]));
+  const $ = (s, r = document) => r.querySelector(s), $$ = (s, r = document) => [...r.querySelectorAll(s)];
+  const esc = s => String(s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]);
+  const pad = n => String(n).padStart(2, '0');
+  const V = o => ` data-v='${esc(JSON.stringify(o))}'`;
+
+  // self-checks: the monthly series must add up to the published clean totals
+  const sum = k => PRE[k] + MONTHS.reduce((s, m) => s + m[k], 0);
+  ['commits', 'linhas_adicionadas', 'linhas_removidas'].forEach(k => { if (sum(k) !== TOT[k]) console.error('stats mismatch', k, sum(k), TOT[k]); });
+
+  // ---------- UI copy in three languages (project summaries come from the data) ----------
+  const I18N = {
+    en: {
+      'doc.title': 'Michel Modesto — Full Stack Developer',
+      'doc.desc': 'Michel Modesto, full stack developer in São Paulo, open to relocating to Europe, Australia and North America. A portfolio told in nine chapters.',
+      'nav.who': 'Who', 'nav.work': 'Work', 'nav.web': 'Web', 'nav.mobile': 'Mobile', 'nav.skills': 'Skills', 'nav.ai': 'AI', 'nav.code': 'Code', 'nav.contact': 'Contact',
+      'nav.cta': 'Get in touch', 'nav.brand': 'Full stack developer.<br>São Paulo, Brazil.<br>Open to relocate.', 'nav.aria': 'Chapters', 'nav.lang': 'Language', 'nav.home': 'Michel Modesto, back to top',
+      'dk.m.work': 'Work', 'dk.m.archive': 'Archive', 'dk.m.mobile': 'Mobile', 'dk.m.skills': 'Skills', 'dk.m.commits': 'Commits', 'dk.m.code': 'Code', 'dk.m.contact': 'Contact', 'dk.sections': 'Sections',
+      'dk.sort': 'Sort by platform', 'dk.clean': 'Clean up', 'dk.pile': 'Pile up', 'dk.kick': 'Full Stack Developer · São Paulo, Brazil',
+      'dk.intro': 'I build ERPs, APIs, mobile apps and 3D in the browser. Since June 2024 I lead development of the corporate systems at Flexaseal Brasil. Open to relocating to Europe, Australia and North America.',
+      'dk.stat': '{c} commits · {d} active days · {p} projects', 'dk.hintM': 'Drag and throw the files.<br>Sort them by platform in the menu bar.', 'dk.hintT': 'Tap to open · hold to drag',
+      'dk.files': 'Project files', 'dk.open': 'Open {x}', 'dk.goto': '{x} — go to section', 'dk.docs': 'Documents', 'dk.dock': 'Dock',
+      'dk.dock.finder': 'Finder — archive', 'dk.dock.notes': 'Notes — CV', 'dk.dock.term': 'Terminal — commits', 'dk.dock.skills': 'Settings — skills', 'dk.dock.mail': 'Mail',
+      'dk.close': 'Close window', 'dk.t.show': 'Showcase', 'dk.d.built': 'Built with', 'dk.d.links': 'Links', 'dk.d.gallery': 'Screens', 'dk.d.period': 'period', 'dk.d.nolink': 'No public link',
+      'dk.d.conf': 'Confidential: no screenshots. The image is an illustration.', 'dk.d.rec': 'screen recording — to be captured',
+      'dk.cv.bar': 'Notes — CV', 'dk.cv.eye': 'Notes<br>CV summary', 'dk.cv.role': 'Full Stack Developer · São Paulo, Brazil · open to relocating to Europe, Australia and North America.',
+      'dk.cv.nowH': 'Now', 'dk.cv.now': 'Since June 2024, lead developer of the corporate systems at Flexaseal Brasil: ERP portal, REST API, mobile apps and websites.',
+      'dk.cv.stackH': 'Main stack', 'dk.cv.filesH': 'Files', 'dk.cv.all': 'All skills →', 'dk.cv.pdf': 'Download CV (PDF)',
+      'mf.label': 'Who I am',
+      'mf.text': 'Most portfolios list tools. I’d rather show what runs. Since June 2024 I have led development at <u>Flexaseal Brasil</u>: the ERP portal the company runs on, its REST API and its mobile apps, plus <u>a sister portal for R4Mi</u>. After hours I keep shipping: <u>a trip planner on its own domain</u>, browser games, a deal bot and a 3D office where <u>my AI agents work</u>. I’m in São Paulo and <u>ready to relocate to Europe, Australia and North America.</u>',
+      'id.aria': 'Profile card', 'id.photo': 'Portrait —<br>to be captured', 'id.name': 'Name', 'id.role': 'Role', 'id.roleV': 'Full Stack Developer', 'id.base': 'Base', 'id.baseV': 'São Paulo, Brazil', 'id.next': 'Next', 'id.nextV': 'Europe, Australia and North America', 'id.speaks': 'Speaks',
+      'w.label': 'Chapter 02 — Highlights', 'w.h2': 'Things I built<br>and shipped.', 'w.note': '{n} highlights, from the day job to side projects. The full catalog, by platform, comes next.',
+      'pl.web': 'Web', 'pl.web+mobile': 'Web + mobile', 'pl.mobile': 'Mobile', 'pl.api': 'API', 'pl.tool/automation': 'Tools & automation', 'pl.desktop': 'Desktop',
+      'tp.empresa': 'Day job', 'tp.cliente': 'Client work', 'tp.pessoal': 'Personal', 'tp.estudo': 'Study',
+      'b.conf': 'Confidential', 'b.hl': 'Highlight',
+      'lk.local': 'Runs locally — no public demo', 'lk.private': 'Private repository', 'lk.repo': 'Code on GitHub', 'lk.own': 'Own domain',
+      'm.commit': 'commit', 'm.commits': 'commits', 'm.lines': 'lines', 'm.files': 'files',
+      'c.label': 'Chapter 03 — Web', 'c.h2': 'Every project,<br>by platform.', 'c.note': '{w} of {t} projects run in the browser. Filter by platform — the mobile apps also get their own chapter next.',
+      'c.filter': 'Filter by platform', 'c.all': 'All', 'c.archive': 'Archive', 'c.showing': 'Showing {n} of {t} projects',
+      'mb.label': 'Chapter 04 — Mobile', 'mb.h2': 'In your<br>pocket.', 'mb.sub': 'iOS and Android apps built with Expo and React Native, from industrial field work to trip planning.',
+      'sk.label': 'Chapter 05 — Skills', 'sk.h2': 'Every stack,<br>counted.', 'sk.note': '{n} technologies from {t} projects, grouped by area. The number shows how many projects use each one.', 'sk.speak': 'Languages I speak',
+      'cat.linguagens': 'Languages', 'cat.front-end web': 'Web front end', 'cat.mobile': 'Mobile', 'cat.back-end': 'Back end', 'cat.banco': 'Databases', 'cat.infra/deploy': 'Infra & deploy', 'cat.IA': 'AI', 'cat.3D/gráficos': '3D, maps & charts', 'cat.testes': 'Testing', 'cat.ferramentas': 'Tooling',
+      'lv.nativo': 'Native', 'lv.intermediário': 'Intermediate', 'lv.básico': 'Basic',
+      'ln.Português': 'Portuguese', 'ln.Espanhol': 'Spanish', 'ln.Inglês': 'English',
+      'ai.label': 'Chapter 06 — How I work with AI', 'ai.h2': 'Agents type.<br>I decide.', 'ai.sub': 'AI writes a lot of my code. The plan, the review and the result stay mine.',
+      'ai.w1': 'Plan', 'ai.w2': 'Delegate', 'ai.w3': 'Verify', 'ai.w4': 'Observe',
+      'ai.t1': 'Plan before code', 'ai.p1': 'Every big change starts as a written plan, and the plan goes through a devil’s-advocate review agent before anything runs.',
+      'ai.t2': 'A team of agents', 'ai.p2': 'Claude Code agents, skills and rules from one private library, shared by every repository I work on.',
+      'ai.t3': 'Verify, then say done', 'ai.p3': 'A headless browser loads the result first: zero console errors, screenshots at desktop and phone width, then a review.',
+      'ai.t4': 'Watch them work', 'ai.p4': 'Michel Code House shows every agent live, in a 3D office with one room per repository.',
+      'cm.label': 'Chapter 07 — Commits', 'cm.note': 'My own commits in {p} projects, month by month. Merges and automated commits excluded. The counter starts at the {b} commits made before October 2024.',
+      'cm.month': '{m} · {n} this month', 'cm.all': '{a} — {b} · {n} months', 'cm.aria': 'Monthly commits from {a} to {b}: {t} in total, peak of {p} in {pm}.',
+      'cd.label': 'Chapter 08 — Code', 'cd.added': 'lines added', 'cd.removed': 'lines removed', 'cd.files': 'files touched', 'cd.days': 'active days', 'cd.commits': 'commits', 'cd.big': 'Biggest commit', 'cd.withc': 'projects with my commits',
+      'cd.note': 'Counted with git numstat. Lockfiles, build output, generated data and binaries excluded.', 'cd.aria': 'Lines added and removed per month, from {a} to {b}.',
+      'bd.label': 'Lines by project', 'bd.h': 'Where the code went.', 'bd.lang': 'Languages, by lines added', 'bd.langh': 'What it’s written in.', 'bd.more': '+{n} more',
+      'ct.label': 'Chapter 09 — Contact', 'ct.h2': 'Hiring in Europe, Australia and North America? The door is open.', 'ct.todo': 'to be added', 'ct.cv': 'CV (PDF)', 'ct.phone': 'Phone', 'ct.write': 'Write to me',
+      'ct.tz': 'São Paulo, Brazil · UTC−3', 'ct.foot': 'Full stack developer · São Paulo', 'ct.bye': 'LET’S BUILD', 'ct.seal': 'OPEN TO RELOCATE · EUROPE · AUSTRALIA · NORTH AMERICA ·',
+      'x.Outros': 'Others', 'x.Texto': 'Plain text', 'x.Geração de imagem por IA': 'AI image generation'
+    },
+    pt: {
+      'doc.title': 'Michel Modesto — Desenvolvedor Full Stack',
+      'doc.desc': 'Michel Modesto, desenvolvedor full stack em São Paulo, aberto a mudar para a Europa, Austrália e América do Norte. Um portfólio em nove capítulos.',
+      'nav.who': 'Quem', 'nav.work': 'Projetos', 'nav.web': 'Web', 'nav.mobile': 'Mobile', 'nav.skills': 'Skills', 'nav.ai': 'IA', 'nav.code': 'Código', 'nav.contact': 'Contato',
+      'nav.cta': 'Fale comigo', 'nav.brand': 'Desenvolvedor full stack.<br>São Paulo, Brasil.<br>Aberto a mudança.', 'nav.aria': 'Capítulos', 'nav.lang': 'Idioma', 'nav.home': 'Michel Modesto, voltar ao topo',
+      'dk.m.work': 'Trabalhos', 'dk.m.archive': 'Arquivo', 'dk.m.mobile': 'Mobile', 'dk.m.skills': 'Habilidades', 'dk.m.commits': 'Commits', 'dk.m.code': 'Código', 'dk.m.contact': 'Contato', 'dk.sections': 'Seções',
+      'dk.sort': 'Agrupar por plataforma', 'dk.clean': 'Organizar', 'dk.pile': 'Empilhar', 'dk.kick': 'Desenvolvedor Full Stack · São Paulo, Brasil',
+      'dk.intro': 'Construo ERPs, APIs, apps mobile e 3D no navegador. Desde junho de 2024 lidero o desenvolvimento dos sistemas corporativos da Flexaseal Brasil. Aberto a me mudar para Europa, Austrália e América do Norte.',
+      'dk.stat': '{c} commits · {d} dias ativos · {p} projetos', 'dk.hintM': 'Arraste e arremesse os arquivos.<br>Agrupe por plataforma na barra de menu.', 'dk.hintT': 'Toque para abrir · segure para arrastar',
+      'dk.files': 'Arquivos de projetos', 'dk.open': 'Abrir {x}', 'dk.goto': '{x} — ir para a seção', 'dk.docs': 'Documentos', 'dk.dock': 'Dock',
+      'dk.dock.finder': 'Finder — arquivo', 'dk.dock.notes': 'Notas — CV', 'dk.dock.term': 'Terminal — commits', 'dk.dock.skills': 'Ajustes — habilidades', 'dk.dock.mail': 'Mail',
+      'dk.close': 'Fechar janela', 'dk.t.show': 'Vitrine', 'dk.d.built': 'Feito com', 'dk.d.links': 'Links', 'dk.d.gallery': 'Telas', 'dk.d.period': 'período', 'dk.d.nolink': 'Sem link público',
+      'dk.d.conf': 'Confidencial: sem prints. A imagem é uma ilustração.', 'dk.d.rec': 'gravação de tela — a capturar',
+      'dk.cv.bar': 'Notas — CV', 'dk.cv.eye': 'Notas<br>Resumo do CV', 'dk.cv.role': 'Desenvolvedor Full Stack · São Paulo, Brasil · aberto a me mudar para Europa, Austrália e América do Norte.',
+      'dk.cv.nowH': 'Agora', 'dk.cv.now': 'Desde junho de 2024, desenvolvedor líder dos sistemas corporativos da Flexaseal Brasil: portal ERP, API REST, apps mobile e sites.',
+      'dk.cv.stackH': 'Stack principal', 'dk.cv.filesH': 'Arquivos', 'dk.cv.all': 'Todas as habilidades →', 'dk.cv.pdf': 'Baixar CV (PDF)',
+      'mf.label': 'Quem sou',
+      'mf.text': 'A maioria dos portfólios lista ferramentas. Prefiro mostrar o que está rodando. Desde junho de 2024 lidero o desenvolvimento na <u>Flexaseal Brasil</u>: o portal ERP em que a empresa roda, a API REST e os apps mobile, além de <u>um portal irmão para a R4Mi</u>. Fora do expediente sigo entregando: <u>um planejador de viagens com domínio próprio</u>, jogos de navegador, um bot de ofertas e um escritório 3D onde <u>meus agentes de IA trabalham</u>. Estou em São Paulo e <u>pronto para me mudar para a Europa, Austrália e América do Norte.</u>',
+      'id.aria': 'Cartão de perfil', 'id.photo': 'Retrato —<br>a fotografar', 'id.name': 'Nome', 'id.role': 'Função', 'id.roleV': 'Desenvolvedor Full Stack', 'id.base': 'Base', 'id.baseV': 'São Paulo, Brasil', 'id.next': 'Próximo', 'id.nextV': 'Europa, Austrália e América do Norte', 'id.speaks': 'Idiomas',
+      'w.label': 'Capítulo 02 — Destaques', 'w.h2': 'Coisas que construí<br>e coloquei no ar.', 'w.note': '{n} destaques, do trabalho na empresa aos projetos pessoais. O catálogo completo, por plataforma, vem em seguida.',
+      'pl.web': 'Web', 'pl.web+mobile': 'Web + mobile', 'pl.mobile': 'Mobile', 'pl.api': 'API', 'pl.tool/automation': 'Ferramentas e automação', 'pl.desktop': 'Desktop',
+      'tp.empresa': 'Empresa', 'tp.cliente': 'Cliente', 'tp.pessoal': 'Pessoal', 'tp.estudo': 'Estudo',
+      'b.conf': 'Confidencial', 'b.hl': 'Destaque',
+      'lk.local': 'Roda local — sem demo pública', 'lk.private': 'Repositório privado', 'lk.repo': 'Código no GitHub', 'lk.own': 'Domínio próprio',
+      'm.commit': 'commit', 'm.commits': 'commits', 'm.lines': 'linhas', 'm.files': 'arquivos',
+      'c.label': 'Capítulo 03 — Web', 'c.h2': 'Todos os projetos,<br>por plataforma.', 'c.note': '{w} de {t} projetos rodam no navegador. Filtre por plataforma — os apps mobile também ganham um capítulo próprio logo depois.',
+      'c.filter': 'Filtrar por plataforma', 'c.all': 'Todos', 'c.archive': 'Arquivo', 'c.showing': 'Mostrando {n} de {t} projetos',
+      'mb.label': 'Capítulo 04 — Mobile', 'mb.h2': 'No seu<br>bolso.', 'mb.sub': 'Apps para iOS e Android com Expo e React Native, do trabalho de campo na indústria ao planejamento de viagens.',
+      'sk.label': 'Capítulo 05 — Skills', 'sk.h2': 'Cada stack,<br>contada.', 'sk.note': '{n} tecnologias em {t} projetos, agrupadas por área. O número mostra em quantos projetos cada uma aparece.', 'sk.speak': 'Idiomas que falo',
+      'cat.linguagens': 'Linguagens', 'cat.front-end web': 'Front-end web', 'cat.mobile': 'Mobile', 'cat.back-end': 'Back-end', 'cat.banco': 'Bancos de dados', 'cat.infra/deploy': 'Infra e deploy', 'cat.IA': 'IA', 'cat.3D/gráficos': '3D, mapas e gráficos', 'cat.testes': 'Testes', 'cat.ferramentas': 'Ferramentas',
+      'lv.nativo': 'Nativo', 'lv.intermediário': 'Intermediário', 'lv.básico': 'Básico',
+      'ln.Português': 'Português', 'ln.Espanhol': 'Espanhol', 'ln.Inglês': 'Inglês',
+      'ai.label': 'Capítulo 06 — Como trabalho com IA', 'ai.h2': 'Os agentes digitam.<br>Eu decido.', 'ai.sub': 'A IA escreve boa parte do meu código. O plano, a revisão e o resultado continuam meus.',
+      'ai.w1': 'Planejar', 'ai.w2': 'Delegar', 'ai.w3': 'Verificar', 'ai.w4': 'Observar',
+      'ai.t1': 'Plano antes do código', 'ai.p1': 'Toda mudança grande começa como um plano escrito, e o plano passa por um agente revisor, advogado do diabo, antes de qualquer execução.',
+      'ai.t2': 'Uma equipe de agentes', 'ai.p2': 'Agentes, skills e regras do Claude Code numa biblioteca privada, usada por todos os meus repositórios.',
+      'ai.t3': 'Verificar, depois dizer pronto', 'ai.p3': 'Um navegador headless carrega o resultado primeiro: zero erro de console, screenshots em desktop e celular, depois a revisão.',
+      'ai.t4': 'Ver os agentes trabalhando', 'ai.p4': 'O Michel Code House mostra cada agente ao vivo, num escritório 3D com uma sala por repositório.',
+      'cm.label': 'Capítulo 07 — Commits', 'cm.note': 'Meus commits em {p} projetos, mês a mês. Sem merges e sem commits automáticos. O contador começa nos {b} commits anteriores a outubro de 2024.',
+      'cm.month': '{m} · {n} neste mês', 'cm.all': '{a} — {b} · {n} meses', 'cm.aria': 'Commits por mês de {a} a {b}: {t} no total, pico de {p} em {pm}.',
+      'cd.label': 'Capítulo 08 — Código', 'cd.added': 'linhas adicionadas', 'cd.removed': 'linhas removidas', 'cd.files': 'arquivos tocados', 'cd.days': 'dias ativos', 'cd.commits': 'commits', 'cd.big': 'Maior commit', 'cd.withc': 'projetos com commits meus',
+      'cd.note': 'Contado com git numstat. Sem lockfiles, saída de build, dados gerados e binários.', 'cd.aria': 'Linhas adicionadas e removidas por mês, de {a} a {b}.',
+      'bd.label': 'Linhas por projeto', 'bd.h': 'Para onde foi o código.', 'bd.lang': 'Linguagens, por linhas adicionadas', 'bd.langh': 'Em que está escrito.', 'bd.more': '+{n} outras',
+      'ct.label': 'Capítulo 09 — Contato', 'ct.h2': 'Contratando na Europa, Austrália e América do Norte? A porta está aberta.', 'ct.todo': 'a adicionar', 'ct.cv': 'CV (PDF)', 'ct.phone': 'Telefone', 'ct.write': 'Escreva para mim',
+      'ct.tz': 'São Paulo, Brasil · UTC−3', 'ct.foot': 'Desenvolvedor full stack · São Paulo', 'ct.bye': 'VAMOS CRIAR', 'ct.seal': 'ABERTO A MUDANÇA · EUROPA · AUSTRÁLIA · AMÉRICA DO NORTE ·'
+    },
+    es: {
+      'doc.title': 'Michel Modesto — Desarrollador Full Stack',
+      'doc.desc': 'Michel Modesto, desarrollador full stack en São Paulo, dispuesto a mudarse a Europa, Australia y Norteamérica. Un portafolio en nueve capítulos.',
+      'nav.who': 'Quién', 'nav.work': 'Proyectos', 'nav.web': 'Web', 'nav.mobile': 'Móvil', 'nav.skills': 'Skills', 'nav.ai': 'IA', 'nav.code': 'Código', 'nav.contact': 'Contacto',
+      'nav.cta': 'Escríbeme', 'nav.brand': 'Desarrollador full stack.<br>São Paulo, Brasil.<br>Dispuesto a mudarme.', 'nav.aria': 'Capítulos', 'nav.lang': 'Idioma', 'nav.home': 'Michel Modesto, volver arriba',
+      'dk.m.work': 'Proyectos', 'dk.m.archive': 'Archivo', 'dk.m.mobile': 'Móvil', 'dk.m.skills': 'Habilidades', 'dk.m.commits': 'Commits', 'dk.m.code': 'Código', 'dk.m.contact': 'Contacto', 'dk.sections': 'Secciones',
+      'dk.sort': 'Agrupar por plataforma', 'dk.clean': 'Ordenar', 'dk.pile': 'Apilar', 'dk.kick': 'Desarrollador Full Stack · São Paulo, Brasil',
+      'dk.intro': 'Construyo ERPs, APIs, apps móviles y 3D en el navegador. Desde junio de 2024 lidero el desarrollo de los sistemas corporativos de Flexaseal Brasil. Abierto a mudarme a Europa, Australia y Norteamérica.',
+      'dk.stat': '{c} commits · {d} días activos · {p} proyectos', 'dk.hintM': 'Arrastra y lanza los archivos.<br>Agrúpalos por plataforma en la barra de menú.', 'dk.hintT': 'Toca para abrir · mantén pulsado para arrastrar',
+      'dk.files': 'Archivos de proyectos', 'dk.open': 'Abrir {x}', 'dk.goto': '{x} — ir a la sección', 'dk.docs': 'Documentos', 'dk.dock': 'Dock',
+      'dk.dock.finder': 'Finder — archivo', 'dk.dock.notes': 'Notas — CV', 'dk.dock.term': 'Terminal — commits', 'dk.dock.skills': 'Ajustes — habilidades', 'dk.dock.mail': 'Correo',
+      'dk.close': 'Cerrar ventana', 'dk.t.show': 'Vitrina', 'dk.d.built': 'Hecho con', 'dk.d.links': 'Enlaces', 'dk.d.gallery': 'Pantallas', 'dk.d.period': 'período', 'dk.d.nolink': 'Sin enlace público',
+      'dk.d.conf': 'Confidencial: sin capturas. La imagen es una ilustración.', 'dk.d.rec': 'grabación de pantalla — por capturar',
+      'dk.cv.bar': 'Notas — CV', 'dk.cv.eye': 'Notas<br>Resumen del CV', 'dk.cv.role': 'Desarrollador Full Stack · São Paulo, Brasil · abierto a mudarme a Europa, Australia y Norteamérica.',
+      'dk.cv.nowH': 'Ahora', 'dk.cv.now': 'Desde junio de 2024, desarrollador líder de los sistemas corporativos de Flexaseal Brasil: portal ERP, API REST, apps móviles y sitios web.',
+      'dk.cv.stackH': 'Stack principal', 'dk.cv.filesH': 'Archivos', 'dk.cv.all': 'Todas las habilidades →', 'dk.cv.pdf': 'Descargar CV (PDF)',
+      'mf.label': 'Quién soy',
+      'mf.text': 'La mayoría de los portafolios enumera herramientas. Prefiero mostrar lo que funciona. Desde junio de 2024 lidero el desarrollo en <u>Flexaseal Brasil</u>: el portal ERP con el que opera la empresa, su API REST y sus apps móviles, además de <u>un portal hermano para R4Mi</u>. Fuera del horario sigo publicando: <u>un planificador de viajes con dominio propio</u>, juegos de navegador, un bot de ofertas y una oficina 3D donde <u>trabajan mis agentes de IA</u>. Estoy en São Paulo y <u>listo para mudarme a Europa, Australia y Norteamérica.</u>',
+      'id.aria': 'Tarjeta de perfil', 'id.photo': 'Retrato —<br>por tomar', 'id.name': 'Nombre', 'id.role': 'Rol', 'id.roleV': 'Desarrollador Full Stack', 'id.base': 'Base', 'id.baseV': 'São Paulo, Brasil', 'id.next': 'Próximo', 'id.nextV': 'Europa, Australia y Norteamérica', 'id.speaks': 'Idiomas',
+      'w.label': 'Capítulo 02 — Destacados', 'w.h2': 'Cosas que construí<br>y publiqué.', 'w.note': '{n} destacados, del trabajo en la empresa a proyectos personales. A continuación, el catálogo completo por plataforma.',
+      'pl.web': 'Web', 'pl.web+mobile': 'Web + móvil', 'pl.mobile': 'Móvil', 'pl.api': 'API', 'pl.tool/automation': 'Herramientas y automatización', 'pl.desktop': 'Escritorio',
+      'tp.empresa': 'Empresa', 'tp.cliente': 'Cliente', 'tp.pessoal': 'Personal', 'tp.estudo': 'Estudio',
+      'b.conf': 'Confidencial', 'b.hl': 'Destacado',
+      'lk.local': 'Corre en local — sin demo pública', 'lk.private': 'Repositorio privado', 'lk.repo': 'Código en GitHub', 'lk.own': 'Dominio propio',
+      'm.commit': 'commit', 'm.commits': 'commits', 'm.lines': 'líneas', 'm.files': 'archivos',
+      'c.label': 'Capítulo 03 — Web', 'c.h2': 'Todos los proyectos,<br>por plataforma.', 'c.note': '{w} de {t} proyectos funcionan en el navegador. Filtra por plataforma — las apps móviles también tienen su propio capítulo a continuación.',
+      'c.filter': 'Filtrar por plataforma', 'c.all': 'Todos', 'c.archive': 'Archivo', 'c.showing': 'Mostrando {n} de {t} proyectos',
+      'mb.label': 'Capítulo 04 — Móvil', 'mb.h2': 'En tu<br>bolsillo.', 'mb.sub': 'Apps para iOS y Android con Expo y React Native, del trabajo de campo en la industria a la planificación de viajes.',
+      'sk.label': 'Capítulo 05 — Skills', 'sk.h2': 'Cada stack,<br>contado.', 'sk.note': '{n} tecnologías en {t} proyectos, agrupadas por área. El número indica en cuántos proyectos aparece cada una.', 'sk.speak': 'Idiomas que hablo',
+      'cat.linguagens': 'Lenguajes', 'cat.front-end web': 'Front-end web', 'cat.mobile': 'Móvil', 'cat.back-end': 'Back-end', 'cat.banco': 'Bases de datos', 'cat.infra/deploy': 'Infra y deploy', 'cat.IA': 'IA', 'cat.3D/gráficos': '3D, mapas y gráficos', 'cat.testes': 'Pruebas', 'cat.ferramentas': 'Herramientas',
+      'lv.nativo': 'Nativo', 'lv.intermediário': 'Intermedio', 'lv.básico': 'Básico',
+      'ln.Português': 'Portugués', 'ln.Espanhol': 'Español', 'ln.Inglês': 'Inglés',
+      'ai.label': 'Capítulo 06 — Cómo trabajo con IA', 'ai.h2': 'Los agentes escriben.<br>Yo decido.', 'ai.sub': 'La IA escribe gran parte de mi código. El plan, la revisión y el resultado siguen siendo míos.',
+      'ai.w1': 'Planificar', 'ai.w2': 'Delegar', 'ai.w3': 'Verificar', 'ai.w4': 'Observar',
+      'ai.t1': 'Plan antes del código', 'ai.p1': 'Todo cambio grande empieza como un plan escrito, y el plan pasa por un agente revisor, abogado del diablo, antes de ejecutar nada.',
+      'ai.t2': 'Un equipo de agentes', 'ai.p2': 'Agentes, skills y reglas de Claude Code en una biblioteca privada, compartida por todos mis repositorios.',
+      'ai.t3': 'Verificar y luego decir listo', 'ai.p3': 'Un navegador headless carga primero el resultado: cero errores de consola, capturas en escritorio y móvil, y después la revisión.',
+      'ai.t4': 'Verlos trabajar', 'ai.p4': 'Michel Code House muestra a cada agente en vivo, en una oficina 3D con una sala por repositorio.',
+      'cm.label': 'Capítulo 07 — Commits', 'cm.note': 'Mis commits en {p} proyectos, mes a mes. Sin merges ni commits automáticos. El contador empieza en los {b} commits anteriores a octubre de 2024.',
+      'cm.month': '{m} · {n} este mes', 'cm.all': '{a} — {b} · {n} meses', 'cm.aria': 'Commits por mes de {a} a {b}: {t} en total, pico de {p} en {pm}.',
+      'cd.label': 'Capítulo 08 — Código', 'cd.added': 'líneas añadidas', 'cd.removed': 'líneas eliminadas', 'cd.files': 'archivos modificados', 'cd.days': 'días activos', 'cd.commits': 'commits', 'cd.big': 'Mayor commit', 'cd.withc': 'proyectos con mis commits',
+      'cd.note': 'Contado con git numstat. Sin lockfiles, salida de build, datos generados ni binarios.', 'cd.aria': 'Líneas añadidas y eliminadas por mes, de {a} a {b}.',
+      'bd.label': 'Líneas por proyecto', 'bd.h': 'Adónde fue el código.', 'bd.lang': 'Lenguajes, por líneas añadidas', 'bd.langh': 'En qué está escrito.', 'bd.more': '+{n} más',
+      'ct.label': 'Capítulo 09 — Contacto', 'ct.h2': '¿Contratas en Europa, Australia y Norteamérica? La puerta está abierta.', 'ct.todo': 'por añadir', 'ct.cv': 'CV (PDF)', 'ct.phone': 'Teléfono', 'ct.write': 'Escríbeme',
+      'ct.tz': 'São Paulo, Brasil · UTC−3', 'ct.foot': 'Desarrollador full stack · São Paulo', 'ct.bye': 'CONSTRUYAMOS', 'ct.seal': 'ABIERTO A MUDARME · EUROPA · AUSTRALIA · NORTEAMÉRICA ·',
+      'x.Outros': 'Otros', 'x.Geração de imagem por IA': 'Generación de imágenes con IA'
+    }
+  };
+  const LOCALE = { pt: 'pt-BR', en: 'en-US', es: 'es-ES' }, HTMLLANG = { pt: 'pt-BR', en: 'en', es: 'es' };
+  let L = 'en';
+  const t = k => I18N[L][k] ?? I18N.en[k] ?? k;
+  const fmt = n => Number(n).toLocaleString(LOCALE[L], { maximumFractionDigits: 1 });
+  const fmtM = (m, short) => { const parts = new Intl.DateTimeFormat(LOCALE[L], { month: 'short', year: short ? '2-digit' : 'numeric' }).formatToParts(new Date(m + '-15T12:00:00'));
+    const get = ty => parts.find(x => x.type === ty).value; return get('month').replace(/\.$/, '') + ' ' + get('year'); };
+  const fmtD = d => new Date(d + 'T12:00:00').toLocaleDateString(LOCALE[L], { day: 'numeric', month: 'short', year: 'numeric' });
+  const fill = (s, v) => s.replace(/\{(\w+)\}/g, (_, k) => { const x = v[k];
+    return typeof x === 'number' ? fmt(x) : /^\d{4}-\d{2}$/.test(x) ? fmtM(x) : /^\d{4}-\d{2}-\d{2}$/.test(x) ? fmtD(x) : x; });
+
+  // ---------- helpers built on the data ----------
+  const rank = {};
+  Object.values(K.categorias).forEach(l => l.forEach(s => { rank[s.nome] = Math.max(rank[s.nome] || 0, s.projetos); }));
+  const sortStack = st => [...st].sort((a, b) => (rank[b] || 0) - (rank[a] || 0));
+  const tok = pl => pl === 'web+mobile' ? ['web', 'mobile'] : pl === 'tool/automation' ? ['tool'] : [pl];
+  const stackLine = (p, n) => { const s = sortStack(p.stack); if (!s.length) return '';
+    const shown = s.slice(0, n).map(esc).join(' · ');
+    return `<div class="stk">${shown}${s.length > n ? ` <span class="more" title="${esc(s.slice(n).join(', '))}">+${s.length - n}</span>` : ''}</div>`; };
+  const when = p => { const a = p.git.primeiro_commit, b = p.git.ultimo_commit; if (!a) return '';
+    const ma = a.slice(0, 7), mb = b.slice(0, 7);
+    return `<span class="when mono"><span data-m="${ma}" data-short></span>${ma !== mb ? ` – <span data-m="${mb}" data-short></span>` : ''}</span>`; };
+  // projects with 0 commits under Michel's identities show no numbers at all
+  const meta = p => p.git.commits ? `<div class="meta mono"><span data-n="${p.git.commits}"></span> <span data-t="${p.git.commits === 1 ? 'm.commit' : 'm.commits'}"></span> · +<span data-n="${p.git.linhas_adicionadas}"></span> <span data-t="m.lines"></span></div>` : '';
+  const badges = (p, extra = '') => `<div class="badges"><span class="badge pl" data-pl="${p.plataforma}"></span><span class="badge" data-t="tp.${p.tipo}"></span>${p.confidencial ? '<span class="badge or" data-t="b.conf"></span>' : ''}${extra}</div>`;
+  function link(p) {
+    const main = p.url_principal && !/^https?:\/\/(127\.|localhost)/.test(p.url_principal) ? p.url_principal : null;
+    if (main) {
+      const u = new URL(main), label = (u.host + u.pathname).replace(/^www\./, '').replace(/\/$/, '');
+      const a = `<a class="go" href="${esc(main)}" target="_blank" rel="noopener">${esc(label)} →</a>`;
+      const own = p.urls.some(x => x.url === main && /próprio/.test(x.rotulo || ''));
+      return `<div class="lk">${own ? `<span class="own">${a}<span class="badge" data-t="lk.own"></span></span>` : a}</div>`;
+    }
+    const repo = p.repos.find(r => r.publico && r.url);
+    if (repo) return `<div class="lk"><a class="go" href="${esc(repo.url)}" target="_blank" rel="noopener"><span data-t="lk.repo"></span> →</a></div>`;
+    return `<div class="lk"><span class="go" aria-disabled="true" data-t="${p.urls.some(x => x.tipo === 'local') ? 'lk.local' : 'lk.private'}"></span></div>`;
+  }
+
+  // ---------- illustrated thumbnails (for projects without a public screenshot) ----------
+  const gear = (x, y, r, teeth) => { const c = 2 * Math.PI * r / teeth; return `<circle class="w" cx="${x}" cy="${y}" r="${r}" stroke-width="9" stroke-dasharray="${(c * .45).toFixed(2)} ${(c * .55).toFixed(2)}"/><circle class="w" cx="${x}" cy="${y}" r="${r - 8}"/><circle class="o" cx="${x}" cy="${y}" r="${(r / 3.4).toFixed(1)}"/>`; };
+  const shirt = (x, y, c) => `<path class="${c}" d="M${x} ${y + 6}l10-6h4c2 4 10 4 12 0h4l10 6-4 10-6-2v26H${x + 10}v-26l-6 2Z"/>`;
+  const browser = `<rect class="w" x="34" y="22" width="252" height="156" rx="10"/><path class="d" d="M34 42h252"/><g class="wf"><circle cx="46" cy="32" r="2.5"/><circle cx="55" cy="32" r="2.5"/><circle cx="64" cy="32" r="2.5"/></g>`;
+  const ILL = {
+    'flexaseal-portal': `<rect class="w" x="36" y="26" width="248" height="148" rx="10"/><path class="d" d="M36 48h248M98 48v126"/><circle class="of" cx="50" cy="37" r="3"/><circle class="wf" cx="60" cy="37" r="3"/><path class="d" d="M50 64h34M50 78h28M50 92h34M50 106h24M50 120h30"/><path class="o" d="M50 64h34"/><rect class="w" x="110" y="60" width="78" height="50" rx="6"/><path class="o" d="M118 100l14-14 12 8 16-20 20 12"/><rect class="w" x="196" y="60" width="76" height="50" rx="6"/><g class="wf"><rect x="206" y="88" width="9" height="14" rx="1"/><rect x="221" y="80" width="9" height="22" rx="1"/><rect x="236" y="72" width="9" height="30" rx="1"/><rect x="251" y="84" width="9" height="18" rx="1"/></g><path class="d" d="M110 124h162M110 138h162M110 152h162M110 166h162M150 118v50M206 118v50M244 118v50"/>`,
+    'r4mi-portal': `${gear(92, 84, 30, 10)}<path class="w" d="M170 96a34 34 0 0 1 68 0"/><path class="o" d="M204 96l18-20"/><circle class="wf" cx="204" cy="96" r="3"/><path class="d" d="M250 96a20 20 0 0 1 40 0"/><path class="w" d="M270 96l-8-14"/><path class="w" d="M30 152h264"/><g class="d"><circle cx="52" cy="162" r="8"/><circle cx="112" cy="162" r="8"/><circle cx="172" cy="162" r="8"/><circle cx="232" cy="162" r="8"/><circle cx="282" cy="162" r="8"/></g><rect class="w" x="60" y="130" width="26" height="22" rx="3"/><rect class="o" x="140" y="130" width="26" height="22" rx="3"/><rect class="w" x="220" y="130" width="26" height="22" rx="3"/>`,
+    'api-flexaseal': `<path class="d" style="opacity:.45" d="M0 40h320M0 80h320M0 120h320M0 160h320M40 0v200M80 0v200M120 0v200M160 0v200M200 0v200M240 0v200M280 0v200"/><rect class="w" x="34" y="62" width="44" height="76" rx="8"/><path class="d" d="M48 128h16"/><rect class="w" x="134" y="54" width="52" height="92" rx="6"/><path class="w" d="M134 84h52M134 114h52"/><g class="of"><circle cx="146" cy="69" r="3"/><circle cx="146" cy="99" r="3"/><circle cx="146" cy="129" r="3"/></g><path class="w" d="M242 66v68c0 8 44 8 44 0V66"/><ellipse class="w" cx="264" cy="66" rx="22" ry="8"/><path class="d" d="M242 90c0 8 44 8 44 0M242 112c0 8 44 8 44 0"/><path class="o dash" d="M80 100h52M188 100h52"/><text x="56" y="160" text-anchor="middle">APP</text><text x="160" y="166" text-anchor="middle">API</text><text x="264" y="160" text-anchor="middle">DB</text>`,
+    'app-r4mi': `<rect class="w" x="118" y="14" width="84" height="172" rx="14"/><path class="d" d="M148 24h24"/><path class="o" d="M132 52l5 5 9-10M132 80l5 5 9-10M132 108l5 5 9-10"/><path class="d" d="M156 52h32M156 80h28M156 108h32M156 136h24"/><rect class="d" x="132" y="130" width="12" height="12" rx="2"/><circle class="w" cx="256" cy="100" r="30"/><circle class="o" cx="256" cy="100" r="18"/><circle class="w" cx="256" cy="100" r="7"/><circle class="d" cx="64" cy="100" r="26"/><path class="d" d="M64 74v52M38 100h52"/><circle class="of pulse" cx="64" cy="100" r="4"/>`,
+    'flexaseal-app': `<rect class="w" x="78" y="18" width="78" height="164" rx="13"/><rect class="w" x="166" y="18" width="78" height="164" rx="13"/><rect class="d" x="88" y="40" width="58" height="32" rx="5"/><path class="o" d="M94 64l10-8 8 4 12-10 14 6"/><rect class="d" x="88" y="80" width="58" height="32" rx="5"/><g class="wf"><rect x="95" y="96" width="6" height="10"/><rect x="105" y="90" width="6" height="16"/><rect x="115" y="94" width="6" height="12"/><rect x="125" y="88" width="6" height="18"/></g><path class="d" d="M90 126h50M90 138h36M90 150h44"/><path class="d" d="M176 46h58M176 76h58M176 106h58M176 136h58M196 32v136M220 32v136"/><path class="o dash" d="M184 152c10-30 30-10 36-50s8-34 6-50"/><path class="of" d="M226 40c-6 0-9 4-9 8 0 7 9 14 9 14s9-7 9-14c0-4-3-8-9-8Z"/><circle class="wf" cx="184" cy="152" r="4"/>`,
+    'rh-flexaseal': `<rect class="w" x="50" y="40" width="90" height="124" rx="10"/><rect class="d" x="80" y="30" width="30" height="16" rx="4"/><circle class="w" cx="95" cy="88" r="18"/><path class="w" d="M70 140c4-16 46-16 50 0"/><path class="o" d="M72 152h46"/><g class="w"><circle cx="182" cy="60" r="8"/><circle cx="182" cy="100" r="8"/><circle cx="182" cy="140" r="8"/></g><path class="d" d="M170 80a12 8 0 0 1 24 0M170 120a12 8 0 0 1 24 0M170 160a12 8 0 0 1 24 0"/><path class="d" d="M206 58h66M206 70h40M206 138h66M206 150h36"/><path class="o" d="M206 98h66"/><path class="d" d="M206 110h48"/>`,
+    'site-flexaseal': `${browser}<path class="w" d="M54 80h90M54 96h70"/><path class="d" d="M54 114h80M54 124h60"/><rect class="o" x="54" y="140" width="46" height="16" rx="8"/><circle class="d" cx="222" cy="110" r="44"/><circle class="w" cx="222" cy="110" r="32"/><circle class="o" cx="222" cy="110" r="20"/><circle class="w" cx="222" cy="110" r="8"/><path class="df" d="M222 110V66a44 44 0 0 1 44 44Z"/><path class="d" d="M230 72l28 28M240 70l20 20"/>`,
+    'afiliados-auto': `<path class="o" d="M30 46h52l16 16-16 16H30Z"/><circle class="o" cx="44" cy="62" r="4"/><path class="w" d="M40 102h52l16 16-16 16H40Z"/><circle class="w" cx="54" cy="118" r="4"/><path class="d dash" d="M118 90h48"/><path class="w" d="M162 82l10 8-10 8"/><rect class="w" x="186" y="40" width="104" height="40" rx="14"/><path class="w" d="M200 80l-6 12 16-12"/><rect class="w" x="186" y="104" width="104" height="40" rx="14"/><path class="w" d="M276 144l6 12-16-12"/><path class="d" d="M200 56h70M200 120h70M200 130h44"/><path class="o" d="M200 66h34"/>`,
+    'nickyfotografa': `<g class="w"><rect x="34" y="40" width="50" height="50" rx="4"/><rect x="92" y="40" width="50" height="50" rx="4"/><rect x="34" y="98" width="50" height="50" rx="4"/><rect x="150" y="98" width="50" height="50" rx="4"/></g><rect class="o" x="92" y="98" width="50" height="50" rx="4"/><rect class="w" x="150" y="40" width="50" height="50" rx="4"/><path class="d" d="M38 84l12-14 10 8 8-6 12 12M96 142l12-14 10 8 8-6 12 12"/><circle class="of" cx="128" cy="54" r="4"/><rect class="w" x="222" y="74" width="74" height="54" rx="10"/><path class="w" d="M240 74l6-10h24l6 10"/><circle class="o" cx="259" cy="101" r="16"/><circle class="w" cx="259" cy="101" r="7"/><circle class="of" cx="285" cy="84" r="3"/>`,
+    'splend-closet': `<path class="w" d="M26 40h268"/><path class="d" d="M80 40v10M56 64l24-14 24 14M160 40v10M136 64l24-14 24 14M240 40v10M216 64l24-14 24 14"/><path class="w" d="M66 64h28l-4 22 16 74H54l16-74Z"/><path class="o" d="M146 64h28l-4 22 20 74h-60l20-74Z"/><path class="w" d="M226 64h28l-6 30 10 66h-36l10-66Z"/>`,
+    'tarso': `${shirt(30, 28, 'w')}${shirt(80, 28, 'o')}${shirt(130, 28, 'w')}${shirt(30, 84, 'd')}${shirt(80, 84, 'w')}${shirt(130, 84, 'd')}<rect class="of" x="30" y="146" width="130" height="7" rx="3.5"/><rect class="wf" x="30" y="160" width="92" height="7" rx="3.5"/><rect class="df" x="30" y="174" width="54" height="7" rx="3.5"/><rect class="w" x="200" y="84" width="80" height="60" rx="6"/><path class="o" d="M220 84h40"/><path class="w" d="M228 84V54h24v30"/><path class="d" d="M234 64h12M234 72h8"/><text x="240" y="166" text-anchor="middle">VOTE</text>`,
+    'pathfinders': [34, 122, 210].map((x, i) => `<rect class="${i === 2 ? 'o' : 'w'}" x="${x}" y="34" width="76" height="128" rx="8"/><path class="${i === 2 ? 'o' : 'd'}" d="M${x + 24} ${78 - i * 6}l14-9 14 9M${x + 24} ${88 - i * 6}l14-9 14 9${i ? `M${x + 24} ${98 - i * 6}l14-9 14 9` : ''}"/><path class="w" d="M${x + 38} 108l14 6v10c0 9-14 14-14 14s-14-5-14-14v-10Z"/><path class="d" d="M${x + 12} 150h52"/>`).join(''),
+    'analista-cambio': `<path class="d" d="M34 30v130h170"/><path class="d" style="opacity:.5" d="M34 62h170M34 96h170M34 130h170"/><path class="w" d="M40 130l24-20 20 10 26-36 22 14 26-40 24 8"/><path class="o" d="M168 70l16-16M174 54h10v10"/><rect class="w" x="222" y="84" width="72" height="50" rx="6"/><path class="w" d="M222 90l36 24 36-24"/><circle class="of pulse" cx="292" cy="84" r="6"/><text x="40" y="182">EUR · CHF</text>`,
+    'biblioteca-agentes': `<rect class="o" x="128" y="22" width="64" height="34" rx="8"/><circle class="of pulse" cx="160" cy="39" r="4"/><path class="d" d="M160 56v20M70 76h180M70 76v16M160 76v16M250 76v16"/><g class="w"><rect x="40" y="92" width="60" height="32" rx="8"/><rect x="130" y="92" width="60" height="32" rx="8"/><rect x="220" y="92" width="60" height="32" rx="8"/></g><path class="d" d="M70 124v16M50 140h40M50 140v10M90 140v10M250 124v16M230 140h40M230 140v10M270 140v10M160 124v26"/><g class="d"><rect x="38" y="150" width="24" height="18" rx="5"/><rect x="78" y="150" width="24" height="18" rx="5"/><rect x="148" y="150" width="24" height="18" rx="5"/><rect x="218" y="150" width="24" height="18" rx="5"/><rect x="258" y="150" width="24" height="18" rx="5"/></g>`,
+    'instagram-daniela': `<rect class="d" x="40" y="52" width="70" height="92" rx="8"/><rect class="d" x="70" y="42" width="70" height="92" rx="8"/><rect class="w" x="100" y="30" width="80" height="108" rx="8"/><rect class="d" x="110" y="40" width="60" height="52" rx="4"/><path class="d" d="M114 82l14-16 12 10 10-8 16 14"/><path class="d" d="M110 104h54M110 116h36"/><circle class="o" cx="238" cy="112" r="36"/><circle class="d" cx="238" cy="112" r="28"/><path class="o" d="M224 112l10 10 18-20"/>`,
+    'financeiro': `<rect class="w" x="30" y="30" width="150" height="130" rx="6"/><path class="d" d="M30 56h150M30 82h150M30 108h150M30 134h150M70 30v130M110 30v130M150 30v130"/><path class="o" d="M30 56h150"/><circle class="w" cx="240" cy="68" r="30"/><path class="of" d="M240 68V38a30 30 0 0 1 30 30Z"/><rect class="w" x="218" y="122" width="44" height="36" rx="6"/><path class="o" d="M228 122v-10a12 12 0 0 1 24 0v10"/><circle class="wf" cx="240" cy="140" r="4"/>`,
+    'perfil-github': `<rect class="w" x="30" y="34" width="150" height="132" rx="10"/><circle class="w" cx="68" cy="74" r="20"/><path class="w" d="M100 66h60M100 80h40"/><path class="d" d="M46 112h118M46 124h90"/><rect class="d" x="46" y="138" width="26" height="16" rx="2"/><path class="o" d="M59 140l10 6-10 6-10-6Z"/><rect class="d" x="80" y="138" width="26" height="16" rx="2"/><path class="d" d="M80 143h26M80 148h26"/><rect class="d" x="114" y="138" width="26" height="16" rx="2"/><path class="o" d="M114 146h26"/><path class="d" d="M204 40v120h92"/><path class="w" d="M210 146l20-24 18 10 30-44"/><rect class="w" x="242" y="44" width="36" height="28" rx="5"/><path class="o" d="M250 44v-8a10 10 0 0 1 20 0v8"/>`,
+    'testeautomacaox': `<rect class="d" x="60" y="46" width="96" height="124" rx="6"/><rect class="d" x="70" y="38" width="96" height="124" rx="6"/><rect class="w" x="80" y="30" width="96" height="124" rx="6"/><text x="94" y="64" style="font-size:18px;letter-spacing:4px">文書</text><path class="d" d="M94 84h64M94 96h52M94 108h60M94 120h40M94 132h56"/><circle class="o" cx="228" cy="104" r="30"/><path class="o" d="M250 126l26 26" style="stroke-width:6"/><path class="d" d="M214 104h28M228 90v28"/>`,
+    'pixel-architects': `${browser}<rect class="o" x="52" y="56" width="216" height="46" rx="6"/><path class="w" d="M68 74h90M68 86h60"/><g class="d"><rect x="52" y="112" width="66" height="50" rx="6"/><rect x="127" y="112" width="66" height="50" rx="6"/><rect x="202" y="112" width="66" height="50" rx="6"/></g>`,
+    'planyourtripitinerary': `<path class="w" d="M40 50l70-20 80 20 90-20v120l-90 20-80-20-70 20Z"/><path class="d" d="M110 30v120M190 50v120"/><path class="o dash" d="M70 124c30-40 60 10 90-20s50-30 80-40"/><circle class="wf" cx="70" cy="124" r="5"/><circle class="wf" cx="160" cy="104" r="5"/><path class="of" d="M240 50c-8 0-12 6-12 11 0 9 12 19 12 19s12-10 12-19c0-5-4-11-12-11Z"/>`,
+    'devlinks': `<circle class="w" cx="160" cy="40" r="18"/><circle class="w" cx="160" cy="35" r="6"/><path class="w" d="M149 51c4-7 18-7 22 0"/><rect class="w" x="92" y="72" width="136" height="22" rx="11"/><rect class="w" x="92" y="102" width="136" height="22" rx="11"/><rect class="o" x="92" y="132" width="136" height="22" rx="11"/><rect class="d" x="92" y="162" width="136" height="22" rx="11"/><path class="d" d="M140 83h40M134 113h52M140 173h40"/><path class="o" d="M138 143h44"/>`,
+    'rede-social': `<rect class="w" x="40" y="26" width="160" height="70" rx="8"/><circle class="w" cx="60" cy="46" r="10"/><path class="d" d="M78 42h60M78 52h40M54 70h130M54 80h100"/><rect class="w" x="40" y="106" width="160" height="70" rx="8"/><circle class="w" cx="60" cy="126" r="10"/><path class="d" d="M78 122h60M78 132h40M54 150h130M54 160h90"/><rect class="o" x="216" y="54" width="76" height="34" rx="12"/><path class="o" d="M228 88l-6 10 14-10"/><rect class="w" x="222" y="112" width="70" height="30" rx="12"/><path class="w" d="M280 142l6 9-14-9"/>`,
+    'react-ts': `<rect class="d" x="36" y="34" width="150" height="50" rx="8"/><rect class="d" x="36" y="94" width="150" height="50" rx="8"/><path class="d" d="M50 52h90M50 64h60M50 112h90M50 124h70"/><rect class="o" x="200" y="56" width="80" height="80" rx="12"/><text x="268" y="126" text-anchor="end" style="font-size:30px;letter-spacing:0;fill:#fff">TS</text><g class="w"><ellipse cx="110" cy="170" rx="22" ry="8"/><ellipse cx="110" cy="170" rx="22" ry="8" transform="rotate(60 110 170)"/><ellipse cx="110" cy="170" rx="22" ry="8" transform="rotate(-60 110 170)"/></g><circle class="of" cx="110" cy="170" r="3"/>`,
+    'calculadora': `<rect class="w" x="110" y="14" width="100" height="172" rx="12"/><rect class="d" x="122" y="26" width="76" height="30" rx="4"/><text x="190" y="46" text-anchor="end" style="font-size:14px">42</text>` + Array.from({ length: 20 }, (_, i) => `<rect class="${i % 4 === 3 ? 'o' : 'd'}" x="${122 + (i % 4) * 20}" y="${66 + Math.floor(i / 4) * 22}" width="15" height="16" rx="3"/>`).join(''),
+    'chat-responsivo': `<rect class="d" x="24" y="56" width="74" height="52" rx="5"/><path class="d" d="M50 120h22M61 108v12M34 70h40M34 80h52"/><rect class="w" x="116" y="14" width="88" height="172" rx="14"/><path class="d" d="M148 24h24"/><rect class="d" x="126" y="42" width="54" height="22" rx="10"/><rect class="o" x="142" y="72" width="52" height="22" rx="10"/><rect class="d" x="126" y="102" width="44" height="22" rx="10"/><rect class="w" x="150" y="132" width="44" height="22" rx="10"/><circle class="of pulse" cx="134" cy="166" r="3"/><circle class="wf pulse" cx="144" cy="166" r="3"/>`,
+    'todolist-fullstack': `<rect class="w" x="40" y="30" width="130" height="140" rx="10"/><path class="o" d="M56 62l6 6 10-12M56 96l6 6 10-12"/><rect class="d" x="56" y="124" width="16" height="16" rx="3"/><path class="d" d="M84 62h70M84 96h56M84 132h64"/>${gear(236, 100, 34, 12)}`,
+    _: browser
+  };
+  const ill = p => `<svg class="il" viewBox="0 0 320 200" role="img" aria-label="${esc(p.nome)}">${ILL[p.id] || ILL._}</svg>`;
+  const img = (src, alt, lazy = true) => `<img src="dados/${esc(src)}" alt="${esc(alt)}"${lazy ? ' loading="lazy"' : ''}>`;
+  const thumb = p => `<div class="th">${p.thumb ? img(p.thumb, p.nome) : ill(p)}${p.confidencial ? '<span class="cbadge" data-t="b.conf"></span>' : ''}</div>`;
+
+  // ---------- CH 01b: marquee ----------
+
+  const top = Object.entries(rank).filter(([, n]) => n >= 4).sort((x, y) => y[1] - x[1]).map(([n]) => n);
+  const mqHtml = top.map(w => `<span>${esc(w)}</span>`).join('');
+  $('.mq').innerHTML = mqHtml + mqHtml;
+  $('#marquee').setAttribute('aria-label', 'Stack: ' + top.join(', '));
+
+  // ---------- CH 02: highlights ----------
+  const order = { highlight: 0, showcase: 1, archive: 2 };
+  const HL = P.filter(p => p.destaque === 'highlight');
+  $('#wnote').dataset.v = JSON.stringify({ n: HL.length });
+  const shot = (p, lazy) => p.thumb ? `<div class="shot">${img(p.thumb, p.nome, lazy)}${p.thumb_mobile ? `<div class="ph">${img(p.thumb_mobile, p.nome + ' — mobile', lazy)}</div>` : ''}</div>` : ill(p);
+  $('#hl').innerHTML = HL.map((p, i) => `<li class="item${i ? '' : ' on'}">
+    <div class="top"><span class="n">${pad(i + 1)}</span><h3>${esc(p.nome)}</h3></div>
+    <div class="ithumb">${thumb(p)}</div>
+    <p data-r="${p.id}"></p>
+    ${badges(p)}
+    <div class="tags">${sortStack(p.stack).slice(0, 6).map(s => `<span>${esc(s)}</span>`).join('')}${p.stack.length > 6 ? `<span title="${esc(sortStack(p.stack).slice(6).join(', '))}">+${p.stack.length - 6}</span>` : ''}</div>
+    ${meta(p)}${link(p)}</li>`).join('');
+  $('#fbox').insertAdjacentHTML('afterbegin', HL.map((p, i) => `<div class="vis${i ? '' : ' on'}">${shot(p, i > 0)}</div>`).join(''));
+  $('#segs').innerHTML = HL.map((_, i) => `<i${i ? '' : ' class="on"'}></i>`).join('');
+
+  // ---------- CH 03: catalog grouped by platform, with a filter ----------
+  const GORDER = ['web', 'web+mobile', 'mobile', 'api', 'tool/automation', 'desktop'];
+  const card = p => `<article class="vcard${p.destaque === 'highlight' ? ' hl' : ''}">${thumb(p)}
+    <header><h4>${esc(p.nome)}</h4>${when(p)}</header>
+    ${badges(p, p.destaque === 'highlight' ? '<span class="badge or" data-t="b.hl"></span>' : '')}
+    <p data-r="${p.id}"></p>${stackLine(p, p.destaque === 'highlight' ? 12 : 7)}${meta(p)}${link(p)}</article>`;
+  const row = p => `<div class="row"><div class="mini">${p.thumb ? img(p.thumb, p.nome) : ill(p)}</div>
+    <div><div class="nm">${esc(p.nome)} ${p.confidencial ? '<span class="badge or" data-t="b.conf"></span>' : ''}<span class="badge" data-t="tp.${p.tipo}"></span></div><p class="rs" data-r="${p.id}"></p></div>
+    ${stackLine(p, 6) || '<div></div>'}<div>${meta(p)}${link(p)}</div></div>`;
+  $('#groups').innerHTML = GORDER.map(pl => {
+    const list = P.filter(p => p.plataforma === pl).sort((x, y) => order[x.destaque] - order[y.destaque]);
+    if (!list.length) return '';
+    const cards = list.filter(p => p.destaque !== 'archive'), arch = list.filter(p => p.destaque === 'archive');
+    return `<div class="grp" data-tok="${tok(pl).join(' ')}"><div class="grp-h"><h3 data-pl="${pl}"></h3><span class="mono">${pad(list.length)}</span></div>
+      ${cards.length ? `<div class="vgrid">${cards.map(card).join('')}</div>` : ''}
+      ${arch.length ? `<div class="arch"><div class="arch-h mono" data-t="c.archive"></div>${arch.map(row).join('')}</div>` : ''}</div>`;
+  }).join('');
+  const TABS = ['all', 'web', 'mobile', 'api', 'tool', 'desktop'];
+  const count = k => k === 'all' ? P.length : P.filter(p => tok(p.plataforma).includes(k)).length;
+  $('#tabs').innerHTML = TABS.map(k => `<button type="button" data-f="${k}" aria-pressed="${k === 'all'}"><span ${k === 'all' ? 'data-t="c.all"' : `data-pl="${k === 'tool' ? 'tool/automation' : k}"`}></span><b>${count(k)}</b></button>`).join('');
+  $('#cnote').dataset.v = JSON.stringify({ w: count('web'), t: P.length });
+  const fstat = $('#fstat');
+  let stReady = false;
+  function setFilter(k) {
+    $$('#tabs button').forEach(bt => bt.setAttribute('aria-pressed', bt.dataset.f === k));
+    $$('.grp').forEach(g => { g.hidden = !(k === 'all' || g.dataset.tok.split(' ').includes(k)); });
+    fstat.dataset.v = JSON.stringify({ n: count(k), t: P.length });
+    fstat.textContent = fill(t('c.showing'), { n: count(k), t: P.length });
+    if (stReady) ScrollTrigger.refresh();
+  }
+  $('#tabs').addEventListener('click', e => { const bt = e.target.closest('button'); if (bt) setFilter(bt.dataset.f); });
+
+  // ---------- CH 04: mobile deck ----------
+  const MOB = P.filter(p => tok(p.plataforma).includes('mobile')).sort((x, y) => order[x.destaque] - order[y.destaque]);
+  const phone = p => p.thumb_mobile ? `<div class="phone">${img(p.thumb_mobile, p.nome)}</div>`
+    : p.thumb ? `<div class="th wide">${img(p.thumb, p.nome)}</div>` : ill(p);
+  $('#mdeck').innerHTML = MOB.map((p, i) => `<article class="dcard pcard${i ? '' : ' on'}" data-name="${esc(p.nome)}"><div class="art">${phone(p)}${p.confidencial ? '<span class="cbadge" data-t="b.conf"></span>' : ''}</div>
+    <div class="hd"><span>${pad(i + 1)}</span><h3>${esc(p.nome)}</h3></div><p data-r="${p.id}"></p>${badges(p)}${stackLine(p, 5)}${link(p)}</article>`).join('');
+  $('#mtotal').textContent = pad(MOB.length);
+
+  // ---------- CH 05: skills ----------
+  const maxN = Math.max(...Object.values(rank));
+  const nTech = Object.values(K.categorias).reduce((s, l) => s + l.length, 0);
+  $('#sknote').dataset.v = JSON.stringify({ n: nTech, t: K.total_projetos });
+  $('#skgrid').innerHTML = Object.entries(K.categorias).map(([c, l]) => `<section class="scat rv"><h3><span class="label mono" data-t="cat.${esc(c)}"></span><span class="cnt mono">${pad(l.length)}</span></h3>
+    <ul class="pills">${l.map(s => `<li style="--k:${(s.projetos / maxN).toFixed(2)}"${s.projetos >= 5 ? ' class="top"' : ''}><span data-x="${esc(s.nome)}">${esc(s.nome)}</span><b>${s.projetos}</b></li>`).join('')}</ul></section>`).join('');
+  const LVL = { 'nativo': 3, 'intermediário': 2, 'básico': 1 };
+  $('#spk').innerHTML = K.idiomas.map(x => `<div class="spk"><strong data-t="ln.${esc(x.idioma)}"></strong><div class="mono" data-t="lv.${esc(x.nivel)}"></div><div class="segs" aria-hidden="true">${[1, 2, 3].map(j => `<i${j <= (LVL[x.nivel] || 0) ? ' class="on"' : ''}></i>`).join('')}</div></div>`).join('');
+
+  // ---------- CH 07: commits (pinned counter climbs month by month) ----------
+  const first = MONTHS[0].mes, last = MONTHS[MONTHS.length - 1].mes;
+  const peakI = MONTHS.reduce((bi, m, i) => m.commits > MONTHS[bi].commits ? i : bi, 0);
+  const MAXC = MONTHS[peakI].commits;
+  const chart = $('#chart');
+  chart.insertAdjacentHTML('beforeend', MONTHS.map(m => `<i style="height:${(m.commits / MAXC * 100).toFixed(1)}%"></i>`).join(''));
+  chart.dataset.v = JSON.stringify({ a: first, b: last, t: TOT.commits, p: MAXC, pm: MONTHS[peakI].mes });
+  const peak = $('#peak'); peak.style.left = ((peakI + 1) / MONTHS.length * 100).toFixed(2) + '%';
+  peak.innerHTML = `<span data-m="${MONTHS[peakI].mes}"></span> · ${MAXC}`;
+  $('#thtop').innerHTML = `<span data-n="${TOT.commits}"></span>`;
+  $('#cmnote').dataset.v = JSON.stringify({ p: S.por_projeto.filter(x => x.commits > 0).length, b: PRE.commits });
+  const tickIdx = [0, .25, .5, .75, 1].map(f => Math.round(f * (MONTHS.length - 1)));
+  const ticks = tickIdx.map(i => `<span data-m="${MONTHS[i].mes}" data-short></span>`).join('');
+  $('#ticks').innerHTML = ticks; $('#ticks2').innerHTML = ticks;
+  const bars = $$('#chart i'), cnum = $('#cnum'), cmonth = $('#cmonth'), therm = $('#therm');
+  let qC = 1, qL = 1;
+  function drawCommits(q) {
+    qC = q;
+    const k = q * MONTHS.length; let cum = PRE.commits;
+    bars.forEach((el, i) => { const f = Math.max(0, Math.min(1, k - i));
+      el.style.transform = `scaleY(${f})`; cum += MONTHS[i].commits * f;
+      el.classList.toggle('on', q < 1 && i === Math.min(bars.length - 1, Math.floor(k))); });
+    cnum.textContent = fmt(Math.round(cum));
+    therm.style.transform = `scaleY(${cum / TOT.commits})`;
+    const cur = MONTHS[Math.min(MONTHS.length - 1, Math.floor(k))];
+    cmonth.textContent = q >= 1 ? fill(t('cm.all'), { a: first, b: last, n: MONTHS.length }) : fill(t('cm.month'), { m: cur.mes, n: cur.commits });
+  }
+
+  // ---------- CH 08: lines added / removed (mirrored chart) + tiles ----------
+  const MAXA = Math.max(...MONTHS.map(m => m.linhas_adicionadas)), MAXR = Math.max(...MONTHS.map(m => m.linhas_removidas));
+  const mchart = $('#mchart');
+  mchart.style.gridTemplateRows = `${MAXA}fr ${MAXR}fr`;
+  mchart.dataset.v = JSON.stringify({ a: first, b: last });
+  $('.mchart .up').innerHTML = MONTHS.map(m => `<i style="height:${(m.linhas_adicionadas / MAXA * 100).toFixed(1)}%"></i>`).join('');
+  $('.mchart .dn').innerHTML = MONTHS.map(m => `<i style="height:${(m.linhas_removidas / MAXR * 100).toFixed(1)}%"></i>`).join('');
+  const ups = $$('.mchart .up i'), dns = $$('.mchart .dn i'), ladd = $('#ladd'), lrem = $('#lrem'), lmonth = $('#lmonth');
+  function drawLines(q) {
+    qL = q;
+    const k = q * MONTHS.length; let ca = PRE.linhas_adicionadas, cr = PRE.linhas_removidas;
+    MONTHS.forEach((m, i) => { const f = Math.max(0, Math.min(1, k - i));
+      ups[i].style.transform = dns[i].style.transform = `scaleY(${f})`;
+      ups[i].classList.toggle('on', q < 1 && i === Math.min(MONTHS.length - 1, Math.floor(k)));
+      ca += m.linhas_adicionadas * f; cr += m.linhas_removidas * f; });
+    ladd.textContent = '+' + fmt(Math.round(ca)); lrem.textContent = '−' + fmt(Math.round(cr));
+    const cur = MONTHS[Math.min(MONTHS.length - 1, Math.floor(k))];
+    lmonth.textContent = q >= 1 ? fill(t('cm.all'), { a: first, b: last, n: MONTHS.length }) : fmtM(cur.mes) + ' · +' + fmt(cur.linhas_adicionadas) + ' / −' + fmt(cur.linhas_removidas);
+  }
+  const big = S.maior_commit;
+  $('#tiles').innerHTML = `<div class="tile"><b data-n="${TOT.commits}"></b><span class="mono" data-t="cd.commits"></span></div>
+    <div class="tile"><b data-n="${TOT.arquivos_tocados}"></b><span class="mono" data-t="cd.files"></span></div>
+    <div class="tile"><b data-n="${TOT.dias_ativos}"></b><span class="mono" data-t="cd.days"></span></div>
+    <div class="tile"><b><span data-n="${S.por_projeto.filter(x => x.commits > 0).length}"></span>/<span data-n="${P.length}"></span></b><span class="mono" data-t="cd.withc"></span></div>
+    <div class="tile wide"><span class="mono" data-t="cd.big" style="margin:0 0 4px"></span><b>+<span data-n="${big.linhas_adicionadas}"></span> / −<span data-n="${big.linhas_removidas}"></span></b>
+      <small>${esc(byId[big.projeto] ? byId[big.projeto].nome : big.projeto)} · <span data-d="${big.data}"></span> · <span data-n="${big.arquivos}"></span> <span data-t="m.files"></span></small></div>`;
+
+  // ---------- CH 08b: per project + languages ----------
+  const PP = S.por_projeto.filter(x => x.commits > 0).sort((x, y) => y.linhas_adicionadas - x.linhas_adicionadas);
+  const MAXP = PP[0].linhas_adicionadas;
+  const pct = (v, m) => Math.max(.4, v / m * 100).toFixed(2) + '%';
+  $('#prows').innerHTML = PP.map(x => `<div class="prow"><div class="nm"><span>${esc(x.nome)}</span><span class="mono"><span data-n="${x.commits}"></span> <span data-t="${x.commits === 1 ? 'm.commit' : 'm.commits'}"></span></span></div>
+    <div class="bars" aria-hidden="true"><div class="bar"><i style="width:${pct(x.linhas_adicionadas, MAXP)}"></i></div><div class="bar r"><i style="width:${pct(x.linhas_removidas, MAXP)}"></i></div></div>
+    <div class="meta mono">+<span data-n="${x.linhas_adicionadas}"></span> / −<span data-n="${x.linhas_removidas}"></span> <span data-t="m.lines"></span> · <span data-n="${x.arquivos_tocados}"></span> <span data-t="m.files"></span></div></div>`).join('');
+  const LG = S.linguagens_por_linhas_adicionadas.filter(x => x.linhas > 0);
+  const LTOP = LG.slice(0, 10), LREST = LG.slice(10);
+  const rest = { linhas: LREST.reduce((s, x) => s + x.linhas, 0), pct: +LREST.reduce((s, x) => s + x.pct, 0).toFixed(1) };
+  const lrow = (name, x) => `<div class="prow"><div class="nm"><span>${name}</span><span class="mono"><span data-n="${x.pct}"></span>%</span></div>
+    <div class="bars" aria-hidden="true"><div class="bar"><i style="width:${pct(x.linhas, LG[0].linhas)}"></i></div></div><div class="meta mono"><span data-n="${x.linhas}"></span> <span data-t="m.lines"></span></div></div>`;
+  $('#lrows').innerHTML = LTOP.map(x => lrow(`<span data-x="${esc(x.linguagem)}">${esc(x.linguagem)}</span>`, x)).join('')
+    + (LREST.length ? lrow(`<span data-t="bd.more"${V({ n: LREST.length })} title="${esc(LREST.map(x => x.linguagem).join(', '))}"></span>`, rest) : '');
+
+  // ---------- active states for the pinned films ----------
+  const items = $$('.item'), vis = $$('.fbox .vis'), segs = $$('#segs i');
+  const bignum = $('.bignum'), capname = $('#capname'), capt = $('#capt');
+  let curWork = 0;
+  function setWork(i) {
+    curWork = i;
+    items.forEach((el, j) => el.classList.toggle('on', j === i));
+    vis.forEach((el, j) => el.classList.toggle('on', j === i));
+    segs.forEach((el, j) => el.classList.toggle('on', j <= i));
+    bignum.textContent = pad(i + 1);
+    capname.textContent = HL[i].nome;
+    capt.textContent = t('pl.' + HL[i].plataforma);
+  }
+  function deckState(sec) {
+    const cards = $$('.dcard', sec), stepn = $('.step-n', sec), stepw = $('.step-w', sec), dnum = $('.dnum', sec);
+    let cur = 0;
+    const set = i => { cur = i;
+      cards.forEach((el, j) => el.classList.toggle('on', j === i));
+      stepn.textContent = dnum.textContent = pad(i + 1);
+      stepw.textContent = sec.id === 'ai' ? t('ai.w' + (i + 1)) : cards[i].dataset.name; };
+    return { cards, set, again: () => set(cur) };
+  }
+  const AI = deckState($('#ai')), MB = deckState($('#mobile'));
+
+  // ---------- CH 01: desktop (files with hand-written physics, project windows, dock) ----------
+  const RM = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let lenis = null; // set by the motion branch below; anchors and icons scroll through it when present
+  const goTo = sel => { const el = $(sel); if (!el) return; if (lenis) lenis.scrollTo(el); else el.scrollIntoView({ behavior: RM ? 'auto' : 'smooth' }); };
+  const T = (bg, inner) => `<svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="15" fill="${bg}"/>${inner}</svg>`;
+  const ICON = {
+    'flexaseal-portal': T('#1e4e8c','<rect x="10" y="12" width="44" height="40" rx="5" fill="#eaf1fb"/><path d="M10 17a5 5 0 0 1 5-5h34a5 5 0 0 1 5 5v3H10Z" fill="#9fc0ea"/><rect x="14" y="24" width="17" height="12" rx="2" fill="#fff" stroke="#c9d9ef"/><rect x="33" y="24" width="17" height="12" rx="2" fill="#fff" stroke="#c9d9ef"/><path d="M18 33v-3M21.5 33v-6M25 33v-4M28 33v-7" stroke="#1e4e8c" stroke-width="2"/><path d="M35.5 32.5l4-3.5 3 2 5.5-5" fill="none" stroke="#e5533d" stroke-width="1.8" stroke-linecap="round"/><g fill="#c9d9ef"><rect x="14" y="40" width="36" height="3" rx="1"/><rect x="14" y="45" width="36" height="3" rx="1"/></g>'),
+    'r4mi-portal': T('#2b3440','<circle cx="26" cy="29" r="11" fill="none" stroke="#f2c46d" stroke-width="6" stroke-dasharray="4.3 4.3"/><circle cx="26" cy="29" r="8.5" fill="#f2c46d"/><circle cx="26" cy="29" r="3.5" fill="#2b3440"/><path d="M41 50V41M47 50V34M53 50V38" stroke="#7cd992" stroke-width="3.4" stroke-linecap="round"/><path d="M9 54h46" stroke="#5b6675" stroke-width="2"/>'),
+    'api-flexaseal': T('#1b4a86','<path d="M0 16h64M0 32h64M0 48h64M16 0v64M32 0v64M48 0v64" stroke="#2c5d9c" stroke-width="1"/><rect x="7" y="12" width="14" height="22" rx="3" fill="none" stroke="#fff" stroke-width="2"/><path d="M12 30h4" stroke="#fff" stroke-width="1.6"/><rect x="25" y="25" width="14" height="14" rx="3" fill="#fff"/><path d="M29 30h6M29 34h4" stroke="#1b4a86" stroke-width="1.6"/><ellipse cx="50" cy="40" rx="7" ry="3" fill="none" stroke="#fff" stroke-width="2"/><path d="M43 40v9c0 1.7 3.1 3 7 3s7-1.3 7-3v-9" fill="none" stroke="#fff" stroke-width="2"/><path d="M21 23h5v3M39 32h11v5" fill="none" stroke="#9fd3ff" stroke-width="1.8" stroke-dasharray="2 2"/>'),
+    'app-r4mi': T('#e3ecf5','<rect x="18" y="7" width="26" height="50" rx="5" fill="#1d2633"/><rect x="21" y="12" width="20" height="40" rx="2" fill="#fff"/><g stroke="#1f8a55" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M24 19l2 2 3-4M24 28l2 2 3-4"/></g><path d="M31 19h7M31 28h7M31 37h7" stroke="#c4ccd6" stroke-width="2"/><rect x="24" y="35" width="4" height="4" rx="1" fill="none" stroke="#c4ccd6" stroke-width="1.5"/><circle cx="47" cy="47" r="8" fill="#f2c46d" stroke="#1d2633" stroke-width="2"/><circle cx="47" cy="47" r="3" fill="#1d2633"/>'),
+    'flexaseal-app': T('#cfe0f5','<rect x="8" y="11" width="22" height="42" rx="4" fill="#1e4e8c"/><rect x="11" y="16" width="16" height="32" rx="1.5" fill="#fff"/><rect x="13" y="19" width="12" height="7" rx="1" fill="#9fc0ea"/><rect x="13" y="29" width="12" height="7" rx="1" fill="#f2c46d"/><rect x="13" y="39" width="12" height="6" rx="1" fill="#9fc0ea"/><rect x="34" y="11" width="22" height="42" rx="4" fill="#1e4e8c"/><rect x="37" y="16" width="16" height="32" rx="1.5" fill="#dcebdf"/><path d="M37 32c5-3 10 3 16-1" stroke="#fff" stroke-width="2" fill="none"/><path d="M45 34c-3-3.4-4.6-5.2-4.6-7.2a4.6 4.6 0 0 1 9.2 0c0 2-1.6 3.8-4.6 7.2Z" fill="#e5533d"/>'),
+    'rh-flexaseal': T('#ece6dc','<rect x="16" y="12" width="32" height="42" rx="5" fill="#fff" stroke="#cfc6b6"/><rect x="27" y="8" width="10" height="8" rx="2" fill="#8d8473"/><circle cx="32" cy="28" r="6" fill="#b9ae9b"/><path d="M22 43c1-6 5-8.5 10-8.5s9 2.5 10 8.5Z" fill="#b9ae9b"/><path d="M23 48h18" stroke="#ddd5c7" stroke-width="2.5" stroke-linecap="round"/>'),
+    'site-flexaseal': T('#13304f','<circle cx="32" cy="34" r="19" fill="none" stroke="#9fc0ea" stroke-width="5"/><circle cx="32" cy="34" r="11" fill="none" stroke="#f2c46d" stroke-width="4"/><circle cx="32" cy="34" r="4" fill="#9fc0ea"/><path d="M32 34V10A24 24 0 0 1 56 34Z" fill="#13304f"/><path d="M35 13l4 4M38 12l8 8M35 21l13 13M43 21l8 8" stroke="#2c5d9c" stroke-width="1.4"/><path d="M14 10h12" stroke="#fff" stroke-width="2.4" stroke-linecap="round"/>'),
+    'afiliados-auto': T('#ff6b4a','<path d="M11 28V16a2 2 0 0 1 2-2h12l15 15-14 14Z" fill="#fff"/><circle cx="18" cy="21" r="2.6" fill="#ff6b4a"/><path d="M36 36h17a3 3 0 0 1 3 3v8a3 3 0 0 1-3 3h-9l-6 5v-5h-2a3 3 0 0 1-3-3v-8a3 3 0 0 1 3-3Z" fill="#17171a"/><path d="M39 41h12M39 45h8" stroke="#fff" stroke-width="2"/>'),
+    nickyfotografa: T('#f2d6c0','<rect x="10" y="22" width="44" height="28" rx="5" fill="#3a2a22"/><rect x="20" y="16" width="14" height="8" rx="2" fill="#3a2a22"/><circle cx="32" cy="36" r="10" fill="#f2d6c0"/><circle cx="32" cy="36" r="6" fill="#c0703c"/><circle cx="29.5" cy="33.5" r="1.8" fill="#fff"/><rect x="45" y="26" width="5" height="3" rx="1" fill="#e5a47a"/>'),
+    'splend-closet': T('#f1e3ea','<path d="M29.5 12a2.6 2.6 0 1 1 3.6 2.4L32 15.5V18" fill="none" stroke="#6b5560" stroke-width="2" stroke-linecap="round"/><path d="M13 25l19-7 19 7" fill="none" stroke="#6b5560" stroke-width="2" stroke-linejoin="round"/><path d="M26 22l-2 6 4 4-8 22h24l-8-22 4-4-2-6c-2 2-4 3-6 3s-4-1-6-3Z" fill="#d9a3b8"/><path d="M28 32h8" stroke="#b77d95" stroke-width="1.6"/>'),
+    tarso: T('#2f7d4f','<path d="M17 11l-8 5 3 8 4-1.5V42h18V22.5l4 1.5 3-8-8-5c-1 2.6-3.4 4-8 4s-7-1.4-8-4Z" fill="#fff"/><path d="M21 22v14" stroke="#2f7d4f" stroke-width="1.6"/><rect x="36" y="38" width="20" height="16" rx="2" fill="#f2c46d"/><rect x="41" y="38" width="10" height="2.5" fill="#2f7d4f"/><path d="M43 33l3 4 5-7" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>'),
+    pathfinders: T('#1b1d2b','<rect x="10" y="10" width="28" height="40" rx="4" fill="#2a2d42" stroke="#3d4160"/><rect x="24" y="15" width="30" height="41" rx="4" fill="#33375a" stroke="#565b88"/><path d="M39 23l8 4.5v9L39 41l-8-4.5v-9Z" fill="#f2c46d"/><path d="M35 31l4 3 4-3" fill="none" stroke="#1b1d2b" stroke-width="2"/><path d="M30 48h18" stroke="#565b88" stroke-width="2.5" stroke-linecap="round"/>'),
+    'analista-cambio': T('#0f766e','<text x="32" y="26" text-anchor="middle" font-family="Inter Tight,system-ui,sans-serif" font-weight="700" font-size="12" fill="#fff">EUR·CHF</text><path d="M10 44l8-5 6 3 8-9 6 4 9-8" fill="none" stroke="#9ff0d6" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><rect x="38" y="41" width="18" height="13" rx="2" fill="#fff"/><path d="M38.5 42l8.5 6 8.5-6" fill="none" stroke="#0f766e" stroke-width="1.8"/>'),
+    'biblioteca-agentes': T('#222327','<rect x="24" y="9" width="16" height="11" rx="3" fill="#f2c46d"/><path d="M32 20v6M13 26h38M13 26v6M32 26v6M51 26v6" stroke="#6b6d78" stroke-width="2" fill="none"/><rect x="6" y="32" width="14" height="10" rx="3" fill="#2c5fd6"/><rect x="25" y="32" width="14" height="10" rx="3" fill="#ff6b4a"/><rect x="44" y="32" width="14" height="10" rx="3" fill="#7cd992"/><path d="M10 50h44" stroke="#3a3b44" stroke-width="3" stroke-linecap="round"/>'),
+    'instagram-daniela': T('#f6dbe5','<rect x="19" y="9" width="30" height="32" rx="4" fill="#fff" stroke="#e7b7c8" transform="rotate(-7 34 25)"/><rect x="13" y="15" width="30" height="36" rx="4" fill="#fff" stroke="#d998ae"/><rect x="17" y="19" width="22" height="17" rx="2" fill="#e9b4c6"/><path d="M17 41h16M17 45h10" stroke="#e1c6d0" stroke-width="2"/><circle cx="46" cy="46" r="8.5" fill="#1f8a55"/><path d="M42.3 46l2.7 2.7 4.8-5.2" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>'),
+    financeiro: T('#e4f1e8','<rect x="9" y="11" width="36" height="42" rx="4" fill="#fff" stroke="#bfd8c6"/><path d="M9 21h36M9 31h36M9 41h36M21 11v42M33 11v42" stroke="#d3e6d8"/><circle cx="27" cy="31" r="8" fill="#bfe0c9"/><path d="M27 31V23a8 8 0 0 1 8 8Z" fill="#1f8a55"/><rect x="40" y="40" width="16" height="13" rx="2.5" fill="#17171a"/><path d="M43.5 40v-3.5a4.5 4.5 0 0 1 9 0V40" fill="none" stroke="#17171a" stroke-width="2.4"/>'),
+    'perfil-github': T('#24292f','<rect x="9" y="13" width="46" height="38" rx="5" fill="#f4f1ea"/><circle cx="21" cy="26" r="6" fill="#b9ae9b"/><path d="M31 23h17M31 29h11" stroke="#c9c3b5" stroke-width="2.5" stroke-linecap="round"/><rect x="14" y="39" width="8" height="6" rx="1" fill="#1f8a55"/><rect x="24" y="39" width="8" height="6" rx="1" fill="#2c5fd6"/><rect x="34" y="39" width="8" height="6" rx="1" fill="#e5533d"/><path d="M46 37h6v8h-6Z" fill="#17171a"/><path d="M47.3 37v-1.8a1.7 1.7 0 0 1 3.4 0V37" fill="none" stroke="#17171a" stroke-width="1.3"/>'),
+    testeautomacaox: T('#efe9dc','<rect x="13" y="9" width="28" height="37" rx="3" fill="#fff" stroke="#d6cdb9" transform="rotate(-6 27 27)"/><rect x="18" y="13" width="28" height="38" rx="3" fill="#fff" stroke="#c9bfa8"/><text x="32" y="33" text-anchor="middle" font-size="13" fill="#8d4a3a" font-family="system-ui,sans-serif">あ</text><path d="M23 41h18" stroke="#ddd3bf" stroke-width="2"/><circle cx="44" cy="44" r="7" fill="#efe9dc" stroke="#17171a" stroke-width="2.6"/><path d="M49 49l6 6" stroke="#17171a" stroke-width="3" stroke-linecap="round"/>'),
+    'pixel-architects': T('#e7e2fb','<rect x="9" y="12" width="46" height="40" rx="4" fill="#fff"/><path d="M9 16a4 4 0 0 1 4-4h38a4 4 0 0 1 4 4v3H9Z" fill="#c9bff2"/><rect x="14" y="24" width="22" height="5" rx="1.5" fill="#6a55d8"/><rect x="14" y="31" width="16" height="3" rx="1.5" fill="#cfc8ef"/><rect x="40" y="24" width="10" height="12" rx="2" fill="#f2c46d"/><g fill="#ece9f8"><rect x="14" y="40" width="10" height="8" rx="1.5"/><rect x="27" y="40" width="10" height="8" rx="1.5"/><rect x="40" y="40" width="10" height="8" rx="1.5"/></g>'),
+    planyourtripitinerary: T('#d8e8f0','<path d="M9 18l15-5 16 5 15-5v34l-15 5-16-5-15 5Z" fill="#fff"/><path d="M9 18l15-5v34l-15 5Z M40 18l15-5v34l-15 5Z" fill="#eaf2f6"/><path d="M31 34c-4-4.5-6-6.8-6-9.3a6 6 0 0 1 12 0c0 2.5-2 4.8-6 9.3Z" fill="#e5533d"/><circle cx="31" cy="24.7" r="2" fill="#fff"/><circle cx="47" cy="39" r="2.6" fill="#2c5fd6"/><circle cx="16" cy="40" r="2.6" fill="#2c5fd6"/>'),
+    devlinks: T('#6c4ad6','<circle cx="32" cy="16" r="6" fill="#f4f1ea"/><g fill="none" stroke="#f4f1ea" stroke-width="2"><rect x="14" y="27" width="36" height="7" rx="3.5"/><rect x="14" y="37" width="36" height="7" rx="3.5"/><rect x="14" y="47" width="36" height="7" rx="3.5"/></g>'),
+    'rede-social': T('#e6eef9','<rect x="8" y="9" width="36" height="19" rx="3" fill="#fff"/><circle cx="14" cy="15" r="3" fill="#9fb6d8"/><path d="M20 14h17M12 23h28" stroke="#d3deee" stroke-width="2"/><rect x="8" y="32" width="36" height="19" rx="3" fill="#fff"/><circle cx="14" cy="38" r="3" fill="#9fb6d8"/><path d="M20 37h17M12 46h28" stroke="#d3deee" stroke-width="2"/><path d="M42 39h14a3 3 0 0 1 3 3v6a3 3 0 0 1-3 3h-8l-5 4v-4h-1a3 3 0 0 1-3-3v-6a3 3 0 0 1 3-3Z" fill="#2c5fd6"/>'),
+    'react-ts': T('#2f6fb5','<rect x="12" y="25" width="34" height="13" rx="3" fill="#fff" opacity=".35"/><rect x="16" y="31" width="34" height="13" rx="3" fill="#fff" opacity=".6"/><rect x="20" y="37" width="34" height="16" rx="3" fill="#fff"/><text x="12" y="20" font-family="Inter Tight,system-ui,sans-serif" font-weight="700" font-size="14" fill="#fff">TS</text><path d="M25 43h18M25 47h12" stroke="#bcd3ee" stroke-width="2"/>'),
+    calculadora: T('#2a2a2e','<rect x="13" y="9" width="38" height="12" rx="3" fill="#cfe8d6"/><path d="M40 15h7" stroke="#2a2a2e" stroke-width="2"/><g fill="#55565e"><rect x="13" y="25" width="9" height="7" rx="2"/><rect x="24" y="25" width="9" height="7" rx="2"/><rect x="35" y="25" width="7" height="7" rx="2"/><rect x="13" y="35" width="9" height="7" rx="2"/><rect x="24" y="35" width="9" height="7" rx="2"/><rect x="35" y="35" width="7" height="7" rx="2"/><rect x="13" y="45" width="20" height="7" rx="2"/><rect x="35" y="45" width="7" height="7" rx="2"/></g><rect x="44" y="25" width="7" height="27" rx="2" fill="#ff9f43"/>'),
+    'chat-responsivo': T('#dff3ea','<rect x="18" y="7" width="28" height="50" rx="6" fill="#1d1d1f"/><rect x="21" y="13" width="22" height="38" rx="2" fill="#fff"/><rect x="23" y="17" width="13" height="6" rx="3" fill="#d4d6dc"/><rect x="28" y="26" width="13" height="6" rx="3" fill="#1f8a55"/><rect x="23" y="35" width="15" height="6" rx="3" fill="#d4d6dc"/><rect x="30" y="44" width="11" height="5" rx="2.5" fill="#1f8a55"/>'),
+    'todolist-fullstack': T('#fff2cc','<rect x="9" y="11" width="32" height="42" rx="4" fill="#fff" stroke="#e6d6a3"/><g fill="none" stroke="#1f8a55" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 21l2 2 4-4M14 31l2 2 4-4"/></g><rect x="14" y="40" width="6" height="6" rx="1.5" fill="none" stroke="#c9b57a" stroke-width="1.6"/><path d="M24 21h12M24 31h12M24 43h10" stroke="#d9cfa9" stroke-width="2.2"/><circle cx="47" cy="46" r="7.5" fill="none" stroke="#6b6963" stroke-width="5" stroke-dasharray="2.9 3"/><circle cx="47" cy="46" r="5.5" fill="#6b6963"/><circle cx="47" cy="46" r="2.2" fill="#fff2cc"/>'),
+    // documents + dock
+    folder: `<svg viewBox="0 0 64 64" aria-hidden="true"><path d="M5 16a4 4 0 0 1 4-4h15l5 5h26a4 4 0 0 1 4 4v4H5Z" fill="#3d8fe0"/><rect x="5" y="20" width="54" height="34" rx="4" fill="#5aa9f0"/><rect x="5" y="20" width="54" height="3" fill="#7dbcf5"/><path d="M22 37h20" stroke="#3d8fe0" stroke-width="3" stroke-linecap="round"/></svg>`,
+    log: `<svg viewBox="0 0 64 64" aria-hidden="true"><path d="M14 6h26l12 12v40H14Z" fill="#fff"/><path d="M40 6v12h12" fill="#dcdcdc"/><g stroke="#7cd992" stroke-width="2.2" stroke-linecap="round"><path d="M20 26h6M20 32h14M20 38h9"/></g><path d="M20 44h18" stroke="#ff7b72" stroke-width="2.2" stroke-linecap="round"/><rect x="18" y="49" width="24" height="7" rx="2" fill="#16171c"/><text x="30" y="54.6" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="5.5" fill="#fff">LOG</text></svg>`,
+    cv: `<svg viewBox="0 0 64 64" aria-hidden="true"><path d="M14 6h26l12 12v40H14Z" fill="#fff"/><path d="M40 6v12h12" fill="#dcdcdc"/><text x="33" y="38" text-anchor="middle" font-family="Inter Tight,system-ui,sans-serif" font-weight="700" font-size="15" fill="#17171a">CV</text><rect x="18" y="47" width="22" height="8" rx="2" fill="#e5533d"/><text x="29" y="53" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="5.5" fill="#fff">PDF</text></svg>`,
+    settings: `<svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#dedad1"/><g stroke="#8b877d" stroke-width="3" stroke-linecap="round"><path d="M14 20h36M14 32h36M14 44h36"/></g><circle cx="24" cy="20" r="5.5" fill="#2f6fe4"/><circle cx="41" cy="32" r="5.5" fill="#e5533d"/><circle cx="30" cy="44" r="5.5" fill="#1f8a55"/></svg>`,
+    finder: `<svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#e9eef8"/><path d="M0 14A14 14 0 0 1 14 0h20c-5 12-7 24-6 36h8v28H14A14 14 0 0 1 0 50Z" fill="#3d8fe0"/><path d="M22 22v6M44 22v6" stroke="#17171a" stroke-width="3" stroke-linecap="round"/><path d="M18 44c8 6 20 6 28 0" fill="none" stroke="#17171a" stroke-width="2.6" stroke-linecap="round"/></svg>`,
+    notes: `<svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#fffdf6"/><path d="M0 14A14 14 0 0 1 14 0h36a14 14 0 0 1 14 14v6H0Z" fill="#f7c948"/><g stroke="#ddd6c4" stroke-width="1.6"><path d="M10 32h44M10 41h44M10 50h44"/></g></svg>`,
+    term: `<svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#16171c"/><rect x="2" y="2" width="60" height="60" rx="12" fill="none" stroke="#3a3b44"/><path d="M15 22l9 8-9 8" fill="none" stroke="#7cd992" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/><path d="M29 40h16" stroke="#d7d9e0" stroke-width="3.4" stroke-linecap="round"/></svg>`,
+    mail: `<svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#2f6fe4"/><rect x="11" y="18" width="42" height="28" rx="4" fill="#fff"/><path d="M12 20l20 15 20-15" fill="none" stroke="#2f6fe4" stroke-width="2.6" stroke-linejoin="round"/></svg>`,
+    li: `<svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#f4f1ea"/><rect x="15" y="27" width="7" height="22" rx="1.5" fill="#17171a"/><circle cx="18.5" cy="18.5" r="4.2" fill="#17171a"/><path d="M28 27h7v4c2-3 4.5-4.6 8-4.6 5 0 7 3.4 7 8.6v14h-7V36.5c0-3-1-4.6-3.4-4.6-2.6 0-4.6 1.8-4.6 5V49h-7Z" fill="#17171a"/></svg>`
+  };
+  const LOCK = `<svg viewBox="0 0 12 12" aria-hidden="true"><rect x="2" y="5" width="8" height="6" rx="1.5" fill="#9a3a26"/><path d="M4 5V3.6a2 2 0 0 1 4 0V5" fill="none" stroke="#9a3a26" stroke-width="1.4"/></svg>`;
+  const GL = {
+    web:'<svg class="dk-g" viewBox="0 0 16 16" aria-hidden="true"><rect x="1.5" y="2.5" width="13" height="9" rx="1.5"/><path d="M5.5 14h5M8 11.5V14"/></svg>',
+    mobile:'<svg class="dk-g" viewBox="0 0 16 16" aria-hidden="true"><rect x="4.5" y="1.5" width="7" height="13" rx="1.6"/><path d="M7 12.5h2"/></svg>',
+    api:'<svg class="dk-g" viewBox="0 0 16 16" aria-hidden="true"><path d="M5.5 2.5C3.5 2.5 4 6.5 2 8c2 1.5 1.5 5.5 3.5 5.5M10.5 2.5c2 0 1.5 4 3.5 5.5-2 1.5-1.5 5.5-3.5 5.5"/></svg>',
+    tool:'<svg class="dk-g" viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="2.4"/><path d="M8 1.5v2.2M8 12.3v2.2M1.5 8h2.2M12.3 8h2.2M3.4 3.4l1.6 1.6M11 11l1.6 1.6M3.4 12.6L5 11M11 5l1.6-1.6"/></svg>',
+    desktop:'<svg class="dk-g" viewBox="0 0 16 16" aria-hidden="true"><rect x="3" y="3" width="10" height="7.5" rx="1"/><path d="M1.5 13h13"/></svg>',
+    docs:'<svg class="dk-g" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 1.5h5.5L12.5 4.5v10H4Z"/><path d="M6 8h4.5M6 10.5h3"/></svg>'
+  };
+  const DGROUP = { 'web': 'web', 'web+mobile': 'webmobile', 'mobile': 'mobile', 'api': 'api', 'tool/automation': 'tool', 'desktop': 'desktop' };
+  const DPL = Object.fromEntries(Object.entries(DGROUP).map(([k, v]) => [v, k]));
+  const glyphs = pl => tok(pl).map(k => GL[k]).join('');
+  const platTag = p => { const tk = tok(p.plataforma); return `<span class="dk-plat ${tk.length > 1 ? 'both' : tk[0]}">${glyphs(p.plataforma)}${esc(t('pl.' + p.plataforma))}</span>`; };
+  const range = p => { const g = p.git; if (!g.primeiro_commit) return ''; const a = fmtM(g.primeiro_commit.slice(0, 7)), b = fmtM(g.ultimo_commit.slice(0, 7)); return a === b ? a : `${a} – ${b}`; };
+  const chips = list => list.length ? `<div class="dk-chips">${list.map(s => `<span>${esc(I18N[L]['x.' + s] || s)}</span>`).join('')}</div>` : '<p>—</p>';
+  const ext = (u, label) => `<a href="${esc(u)}" target="_blank" rel="noopener">${label}</a>`;
+  const hostOf = u => u.replace(/^https?:\/\//, '').replace(/\/$/, '');
+
+  const pop = $('#dk-pop'), win = $('#dk-win');
+  function winContent(id) {
+    if (id === 'cv') {
+      const main = [...new Set(['linguagens', 'mobile', 'front-end web', 'back-end', 'banco', 'IA', '3D/gráficos', 'infra/deploy']
+        .flatMap(c => (K.categorias[c] || []).filter(s => !/^(CSS|HTML|Markdown)$/.test(s.nome)).slice(0, 3).map(s => s.nome)))];
+      return { bar: t('dk.cv.bar'), html: `<div class="dk-lead"><div class="dk-eye">${t('dk.cv.eye')}</div><div><h2 id="dk-pop-title">Michel Modesto</h2><p>${esc(t('dk.cv.role'))}</p></div></div>
+      <div class="dk-grid4"><div><h4>${t('dk.cv.nowH')}</h4><p>${esc(t('dk.cv.now'))}</p><h4 style="margin-top:18px">${t('sk.speak')}</h4><p>${K.idiomas.map(x => `${esc(t('ln.' + x.idioma))} — ${esc(t('lv.' + x.nivel))}`).join('<br>')}</p></div>
+      <div><h4>${t('dk.cv.stackH')}</h4>${chips(main)}<p style="margin-top:12px"><button type="button" class="dk-a" data-go="#skills">${t('dk.cv.all')}</button></p></div>
+      <div><h4>${t('dk.cv.filesH')}</h4><p><a class="dk-btn" href="#" data-todo="cv-pdf">${t('dk.cv.pdf')}</a></p><p style="margin-top:10px"><a class="dk-a" href="https://www.linkedin.com/in/michelmodesto/" target="_blank" rel="noopener">LinkedIn</a></p></div></div>` };
+    }
+    const p = byId[id]; if (!p) return null;
+    const g = p.git, c = g.commits, th = [p.thumb, p.thumb_mobile, ...(p.thumbs_extra || [])].filter(Boolean);
+    const links = [...p.urls.filter(u => u.tipo !== 'local').map(u => ext(u.url, esc(hostOf(u.url)) + ' ↗')), ...p.repos.filter(r => r.publico && r.url).map(r => ext(r.url, 'GitHub ↗'))];
+    if (p.urls.some(u => u.tipo === 'local')) links.push(`<span class="dk-mut">${t('lk.local')}</span>`);
+    const pic = `<div class="dk-pic">${p.thumb ? `<img src="dados/${esc(p.thumb)}" alt="">` : ICON[p.id] || ICON.folder}</div>`;
+    const rec = `<div class="dk-phd" data-todo="screen-recording">${t('dk.d.rec')}</div>`;
+    const gallery = p.confidencial ? `<p class="dk-cnote">${t('dk.d.conf')}</p>`
+      : `<div class="dk-rec">${th.map(s => `<img src="dados/${esc(s)}" alt="${esc(p.nome)}" loading="lazy"${/-mobile\./.test(s) ? ' class="tall"' : ''}>`).join('')}${th.length < 3 ? rec : ''}</div>`;
+    const tier = p.destaque === 'highlight' ? t('b.hl') : p.destaque === 'showcase' ? t('dk.t.show') : t('c.archive');
+    const tags = `${p.confidencial ? `<span class="dk-tag conf">${t('b.conf')}</span>` : ''}<span class="dk-tag">${t('tp.' + p.tipo)}</span>`;
+    return { bar: p.id, html: `<div class="dk-lead">${pic}<div><div class="dk-eye">${tier}${range(p) ? ' · ' + esc(range(p)) : ''}</div><h2 id="dk-pop-title" style="margin-top:8px">${esc(p.nome)}${tags}</h2><p>${esc(p.resumo[L] || p.resumo.en)}</p><div class="dk-facts">${platTag(p)}</div></div></div>
+      <div class="dk-grid4"><div><h4>${t('dk.d.built')}</h4>${chips(sortStack(p.stack))}</div>
+      <div>${c ? `<h4>Git</h4><dl><dt>${t('m.commits')}</dt><dd>${fmt(c)}</dd><dt>${t('cd.added')}</dt><dd class="add">+${fmt(g.linhas_adicionadas)}</dd><dt>${t('cd.removed')}</dt><dd class="rem">−${fmt(g.linhas_removidas)}</dd><dt>${t('m.files')}</dt><dd>${fmt(g.arquivos_tocados)}</dd><dt>${t('dk.d.period')}</dt><dd>${esc(range(p))}</dd></dl>` : ''}</div>
+      <div><h4>${t('dk.d.links')}</h4>${links.length ? `<ul class="dk-ul">${links.map(l => `<li>${l}</li>`).join('')}</ul>` : `<p class="dk-mut">${t('dk.d.nolink')}</p>`}</div></div>
+      <h4>${t('dk.d.gallery')}</h4>${gallery}` };
+  }
+  let origin = null;
+  function openWin(id, fromEl) {
+    const c = winContent(id); if (!c) return;
+    $('#dk-bar').textContent = c.bar; $('#dk-body').innerHTML = c.html; $('#dk-body').scrollTop = 0;
+    origin = fromEl || null;
+    if (!pop.open) { pop.showModal(); if (lenis) lenis.stop(); }
+    if (RM || !window.gsap) return;
+    const w = win.getBoundingClientRect(), o = origin ? origin.getBoundingClientRect() : null;
+    const dx = o ? (o.left + o.width / 2) - (w.left + w.width / 2) : 0, dy = o ? (o.top + o.height / 2) - (w.top + w.height / 2) : 24;
+    gsap.fromTo(win, { x: dx, y: dy, scale: o ? .12 : .96, opacity: 0 }, { x: 0, y: 0, scale: 1, opacity: 1, duration: .42, ease: 'power3.out', xPercent: -50, yPercent: -50 });
+  }
+  function closeWin(then) {
+    if (!pop.open) return;
+    const done = () => { pop.close(); if (lenis) lenis.start(); if (window.gsap) gsap.set(win, { clearProps: 'x,y,scale,opacity' }); if (typeof then === 'function') then(); };
+    if (RM || !window.gsap) return done();
+    const w = win.getBoundingClientRect(), o = origin && origin.isConnected ? origin.getBoundingClientRect() : null;
+    const dx = o ? (o.left + o.width / 2) - (w.left + w.width / 2) : 0, dy = o ? (o.top + o.height / 2) - (w.top + w.height / 2) : 16;
+    gsap.to(win, { x: dx, y: dy, scale: o ? .12 : .97, opacity: 0, duration: .26, ease: 'power2.in', onComplete: done });
+  }
+  if (window.gsap) gsap.set(win, { xPercent: -50, yPercent: -50 });
+  pop.addEventListener('cancel', e => { e.preventDefault(); closeWin(); });
+  pop.addEventListener('click', e => { if (e.target === pop) closeWin(); });
+  $('#dk-close').addEventListener('click', () => closeWin());
+  document.addEventListener('click', e => {
+    const o = e.target.closest('[data-open]'); if (o) return openWin(o.dataset.open, o);
+    const gb = e.target.closest('[data-go]'); if (gb) return closeWin(() => goTo(gb.dataset.go));
+    if (e.target.closest('a[data-todo]')) e.preventDefault(); // placeholders must not jump to top
+  });
+
+  // files on the desktop: highlights and showcase from the data, plus four documents
+  const SHOW = P.filter(p => p.destaque === 'showcase');
+  const FILES = [
+    ...[...HL, ...SHOW].map(p => ({ id: p.id, label: () => p.nome, p, g: DGROUP[p.plataforma] || 'web', mob: p.destaque === 'highlight', conf: p.confidencial })),
+    { id: 'archive', label: () => t('dk.m.archive'), svg: ICON.folder, plain: true, g: 'docs', mob: true, href: '#web' },
+    { id: 'skills', label: () => t('dk.m.skills'), svg: ICON.settings, g: 'docs', mob: true, href: '#skills' },
+    { id: 'commits', label: () => 'commits.log', svg: ICON.log, plain: true, g: 'docs', mob: true, href: '#commits' },
+    { id: 'cv', label: () => 'CV.pdf', svg: ICON.cv, plain: true, g: 'docs', mob: true }
+  ];
+  const fileTile = f => {
+    const p = f.p, lk = f.conf ? `<span class="dk-lk">${LOCK}</span>` : '';
+    if (p && p.thumb) { const src = tok(p.plataforma).includes('mobile') && p.thumb_mobile ? p.thumb_mobile : p.thumb; return `<span class="dk-tile img"><img src="dados/${esc(src)}" alt="" draggable="false">${lk}</span>`; }
+    return `<span class="dk-tile">${f.svg || ICON[f.id] || ICON.folder}${lk}</span>`;
+  };
+  const layer = $('#dk-icons'), dk = $('#story');
+  const IW = 92, IH = 98, R = 86;
+  const bodies = FILES.map((f, i) => {
+    const el = document.createElement('button');
+    el.type = 'button'; el.className = 'dk-file' + (f.plain ? ' plain' : '') + (f.mob ? '' : ' donly'); el.setAttribute('role', 'listitem');
+    el.innerHTML = `${fileTile(f)}<span class="dk-name"></span>`;
+    layer.appendChild(el);
+    return { f, el, i, pr: (Math.sin(i * 7.31) * .5) * 28, x: 0, y: 0, vx: 0, vy: 0, rot: 0, tx: 0, ty: 0, hx: 0, hy: 0, wait: 0, drag: false };
+  });
+  const GROUPS = ['web', 'webmobile', 'mobile', 'api', 'tool', 'desktop', 'docs'];
+  const heaps = Object.fromEntries(GROUPS.map(g => {
+    const el = document.createElement(g === 'docs' ? 'div' : 'button');
+    if (g !== 'docs') { el.type = 'button'; el.dataset.g = g; }
+    el.className = 'dk-heap' + (g === 'web' || g === 'mobile' ? ' big' : '');
+    layer.appendChild(el); return [g, el];
+  }));
+  const apps = $$('.dk-app');
+  apps.forEach(a => a.innerHTML = ICON[a.dataset.icon]);
+  const tick = () => $('#dk-clock').textContent = 'São Paulo  ' + new Intl.DateTimeFormat(LOCALE[L], { timeZone: 'America/Sao_Paulo', weekday: 'short', hour: '2-digit', minute: '2-digit', hourCycle: 'h23' }).format(new Date()).replace(',', '');
+  setInterval(tick, 20000);
+  $('#dk-stat').dataset.v = JSON.stringify({ c: TOT.commits, d: TOT.dias_ativos, p: P.length });
+  // called by applyLang: names, aria labels and heap captions follow the language
+  function dkLabel() {
+    layer.setAttribute('aria-label', t('dk.files'));
+    bodies.forEach(b => { const l = b.f.label(); b.el.querySelector('.dk-name').textContent = l; b.el.setAttribute('aria-label', fill(t(b.f.href ? 'dk.goto' : 'dk.open'), { x: l })); });
+    GROUPS.forEach(g => { const n = bodies.filter(b => b.f.g === g).length;
+      heaps[g].innerHTML = `${g === 'docs' ? GL.docs : glyphs(DPL[g])}${esc(t(g === 'docs' ? 'dk.docs' : 'pl.' + DPL[g]))} <b>${n}</b>`; });
+    tick();
+    if (pop.open) closeWin();
+  }
+
+  let act = [], W = 0, H = 0, mobile = false, mode = 'pile', z = 10, running = false, lastT = 0;
+  const bounds = () => ({ x0: 8, x1: W - IW - 8, y0: 36, y1: mobile ? H - IH - 96 : H - IH - 92 });
+  const rnd = i => { const x = Math.sin(i * 12.9898 + 4.1) * 43758.5453; return x - Math.floor(x); };
+  // desktop home slots: a checkerboard of grid cells that keeps clear of the name block, the hint and the moon
+  function homeSlots(n) {
+    const bd = bounds(), dr = dk.getBoundingClientRect();
+    const avoid = ['.dk-intro', '.dk-hint', '.dk-moon'].map(s => { const r = $(s).getBoundingClientRect(); return { l: r.left - dr.left - 16, t: r.top - dr.top - 16, r: r.right - dr.left + 16, b: r.bottom - dr.top + 16 }; });
+    let cells = [];
+    for (let s = 1; s >= .7; s -= .1) {
+      const cols = Math.max(2, Math.floor((bd.x1 - bd.x0) / (116 * s)) + 1), rows = Math.max(2, Math.floor((bd.y1 - bd.y0) / (112 * s)) + 1);
+      const sx = (bd.x1 - bd.x0) / (cols - 1), sy = (bd.y1 - bd.y0) / (rows - 1);
+      cells = [];
+      for (let r = 0; r < rows; r++) for (let c = 0; c < cols; c++) {
+        const x = bd.x0 + c * sx, y = bd.y0 + r * sy;
+        if (!avoid.some(a => x < a.r && x + IW > a.l && y < a.b && y + IH > a.t)) cells.push({ r, c, x, y, jx: RM ? 0 : Math.min(18, (sx - IW) * .3), jy: RM ? 0 : Math.min(14, (sy - IH) * .3) });
+      }
+      if (cells.length >= n) break;
+    }
+    cells.sort((a, b) => (a.r + a.c) % 2 - (b.r + b.c) % 2 || a.r - b.r || a.c - b.c);
+    return cells.slice(0, n).sort((a, b) => a.r - b.r || a.c - b.c);
+  }
+  function layout() {
+    mobile = innerWidth <= 760;
+    act = bodies.filter(b => !mobile || b.f.mob);
+    if (mobile) {
+      const cols = 4, cw = (innerWidth - 16) / cols, rows = Math.ceil(act.length / cols);
+      dk.style.setProperty('--grid-h', (44 + rows * 104) + 'px');
+      act.forEach((b, i) => { b.hx = 8 + (i % cols) * cw + (cw - IW) / 2; b.hy = 44 + Math.floor(i / cols) * 104; });
+    }
+    W = dk.clientWidth; H = dk.clientHeight;
+    if (!mobile) {
+      const bd = bounds(), slots = homeSlots(act.length);
+      act.forEach((b, i) => { const s = slots[i];
+        if (s) { b.hx = Math.min(bd.x1, Math.max(bd.x0, s.x + (rnd(i) - .5) * 2 * s.jx)); b.hy = Math.min(bd.y1, Math.max(bd.y0, s.y + (rnd(i + 50) - .5) * 2 * s.jy)); }
+        else { b.hx = bd.x0 + rnd(i) * (bd.x1 - bd.x0); b.hy = bd.y0 + rnd(i + 9) * (bd.y1 - bd.y0) * .4; } });
+    }
+  }
+  function setTargets(kind) {
+    const bd = bounds();
+    if (kind === 'home') return act.forEach(b => { b.tx = b.hx; b.ty = b.hy; });
+    if (kind === 'pile') { const cx = W / 2 - IW / 2, cy = Math.min(H * .38, bd.y1); return act.forEach((b, i) => { const a = i * 2.4; b.tx = cx + Math.cos(a) * (8 + i * 2.6); b.ty = cy + Math.sin(a) * (6 + i * 1.6); }); }
+    // sort: one heap per platform along the top, web on the left, mobile next to it
+    const present = GROUPS.filter(g => act.some(b => b.f.g === g)), span = bd.x1 - bd.x0 - 60, cy = bd.y0 + 70;
+    GROUPS.forEach(g => heaps[g].classList.toggle('on', present.includes(g)));
+    present.forEach((g, gi) => {
+      const cx = bd.x0 + 30 + (present.length > 1 ? gi * span / (present.length - 1) : span / 2);
+      act.filter(b => b.f.g === g).forEach((b, k) => { const a = k * 2.4, r = 4 + k * 4.4; b.tx = cx + Math.cos(a) * r; b.ty = cy + Math.sin(a) * r * .75; });
+      heaps[g].style.transform = `translate(${(cx + IW / 2).toFixed(0)}px,${(cy + IH + 58).toFixed(0)}px) translateX(-50%)`;
+    });
+  }
+  const tilt = b => mode === 'pile' ? b.pr : mode === 'sort' ? b.pr * .5 : 0;
+  const draw = b => { b.el.style.transform = `translate3d(${b.x.toFixed(1)}px,${b.y.toFixed(1)}px,0) rotate(${b.rot.toFixed(2)}deg)`; };
+  function flags() { layer.classList.toggle('piled', mode === 'pile' || mode === 'sort'); layer.classList.toggle('sorted', mode === 'sort'); $('#dk-sort').setAttribute('aria-pressed', mode === 'sort'); }
+  function step(now) {
+    const dt = Math.min(2.5, (now - lastT) / 16.667 || 1); lastT = now;
+    const bd = bounds(); let busy = false, settled = true;
+    for (const b of act) {
+      if (b.drag) { busy = true; continue; }
+      if (b.wait > now) { busy = true; settled = false; continue; }
+      if (mode !== 'free') {
+        b.vx = (b.vx + (b.tx - b.x) * .05 * dt) * Math.pow(.8, dt);
+        b.vy = (b.vy + (b.ty - b.y) * .05 * dt) * Math.pow(.8, dt);
+        if (Math.abs(b.tx - b.x) + Math.abs(b.ty - b.y) > 1) settled = false;
+      } else { const f = Math.pow(.935, dt); b.vx *= f; b.vy *= f; }
+      b.x += b.vx * dt; b.y += b.vy * dt;
+      if (b.x < bd.x0) { b.x = bd.x0; b.vx = Math.abs(b.vx) * .55; }
+      if (b.x > bd.x1) { b.x = bd.x1; b.vx = -Math.abs(b.vx) * .55; }
+      if (b.y < bd.y0) { b.y = bd.y0; b.vy = Math.abs(b.vy) * .55; }
+      if (b.y > bd.y1) { b.y = bd.y1; b.vy = -Math.abs(b.vy) * .55; }
+    }
+    // ponytail: O(n²) pair check, fine for ~24 files; spatial hash if this grows past ~200
+    if (mode === 'free') for (let i = 0; i < act.length; i++) for (let j = i + 1; j < act.length; j++) {
+      const a = act[i], c = act[j], dx = c.x - a.x, dy = c.y - a.y, d = Math.hypot(dx, dy);
+      if (d >= R || d < .01) continue;
+      const nx = dx / d, ny = dy / d, ov = R - d;
+      const wa = a.drag ? 0 : c.drag ? 1 : .5, wc = 1 - wa;
+      a.x -= nx * ov * wa; a.y -= ny * ov * wa; c.x += nx * ov * wc; c.y += ny * ov * wc;
+      const vn = (c.vx - a.vx) * nx + (c.vy - a.vy) * ny;
+      if (vn < 0) { const j2 = -vn * .8; a.vx -= nx * j2 * wa; a.vy -= ny * j2 * wa; c.vx += nx * j2 * wc; c.vy += ny * j2 * wc; }
+    }
+    for (const b of act) {
+      const tr = tilt(b) + Math.max(-14, Math.min(14, b.vx * .9));
+      b.rot += (tr - b.rot) * Math.min(1, .18 * dt);
+      if (Math.abs(b.vx) + Math.abs(b.vy) > .06 || Math.abs(b.rot - tilt(b)) > .05) busy = true;
+      draw(b);
+    }
+    if (mode === 'home' && settled) mode = 'free';
+    flags();
+    if (busy || !settled) requestAnimationFrame(step); else running = false;
+  }
+  const kick = () => { if (!running) { running = true; lastT = performance.now(); requestAnimationFrame(step); } };
+  function snapAll(kind) { mode = kind; setTargets(kind); act.forEach(b => { b.x = b.tx; b.y = b.ty; b.vx = b.vy = 0; b.rot = tilt(b); draw(b); }); if (kind === 'home') mode = 'free'; flags(); }
+  function arrange(kind, stagger) {
+    if (RM) return snapAll(kind);
+    setTargets(kind); mode = kind;
+    const now = performance.now();
+    act.forEach((b, i) => b.wait = now + (stagger ? i * 28 : 0));
+    kick();
+  }
+
+  // drag + throw: only a pointerdown on a file starts it, so the wheel and touches elsewhere keep scrolling the page
+  let suppress = null;
+  bodies.forEach(b => {
+    const el = b.el; let ox = 0, oy = 0, sx = 0, sy = 0, lt = 0, timer = 0, moved = 0;
+    const grab = (px, py) => {
+      b.drag = true; el.classList.add('held'); el.style.zIndex = ++z;
+      if (mode !== 'free') mode = 'free'; // grabbing breaks the pile or the heaps: overlapping files push apart
+      flags(); ox = px - b.x; oy = py - b.y; b.vx = b.vy = 0; lt = performance.now(); kick();
+    };
+    el.addEventListener('pointerdown', e => {
+      if (e.button || RM) return; // reduced motion: files stay in their grid, a click still opens them
+      const r = dk.getBoundingClientRect(); const px = e.clientX - r.left, py = e.clientY - r.top;
+      sx = px; sy = py; moved = 0;
+      el.setPointerCapture(e.pointerId);
+      if (e.pointerType === 'touch') timer = setTimeout(() => grab(px, py), 220); else grab(px, py);
+    });
+    el.addEventListener('pointermove', e => {
+      const r = dk.getBoundingClientRect(); const px = e.clientX - r.left, py = e.clientY - r.top;
+      moved = Math.max(moved, Math.hypot(px - sx, py - sy));
+      if (!b.drag) { if (moved > 8) clearTimeout(timer); return; }
+      const now = performance.now(), k = Math.max(1, (now - lt) / 16.667);
+      const nx = px - ox, ny = py - oy;
+      b.vx = b.vx * .4 + (nx - b.x) / k * .6; b.vy = b.vy * .4 + (ny - b.y) / k * .6;
+      b.x = nx; b.y = ny; lt = now;
+    });
+    const end = () => {
+      clearTimeout(timer);
+      if (!b.drag) return;
+      b.drag = false; el.classList.remove('held');
+      if (performance.now() - lt > 90) b.vx = b.vy = 0; // held still before release: no throw
+      const s = Math.hypot(b.vx, b.vy); if (s > 42) { b.vx *= 42 / s; b.vy *= 42 / s; }
+      if (moved > 5) suppress = el;
+      kick();
+    };
+    el.addEventListener('pointerup', end); el.addEventListener('pointercancel', end);
+    el.addEventListener('touchmove', e => { if (b.drag) e.preventDefault(); }, { passive: false });
+    el.addEventListener('click', () => {
+      if (suppress === el) { suppress = null; return; }
+      if (b.f.href) return goTo(b.f.href);
+      openWin(b.f.id, el.querySelector('.dk-tile'));
+    });
+  });
+  const HEAP_FILTER = { web: 'web', webmobile: 'mobile', mobile: 'mobile', api: 'api', tool: 'tool', desktop: 'desktop' };
+  layer.addEventListener('click', e => { const h = e.target.closest('.dk-heap[data-g]'); if (!h) return; setFilter(HEAP_FILTER[h.dataset.g]); goTo('#web'); });
+  $('#dk-sort').addEventListener('click', () => arrange(mode === 'sort' ? 'home' : 'sort', true));
+  $('#dk-tidy').addEventListener('click', () => arrange('home', true));
+  $('#dk-pile').addEventListener('click', () => arrange('pile', true));
+  let rt; addEventListener('resize', () => { clearTimeout(rt); rt = setTimeout(() => { const keep = mode === 'sort' || mode === 'pile' ? mode : 'home'; layout(); arrange(keep, false); }, 150); });
+
+  // dock magnification
+  const dock = $('#dk-dock');
+  if (!RM && matchMedia('(hover:hover) and (min-width:761px)').matches) {
+    dock.addEventListener('pointermove', e => apps.forEach(a => {
+      const r = a.getBoundingClientRect(), d = e.clientX - (r.left + r.width / 2);
+      a.style.setProperty('--s', (1 + .55 * Math.exp(-(d * d) / (2 * 70 * 70))).toFixed(3));
+    }));
+    dock.addEventListener('pointerleave', () => apps.forEach(a => a.style.setProperty('--s', 1)));
+  }
+
+  // while the desktop fills the screen its menu bar is the navigation; the site nav comes back once the manifesto sheet covers it
+  const mfSheet = $('#manifesto');
+  const navState = () => document.documentElement.classList.toggle('dk-on', mfSheet.getBoundingClientRect().top > 80);
+  addEventListener('scroll', navState, { passive: true }); navState();
+
+  // ---------- language ----------
+  const mfp = $('#mfp'), bye = $('#bye');
+  let motionOn = false, mfTw = null, byeTw = null;
+  function splitWords(node) {
+    [...node.childNodes].forEach(c => {
+      if (c.nodeType === 3) {
+        const frag = document.createDocumentFragment();
+        c.textContent.split(/(\s+)/).forEach(w => { if (!w) return;
+          if (/^\s+$/.test(w)) frag.append(w); else { const s = document.createElement('span'); s.className = 'w'; s.textContent = w; frag.append(s); } });
+        c.replaceWith(frag);
+      } else splitWords(c);
+    });
+  }
+  const kill = tw => { if (tw) { tw.scrollTrigger && tw.scrollTrigger.kill(); tw.kill(); } };
+  function makeMf() { kill(mfTw); mfTw = gsap.fromTo(mfp.querySelectorAll('.w'), { opacity: .16 }, { opacity: 1, stagger: .1, ease: 'none',
+    scrollTrigger: { trigger: mfp, start: 'top 78%', end: 'bottom 50%', scrub: true } }); }
+  function makeBye() { kill(byeTw); byeTw = gsap.from('.bye span', { yPercent: 100, stagger: .05, ease: 'power2.out',
+    scrollTrigger: { trigger: '.bye', start: 'top bottom', end: 'bottom bottom', scrub: true } }); }
+
+  function applyLang(l) {
+    L = I18N[l] ? l : 'en';
+    document.documentElement.lang = HTMLLANG[L];
+    document.title = t('doc.title');
+    document.querySelector('meta[name=description]').setAttribute('content', t('doc.desc'));
+    const vars = el => el.dataset.v ? JSON.parse(el.dataset.v) : null;
+    $$('[data-t]').forEach(el => { const v = vars(el); el.textContent = v ? fill(t(el.dataset.t), v) : t(el.dataset.t); });
+    $$('[data-th]').forEach(el => { el.innerHTML = t(el.dataset.th); });
+    $$('[data-ta]').forEach(el => el.dataset.ta.split(';').forEach(pair => { const [at, k] = pair.split(':'); el.setAttribute(at, fill(t(k), vars(el) || {})); }));
+    $$('[data-r]').forEach(el => { const p = byId[el.dataset.r]; el.textContent = p.resumo[L] || p.resumo.en; });
+    $$('[data-pl]').forEach(el => { el.textContent = t('pl.' + el.dataset.pl); });
+    $$('[data-x]').forEach(el => { el.textContent = I18N[L]['x.' + el.dataset.x] || el.dataset.x; });
+    $$('[data-n]').forEach(el => { el.textContent = fmt(+el.dataset.n); });
+    $$('[data-m]').forEach(el => { el.textContent = fmtM(el.dataset.m, 'short' in el.dataset); });
+    $$('[data-d]').forEach(el => { el.textContent = fmtD(el.dataset.d); });
+    $('#speaksV').textContent = K.idiomas.map(x => t('ln.' + x.idioma)).join(', ');
+    $$('[data-lang]').forEach(bt => bt.setAttribute('aria-pressed', bt.dataset.lang === L));
+    mfp.innerHTML = t('mf.text'); splitWords(mfp);
+    const word = [...t('ct.bye')];
+    bye.innerHTML = word.map(ch => `<span>${ch === ' ' ? '&nbsp;' : esc(ch)}</span>`).join('');
+    bye.style.fontSize = Math.min(15.6, 168 / word.length).toFixed(2) + 'vw';
+    drawCommits(qC); drawLines(qL); setWork(curWork); AI.again(); MB.again(); dkLabel();
+    if (motionOn) { makeMf(); makeBye(); }
+    try { localStorage.setItem('mm-lang', L); } catch (e) { /* storage blocked: choice lasts this visit only */ }
+  }
+  let saved = null;
+  try { saved = localStorage.getItem('mm-lang'); } catch (e) { saved = null; }
+  setFilter('all');
+  const nav = (navigator.language || 'en').toLowerCase();
+  applyLang(saved && I18N[saved] ? saved : nav.startsWith('pt') ? 'pt' : nav.startsWith('es') ? 'es' : 'en');
+  // one language state: the nav selector and the desktop menu bar selector both land here
+  document.addEventListener('click', e => { const bt = e.target.closest('[data-lang]'); if (!bt || bt.dataset.lang === L) return;
+    applyLang(bt.dataset.lang); if (stReady) ScrollTrigger.refresh(); });
+
+  // desktop: files start piled, then spread to their home slots (reduced motion: straight to a static grid)
+  layout();
+  if (RM) snapAll('home');
+  else { snapAll('pile'); setTimeout(() => { layout(); arrange('home', true); }, 650); }
+
+  if (!window.gsap || !window.ScrollTrigger) return; // content is already complete without motion
+  gsap.registerPlugin(ScrollTrigger);
+  stReady = true;
+  if (!RM) {
+    gsap.set('.dk-dock', { xPercent: -50, x: 0 });
+    gsap.from('.dk-menu', { y: -30, duration: .5, ease: 'power3.out' });
+    gsap.from('.dk-intro > *', { y: 26, opacity: 0, duration: .7, stagger: .08, delay: .15, ease: 'power3.out' });
+    gsap.from('.dk-dock', { y: 90, duration: .7, delay: .45, ease: 'power3.out' });
+    gsap.from('.dk-moon', { scale: .85, opacity: 0, duration: 1.2, ease: 'power2.out' });
+    gsap.from(layer, { opacity: 0, duration: .35 });
+  }
+
+  const workTriggers = () => items.forEach((el, i) => ScrollTrigger.create({ trigger: el, start: 'top 58%', end: 'bottom 58%', onToggle: s => s.isActive && setWork(i) }));
+  const reveal = sel => { gsap.set(sel, { autoAlpha: 0, y: 24 });
+    ScrollTrigger.batch(sel, { start: 'top 90%', once: true, onEnter: bt => gsap.to(bt, { autoAlpha: 1, y: 0, stagger: .07, duration: .7, ease: 'power3.out' }) }); };
+  // a pinned deck that travels sideways; the gauge follows the active card
+  const deckFilm = (sec, st, extra) => {
+    const deck = $('.deck', sec), vp = $('.deck-vp', sec), n = st.cards.length;
+    const dist = () => Math.max(0, deck.scrollWidth - vp.clientWidth);
+    const tl = gsap.timeline({ scrollTrigger: { trigger: sec, start: 'top top', end: () => '+=' + (dist() + innerHeight * .8), pin: true, scrub: 1, invalidateOnRefresh: true,
+        onUpdate: s => st.set(Math.min(n - 1, Math.round(s.progress * (n - 1) * 1.05))) } })
+      .to(deck, { x: () => -dist(), ease: 'none', duration: .8 }, .12)
+      .to($('.bg2', sec), { opacity: 1, ease: 'none', duration: 1 }, 0)
+      .fromTo($('.rail i', sec), { scaleY: .1 }, { scaleY: 1, ease: 'none', duration: 1 }, 0);
+    if (extra) extra(tl);
+  };
+
+  // every ScrollTrigger is created in page order so pin spacing is measured correctly
+  gsap.matchMedia().add({ desk: '(min-width: 861px) and (prefers-reduced-motion: no-preference)', motion: '(prefers-reduced-motion: no-preference)' }, ctx => {
+    const { desk, motion } = ctx.conditions;
+    if (!motion) { workTriggers(); return; } // reduced motion: no smooth scroll, no pins, all content in place
+    motionOn = true;
+
+    let raf;
+    if (window.Lenis) {
+      lenis = new Lenis({ lerp: 0.1 });
+      lenis.on('scroll', ScrollTrigger.update);
+      raf = time => lenis.raf(time * 1000);
+      gsap.ticker.add(raf); gsap.ticker.lagSmoothing(0);
+    }
+    const onAnchor = e => {
+      const el = e.target.closest('a[href^="#"]:not([data-todo])');
+      const target = el && document.querySelector(el.getAttribute('href'));
+      if (lenis && target) { e.preventDefault(); lenis.scrollTo(target); }
+    };
+    document.addEventListener('click', onAnchor);
+
+    // the scroll film runs on desktop only, so phones and hurried readers get plain, complete content
+    if (desk) {
+      document.documentElement.classList.add('pinned');
+      // CH 01: the desktop holds still and dims while the manifesto sheet slides up over it
+      gsap.timeline({ scrollTrigger: { trigger: '#story', start: 'top top', end: '+=100%', pin: true, scrub: true, anticipatePin: 1 } })
+        .to('#story .dk-shade', { opacity: .6, ease: 'none' });
+    }
+
+    makeMf();
+    workTriggers();
+    // CH 04: phones travel sideways, a warm light rises
+    if (desk) deckFilm($('#mobile'), MB);
+    reveal('.scat');
+    // CH 06: deck travels sideways, warm light cools down
+    if (desk) deckFilm($('#ai'), AI);
+
+    if (desk) {
+      // CH 07: the counter climbs month by month to the real total
+      drawCommits(0);
+      gsap.timeline({ scrollTrigger: { trigger: '#commits', start: 'top top', end: '+=200%', pin: true, scrub: .6,
+          onUpdate: s => drawCommits(Math.min(1, s.progress / .8)) } })
+        .to('#commits .glow', { opacity: 1, ease: 'none', duration: .8 })
+        .to({}, { duration: .2 });
+      // CH 08: lines added rise, lines removed fall, then the breakdown sheet slides over
+      drawLines(0);
+      gsap.timeline({ scrollTrigger: { trigger: '#code', start: 'top top', end: '+=260%', pin: true, scrub: .6,
+          onUpdate: s => drawLines(Math.min(1, s.progress / .6)) } })
+        .to('#code .glow', { opacity: 1, ease: 'none', duration: .6 })
+        .from('#tiles .tile', { autoAlpha: 0, y: 20, stagger: .05, duration: .2 }, .05)
+        .to({}, { duration: .4 }); // hold while the breakdown sheet slides over
+      // CH 09: the commit breakdown holds still and the blue contact sheet slides up over it
+      gsap.timeline({ scrollTrigger: { trigger: '#breakdown', start: 'bottom bottom', end: '+=100%', pin: true, pinSpacing: false, scrub: true } })
+        .to('#breakdown .wrap', { scale: .94, autoAlpha: .35, ease: 'none' });
+    }
+
+    gsap.set('.bar i', { scaleX: 0 });
+    ScrollTrigger.batch('.prow', { start: 'top 92%', once: true, onEnter: rows => gsap.to(rows.map(r => r.querySelectorAll('.bar i')), { scaleX: 1, duration: .9, stagger: .04, ease: 'power3.out' }) });
+    reveal('#contact .rv');
+    makeBye();
+
+    return () => {
+      motionOn = false; kill(mfTw); kill(byeTw); mfTw = byeTw = null;
+      document.removeEventListener('click', onAnchor);
+      if (lenis) { gsap.ticker.remove(raf); lenis.destroy(); lenis = null; }
+      document.documentElement.classList.remove('pinned'); drawCommits(1); drawLines(1); AI.set(0); MB.set(0);
+    };
+  });
+
+  document.fonts && document.fonts.ready.then(() => ScrollTrigger.refresh());
+})();
+</script>
+</body>
+</html>

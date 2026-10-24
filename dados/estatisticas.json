@@ -1,0 +1,680 @@
+{
+  "gerado_em": "2026-10-23",
+  "fonte": "git log --all --no-merges --numstat em repositórios locais (Dev/*) e clones dos repositórios do GitHub (MichelModesto, flexasealBR, r4mi-dev); commits deduplicados por SHA",
+  "identidades": "8 e-mails/nomes do Michel (pessoal, Flexaseal, máquinas locais, noreply do GitHub, conta michelthedev)",
+  "regras_limpeza": [
+    "exclui commits automáticos 'Atualiza dados do painel' e 'Atualiza planilha' (mesmo script publicar.sh)",
+    "exclui merges",
+    "exclui lockfiles (package-lock, yarn.lock, pnpm-lock, bun.lockb, Podfile.lock etc.)",
+    "exclui node_modules/, dist/, build/, .next/, out/, coverage/, .expo/, Pods/, vendor/, *.min.js/css, *.map, *.tsbuildinfo",
+    "exclui binários (numstat '-') e anexos/arquivos não-código versionados como texto (.pdf, .dxf, .patch, public/temp/, .idea/)",
+    "exclui dados gerados por script (pastas data/ ou dados/ com .json, games/geo/locais.json) e telas de referência de handoff"
+  ],
+  "total_bruto": {
+    "commits": 1571,
+    "linhas_adicionadas": 1698654,
+    "linhas_removidas": 7706497,
+    "arquivos_tocados": 52331,
+    "dias_ativos": 354
+  },
+  "total_limpo": {
+    "commits": 1504,
+    "linhas_adicionadas": 660521,
+    "linhas_removidas": 117787,
+    "arquivos_tocados": 2579,
+    "dias_ativos": 350
+  },
+  "usar": "total_limpo",
+  "por_mes": [
+    {
+      "mes": "2024-10",
+      "commits": 1,
+      "linhas_adicionadas": 16,
+      "linhas_removidas": 0
+    },
+    {
+      "mes": "2024-11",
+      "commits": 1,
+      "linhas_adicionadas": 56,
+      "linhas_removidas": 16
+    },
+    {
+      "mes": "2024-12",
+      "commits": 19,
+      "linhas_adicionadas": 7113,
+      "linhas_removidas": 929
+    },
+    {
+      "mes": "2025-01",
+      "commits": 3,
+      "linhas_adicionadas": 298,
+      "linhas_removidas": 306
+    },
+    {
+      "mes": "2025-02",
+      "commits": 11,
+      "linhas_adicionadas": 2958,
+      "linhas_removidas": 1624
+    },
+    {
+      "mes": "2025-03",
+      "commits": 31,
+      "linhas_adicionadas": 2856,
+      "linhas_removidas": 535
+    },
+    {
+      "mes": "2025-04",
+      "commits": 39,
+      "linhas_adicionadas": 6414,
+      "linhas_removidas": 1663
+    },
+    {
+      "mes": "2025-05",
+      "commits": 35,
+      "linhas_adicionadas": 12367,
+      "linhas_removidas": 2896
+    },
+    {
+      "mes": "2025-06",
+      "commits": 59,
+      "linhas_adicionadas": 10577,
+      "linhas_removidas": 2567
+    },
+    {
+      "mes": "2025-07",
+      "commits": 37,
+      "linhas_adicionadas": 3874,
+      "linhas_removidas": 1405
+    },
+    {
+      "mes": "2025-08",
+      "commits": 54,
+      "linhas_adicionadas": 12356,
+      "linhas_removidas": 2992
+    },
+    {
+      "mes": "2025-09",
+      "commits": 33,
+      "linhas_adicionadas": 21655,
+      "linhas_removidas": 2508
+    },
+    {
+      "mes": "2025-10",
+      "commits": 60,
+      "linhas_adicionadas": 22664,
+      "linhas_removidas": 3842
+    },
+    {
+      "mes": "2025-11",
+      "commits": 25,
+      "linhas_adicionadas": 9790,
+      "linhas_removidas": 1419
+    },
+    {
+      "mes": "2025-12",
+      "commits": 82,
+      "linhas_adicionadas": 18846,
+      "linhas_removidas": 3914
+    },
+    {
+      "mes": "2026-01",
+      "commits": 93,
+      "linhas_adicionadas": 18980,
+      "linhas_removidas": 4540
+    },
+    {
+      "mes": "2026-02",
+      "commits": 48,
+      "linhas_adicionadas": 18194,
+      "linhas_removidas": 4523
+    },
+    {
+      "mes": "2026-03",
+      "commits": 53,
+      "linhas_adicionadas": 32101,
+      "linhas_removidas": 6814
+    },
+    {
+      "mes": "2026-04",
+      "commits": 50,
+      "linhas_adicionadas": 50302,
+      "linhas_removidas": 5640
+    },
+    {
+      "mes": "2026-05",
+      "commits": 103,
+      "linhas_adicionadas": 38799,
+      "linhas_removidas": 7592
+    },
+    {
+      "mes": "2026-06",
+      "commits": 124,
+      "linhas_adicionadas": 86352,
+      "linhas_removidas": 11767
+    },
+    {
+      "mes": "2026-07",
+      "commits": 185,
+      "linhas_adicionadas": 83928,
+      "linhas_removidas": 20881
+    },
+    {
+      "mes": "2026-08",
+      "commits": 124,
+      "linhas_adicionadas": 83067,
+      "linhas_removidas": 11901
+    },
+    {
+      "mes": "2026-09",
+      "commits": 77,
+      "linhas_adicionadas": 40550,
+      "linhas_removidas": 7974
+    },
+    {
+      "mes": "2026-10",
+      "commits": 128,
+      "linhas_adicionadas": 73023,
+      "linhas_removidas": 9221
+    }
+  ],
+  "antes_de_2024_10": {
+    "commits": 29,
+    "linhas_adicionadas": 3385,
+    "linhas_removidas": 318
+  },
+  "por_ano": [
+    {
+      "ano": "2023",
+      "commits": 2,
+      "linhas_adicionadas": 72,
+      "linhas_removidas": 0
+    },
+    {
+      "ano": "2024",
+      "commits": 48,
+      "linhas_adicionadas": 10498,
+      "linhas_removidas": 1263
+    },
+    {
+      "ano": "2025",
+      "commits": 469,
+      "linhas_adicionadas": 124655,
+      "linhas_removidas": 25671
+    },
+    {
+      "ano": "2026",
+      "commits": 985,
+      "linhas_adicionadas": 525296,
+      "linhas_removidas": 90853
+    }
+  ],
+  "por_projeto": [
+    {
+      "id": "flexaseal-portal",
+      "nome": "Portal Flexaseal",
+      "tipo": "empresa",
+      "commits": 896,
+      "linhas_adicionadas": 420064,
+      "linhas_removidas": 85936,
+      "arquivos_tocados": 803
+    },
+    {
+      "id": "miniparke",
+      "nome": "Carretinha Mini Parke",
+      "tipo": "cliente",
+      "commits": 102,
+      "linhas_adicionadas": 19685,
+      "linhas_removidas": 5377,
+      "arquivos_tocados": 179
+    },
+    {
+      "id": "r4mi-portal",
+      "nome": "Portal R4Mi",
+      "tipo": "empresa",
+      "commits": 100,
+      "linhas_adicionadas": 44108,
+      "linhas_removidas": 6255,
+      "arquivos_tocados": 63
+    },
+    {
+      "id": "app-r4mi",
+      "nome": "App R4Mi",
+      "tipo": "empresa",
+      "commits": 80,
+      "linhas_adicionadas": 6396,
+      "linhas_removidas": 2997,
+      "arquivos_tocados": 89
+    },
+    {
+      "id": "planejador-viagens",
+      "nome": "Planejador de Viagens",
+      "tipo": "pessoal",
+      "commits": 62,
+      "linhas_adicionadas": 19708,
+      "linhas_removidas": 2814,
+      "arquivos_tocados": 177
+    },
+    {
+      "id": "afiliados-auto",
+      "nome": "Afiliados Auto",
+      "tipo": "pessoal",
+      "commits": 46,
+      "linhas_adicionadas": 5169,
+      "linhas_removidas": 963,
+      "arquivos_tocados": 53
+    },
+    {
+      "id": "studoworldcup",
+      "nome": "StudoWorldCup",
+      "tipo": "pessoal",
+      "commits": 36,
+      "linhas_adicionadas": 14304,
+      "linhas_removidas": 1131,
+      "arquivos_tocados": 141
+    },
+    {
+      "id": "api-flexaseal",
+      "nome": "API Flexaseal",
+      "tipo": "empresa",
+      "commits": 35,
+      "linhas_adicionadas": 9980,
+      "linhas_removidas": 736,
+      "arquivos_tocados": 70
+    },
+    {
+      "id": "opsprimer",
+      "nome": "OpsPrimer",
+      "tipo": "pessoal",
+      "commits": 24,
+      "linhas_adicionadas": 3872,
+      "linhas_removidas": 779,
+      "arquivos_tocados": 41
+    },
+    {
+      "id": "geoalmoco",
+      "nome": "Games Lunch (GeoAlmoço)",
+      "tipo": "pessoal",
+      "commits": 19,
+      "linhas_adicionadas": 18654,
+      "linhas_removidas": 2450,
+      "arquivos_tocados": 71
+    },
+    {
+      "id": "perfil-github",
+      "nome": "Perfil GitHub + painel pessoal",
+      "tipo": "pessoal",
+      "commits": 17,
+      "linhas_adicionadas": 1693,
+      "linhas_removidas": 156,
+      "arquivos_tocados": 17
+    },
+    {
+      "id": "flexaseal-app",
+      "nome": "App Flexaseal",
+      "tipo": "empresa",
+      "commits": 13,
+      "linhas_adicionadas": 29724,
+      "linhas_removidas": 4893,
+      "arquivos_tocados": 183
+    },
+    {
+      "id": "projetoh",
+      "nome": "Projeto H",
+      "tipo": "cliente",
+      "commits": 12,
+      "linhas_adicionadas": 11006,
+      "linhas_removidas": 2085,
+      "arquivos_tocados": 117
+    },
+    {
+      "id": "analista-cambio",
+      "nome": "Analista de Câmbio",
+      "tipo": "pessoal",
+      "commits": 10,
+      "linhas_adicionadas": 7567,
+      "linhas_removidas": 175,
+      "arquivos_tocados": 38
+    },
+    {
+      "id": "devlinks",
+      "nome": "DevLinks (Rocketseat)",
+      "tipo": "estudo",
+      "commits": 10,
+      "linhas_adicionadas": 634,
+      "linhas_removidas": 59,
+      "arquivos_tocados": 9
+    },
+    {
+      "id": "rede-social",
+      "nome": "Rede social (Ignite)",
+      "tipo": "estudo",
+      "commits": 8,
+      "linhas_adicionadas": 923,
+      "linhas_removidas": 73,
+      "arquivos_tocados": 26
+    },
+    {
+      "id": "calculadora",
+      "nome": "Calculadora",
+      "tipo": "estudo",
+      "commits": 6,
+      "linhas_adicionadas": 571,
+      "linhas_removidas": 146,
+      "arquivos_tocados": 5
+    },
+    {
+      "id": "biblioteca-agentes",
+      "nome": "Biblioteca de agentes e skills",
+      "tipo": "pessoal",
+      "commits": 5,
+      "linhas_adicionadas": 14066,
+      "linhas_removidas": 158,
+      "arquivos_tocados": 118
+    },
+    {
+      "id": "pathfinders",
+      "nome": "Pathfinders",
+      "tipo": "pessoal",
+      "commits": 4,
+      "linhas_adicionadas": 14818,
+      "linhas_removidas": 46,
+      "arquivos_tocados": 148
+    },
+    {
+      "id": "tarso",
+      "nome": "Camisas Sem Nome — votação",
+      "tipo": "pessoal",
+      "commits": 3,
+      "linhas_adicionadas": 922,
+      "linhas_removidas": 25,
+      "arquivos_tocados": 19
+    },
+    {
+      "id": "cotacoesmoedas",
+      "nome": "Cotações de Moedas",
+      "tipo": "pessoal",
+      "commits": 3,
+      "linhas_adicionadas": 447,
+      "linhas_removidas": 17,
+      "arquivos_tocados": 11
+    },
+    {
+      "id": "react-ts",
+      "nome": "Feed em React + TypeScript",
+      "tipo": "estudo",
+      "commits": 3,
+      "linhas_adicionadas": 955,
+      "linhas_removidas": 40,
+      "arquivos_tocados": 34
+    },
+    {
+      "id": "site-flexaseal",
+      "nome": "Site Flexaseal Brasil",
+      "tipo": "empresa",
+      "commits": 2,
+      "linhas_adicionadas": 6749,
+      "linhas_removidas": 469,
+      "arquivos_tocados": 68
+    },
+    {
+      "id": "financeiro",
+      "nome": "Planilha financeira",
+      "tipo": "pessoal",
+      "commits": 2,
+      "linhas_adicionadas": 1087,
+      "linhas_removidas": 7,
+      "arquivos_tocados": 4
+    },
+    {
+      "id": "nickyfotografa",
+      "nome": "Nicky Fotógrafa",
+      "tipo": "cliente",
+      "commits": 1,
+      "linhas_adicionadas": 308,
+      "linhas_removidas": 0,
+      "arquivos_tocados": 17
+    },
+    {
+      "id": "splend-closet",
+      "nome": "Splend Closet",
+      "tipo": "cliente",
+      "commits": 1,
+      "linhas_adicionadas": 1124,
+      "linhas_removidas": 0,
+      "arquivos_tocados": 28
+    },
+    {
+      "id": "instagram-daniela",
+      "nome": "Influenciadora virtual (pipeline)",
+      "tipo": "pessoal",
+      "commits": 1,
+      "linhas_adicionadas": 1500,
+      "linhas_removidas": 0,
+      "arquivos_tocados": 31
+    },
+    {
+      "id": "testeautomacaox",
+      "nome": "Dossiê afiliados com IA",
+      "tipo": "estudo",
+      "commits": 1,
+      "linhas_adicionadas": 4185,
+      "linhas_removidas": 0,
+      "arquivos_tocados": 14
+    },
+    {
+      "id": "chat-responsivo",
+      "nome": "Chat responsivo",
+      "tipo": "estudo",
+      "commits": 1,
+      "linhas_adicionadas": 285,
+      "linhas_removidas": 0,
+      "arquivos_tocados": 4
+    },
+    {
+      "id": "todolist-fullstack",
+      "nome": "To-do list full stack",
+      "tipo": "estudo",
+      "commits": 1,
+      "linhas_adicionadas": 17,
+      "linhas_removidas": 0,
+      "arquivos_tocados": 1
+    },
+    {
+      "id": "rh-flexaseal",
+      "nome": "RH Flexaseal",
+      "tipo": "empresa",
+      "commits": 0,
+      "linhas_adicionadas": 0,
+      "linhas_removidas": 0,
+      "arquivos_tocados": 0
+    },
+    {
+      "id": "michel-code-house",
+      "nome": "Michel Code House",
+      "tipo": "pessoal",
+      "commits": 0,
+      "linhas_adicionadas": 0,
+      "linhas_removidas": 0,
+      "arquivos_tocados": 0
+    },
+    {
+      "id": "pixel-architects",
+      "nome": "Michel Dev — landing de serviços",
+      "tipo": "pessoal",
+      "commits": 0,
+      "linhas_adicionadas": 0,
+      "linhas_removidas": 0,
+      "arquivos_tocados": 0
+    },
+    {
+      "id": "planyourtripitinerary",
+      "nome": "Plan Your Trip Itinerary",
+      "tipo": "pessoal",
+      "commits": 0,
+      "linhas_adicionadas": 0,
+      "linhas_removidas": 0,
+      "arquivos_tocados": 0
+    }
+  ],
+  "por_tipo": {
+    "cliente": {
+      "projetos": 4,
+      "commits": 116,
+      "linhas_adicionadas": 32123
+    },
+    "empresa": {
+      "projetos": 7,
+      "commits": 1126,
+      "linhas_adicionadas": 517021
+    },
+    "estudo": {
+      "projetos": 7,
+      "commits": 30,
+      "linhas_adicionadas": 7570
+    },
+    "pessoal": {
+      "projetos": 16,
+      "commits": 232,
+      "linhas_adicionadas": 103807
+    }
+  },
+  "maior_commit": {
+    "projeto": "flexaseal-portal",
+    "data": "2026-04-09",
+    "linhas_adicionadas": 19333,
+    "linhas_removidas": 67,
+    "arquivos": 33
+  },
+  "linguagens_por_linhas_adicionadas": [
+    {
+      "linguagem": "JavaScript",
+      "linhas": 364477,
+      "pct": 55.2
+    },
+    {
+      "linguagem": "TypeScript (TSX)",
+      "linhas": 74400,
+      "pct": 11.3
+    },
+    {
+      "linguagem": "EJS",
+      "linhas": 69944,
+      "pct": 10.6
+    },
+    {
+      "linguagem": "CSS",
+      "linhas": 34357,
+      "pct": 5.2
+    },
+    {
+      "linguagem": "TypeScript",
+      "linhas": 33081,
+      "pct": 5.0
+    },
+    {
+      "linguagem": "Markdown",
+      "linhas": 29567,
+      "pct": 4.5
+    },
+    {
+      "linguagem": "JSON",
+      "linhas": 19947,
+      "pct": 3.0
+    },
+    {
+      "linguagem": "Python",
+      "linhas": 12258,
+      "pct": 1.9
+    },
+    {
+      "linguagem": "HTML",
+      "linhas": 9841,
+      "pct": 1.5
+    },
+    {
+      "linguagem": "SQL",
+      "linhas": 3480,
+      "pct": 0.5
+    },
+    {
+      "linguagem": "Outros",
+      "linhas": 1937,
+      "pct": 0.3
+    },
+    {
+      "linguagem": "MDX",
+      "linhas": 1507,
+      "pct": 0.2
+    },
+    {
+      "linguagem": "Astro",
+      "linhas": 1439,
+      "pct": 0.2
+    },
+    {
+      "linguagem": "SVG",
+      "linhas": 954,
+      "pct": 0.1
+    },
+    {
+      "linguagem": "JavaScript (JSX)",
+      "linhas": 646,
+      "pct": 0.1
+    },
+    {
+      "linguagem": "Shell",
+      "linhas": 489,
+      "pct": 0.1
+    },
+    {
+      "linguagem": "Texto",
+      "linhas": 477,
+      "pct": 0.1
+    },
+    {
+      "linguagem": "TOML",
+      "linhas": 443,
+      "pct": 0.1
+    },
+    {
+      "linguagem": "CSV",
+      "linhas": 439,
+      "pct": 0.1
+    },
+    {
+      "linguagem": "YAML",
+      "linhas": 264,
+      "pct": 0.0
+    },
+    {
+      "linguagem": "Gradle",
+      "linhas": 262,
+      "pct": 0.0
+    },
+    {
+      "linguagem": "Swift",
+      "linhas": 256,
+      "pct": 0.0
+    },
+    {
+      "linguagem": "XML",
+      "linhas": 49,
+      "pct": 0.0
+    },
+    {
+      "linguagem": "Kotlin",
+      "linhas": 6,
+      "pct": 0.0
+    },
+    {
+      "linguagem": "C/C++ header",
+      "linhas": 1,
+      "pct": 0.0
+    },
+    {
+      "linguagem": "Objective-C",
+      "linhas": 0,
+      "pct": 0.0
+    }
+  ]
+}
