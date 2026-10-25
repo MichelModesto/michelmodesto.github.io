@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-10-23",
+  "gerado_em": "2026-10-24",
   "fonte": "git log --all --no-merges --numstat em repositórios locais (Dev/*) e clones dos repositórios do GitHub (MichelModesto, flexasealBR, r4mi-dev); commits deduplicados por SHA",
   "identidades": "8 e-mails/nomes do Michel (pessoal, Flexaseal, máquinas locais, noreply do GitHub, conta michelthedev)",
   "regras_limpeza": [
@@ -11,18 +11,18 @@
     "exclui dados gerados por script (pastas data/ ou dados/ com .json, games/geo/locais.json) e telas de referência de handoff"
   ],
   "total_bruto": {
-    "commits": 1571,
-    "linhas_adicionadas": 1698654,
-    "linhas_removidas": 7706497,
-    "arquivos_tocados": 52331,
-    "dias_ativos": 354
+    "commits": 1573,
+    "linhas_adicionadas": 1700105,
+    "linhas_removidas": 7706500,
+    "arquivos_tocados": 52347,
+    "dias_ativos": 355
   },
   "total_limpo": {
-    "commits": 1504,
-    "linhas_adicionadas": 660521,
-    "linhas_removidas": 117787,
-    "arquivos_tocados": 2579,
-    "dias_ativos": 350
+    "commits": 1506,
+    "linhas_adicionadas": 661972,
+    "linhas_removidas": 117790,
+    "arquivos_tocados": 2588,
+    "dias_ativos": 351
   },
   "usar": "total_limpo",
   "por_mes": [
@@ -172,9 +172,9 @@
     },
     {
       "mes": "2026-10",
-      "commits": 128,
-      "linhas_adicionadas": 73023,
-      "linhas_removidas": 9221
+      "commits": 130,
+      "linhas_adicionadas": 74474,
+      "linhas_removidas": 9224
     }
   ],
   "antes_de_2024_10": {
@@ -203,9 +203,9 @@
     },
     {
       "ano": "2026",
-      "commits": 985,
-      "linhas_adicionadas": 525296,
-      "linhas_removidas": 90853
+      "commits": 987,
+      "linhas_adicionadas": 526747,
+      "linhas_removidas": 90856
     }
   ],
   "por_projeto": [
@@ -294,10 +294,10 @@
       "id": "geoalmoco",
       "nome": "Games Lunch (GeoAlmoço)",
       "tipo": "pessoal",
-      "commits": 19,
-      "linhas_adicionadas": 18654,
-      "linhas_removidas": 2450,
-      "arquivos_tocados": 71
+      "commits": 21,
+      "linhas_adicionadas": 20105,
+      "linhas_removidas": 2453,
+      "arquivos_tocados": 80
     },
     {
       "id": "perfil-github",
@@ -534,8 +534,8 @@
     },
     "pessoal": {
       "projetos": 16,
-      "commits": 232,
-      "linhas_adicionadas": 103807
+      "commits": 234,
+      "linhas_adicionadas": 105258
     }
   },
   "maior_commit": {
@@ -548,13 +548,13 @@
   "linguagens_por_linhas_adicionadas": [
     {
       "linguagem": "JavaScript",
-      "linhas": 364477,
+      "linhas": 365678,
       "pct": 55.2
     },
     {
       "linguagem": "TypeScript (TSX)",
       "linhas": 74400,
-      "pct": 11.3
+      "pct": 11.2
     },
     {
       "linguagem": "EJS",
@@ -573,12 +573,12 @@
     },
     {
       "linguagem": "Markdown",
-      "linhas": 29567,
+      "linhas": 29568,
       "pct": 4.5
     },
     {
       "linguagem": "JSON",
-      "linhas": 19947,
+      "linhas": 19954,
       "pct": 3.0
     },
     {
@@ -588,7 +588,7 @@
     },
     {
       "linguagem": "HTML",
-      "linhas": 9841,
+      "linhas": 10064,
       "pct": 1.5
     },
     {
@@ -598,7 +598,7 @@
     },
     {
       "linguagem": "Outros",
-      "linhas": 1937,
+      "linhas": 1944,
       "pct": 0.3
     },
     {
@@ -633,7 +633,7 @@
     },
     {
       "linguagem": "TOML",
-      "linhas": 443,
+      "linhas": 455,
       "pct": 0.1
     },
     {
