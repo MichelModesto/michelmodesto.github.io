@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-10-24",
+  "gerado_em": "2026-10-27",
   "fonte": "git log --all --no-merges --numstat em repositórios locais (Dev/*) e clones dos repositórios do GitHub (MichelModesto, flexasealBR, r4mi-dev); commits deduplicados por SHA",
   "identidades": "8 e-mails/nomes do Michel (pessoal, Flexaseal, máquinas locais, noreply do GitHub, conta michelthedev)",
   "regras_limpeza": [
@@ -11,11 +11,11 @@
     "exclui dados gerados por script (pastas data/ ou dados/ com .json, games/geo/locais.json) e telas de referência de handoff"
   ],
   "total_bruto": {
-    "commits": 1573,
-    "linhas_adicionadas": 1700105,
-    "linhas_removidas": 7706500,
+    "commits": 1579,
+    "linhas_adicionadas": 1700108,
+    "linhas_removidas": 7706503,
     "arquivos_tocados": 52347,
-    "dias_ativos": 355
+    "dias_ativos": 356
   },
   "total_limpo": {
     "commits": 1506,
