@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-10-27",
+  "gerado_em": "2026-10-28",
   "fonte": "git log --all --no-merges --numstat em repositórios locais (Dev/*) e clones dos repositórios do GitHub (MichelModesto, flexasealBR, r4mi-dev); commits deduplicados por SHA",
   "identidades": "8 e-mails/nomes do Michel (pessoal, Flexaseal, máquinas locais, noreply do GitHub, conta michelthedev)",
   "regras_limpeza": [
@@ -11,18 +11,18 @@
     "exclui dados gerados por script (pastas data/ ou dados/ com .json, games/geo/locais.json) e telas de referência de handoff"
   ],
   "total_bruto": {
-    "commits": 1579,
-    "linhas_adicionadas": 1700108,
-    "linhas_removidas": 7706503,
-    "arquivos_tocados": 52347,
-    "dias_ativos": 356
+    "commits": 1582,
+    "linhas_adicionadas": 1704215,
+    "linhas_removidas": 7709673,
+    "arquivos_tocados": 52353,
+    "dias_ativos": 357
   },
   "total_limpo": {
-    "commits": 1506,
-    "linhas_adicionadas": 661972,
-    "linhas_removidas": 117790,
-    "arquivos_tocados": 2588,
-    "dias_ativos": 351
+    "commits": 1509,
+    "linhas_adicionadas": 666079,
+    "linhas_removidas": 120960,
+    "arquivos_tocados": 2594,
+    "dias_ativos": 352
   },
   "usar": "total_limpo",
   "por_mes": [
@@ -172,9 +172,9 @@
     },
     {
       "mes": "2026-10",
-      "commits": 130,
-      "linhas_adicionadas": 74474,
-      "linhas_removidas": 9224
+      "commits": 133,
+      "linhas_adicionadas": 78581,
+      "linhas_removidas": 12394
     }
   ],
   "antes_de_2024_10": {
@@ -203,9 +203,9 @@
     },
     {
       "ano": "2026",
-      "commits": 987,
-      "linhas_adicionadas": 526747,
-      "linhas_removidas": 90856
+      "commits": 990,
+      "linhas_adicionadas": 530854,
+      "linhas_removidas": 94026
     }
   ],
   "por_projeto": [
@@ -213,9 +213,9 @@
       "id": "flexaseal-portal",
       "nome": "Portal Flexaseal",
       "tipo": "empresa",
-      "commits": 896,
-      "linhas_adicionadas": 420064,
-      "linhas_removidas": 85936,
+      "commits": 898,
+      "linhas_adicionadas": 420174,
+      "linhas_removidas": 85967,
       "arquivos_tocados": 803
     },
     {
@@ -231,10 +231,10 @@
       "id": "r4mi-portal",
       "nome": "Portal R4Mi",
       "tipo": "empresa",
-      "commits": 100,
-      "linhas_adicionadas": 44108,
-      "linhas_removidas": 6255,
-      "arquivos_tocados": 63
+      "commits": 101,
+      "linhas_adicionadas": 48105,
+      "linhas_removidas": 9394,
+      "arquivos_tocados": 69
     },
     {
       "id": "app-r4mi",
@@ -524,8 +524,8 @@
     },
     "empresa": {
       "projetos": 7,
-      "commits": 1126,
-      "linhas_adicionadas": 517021
+      "commits": 1129,
+      "linhas_adicionadas": 521128
     },
     "estudo": {
       "projetos": 7,
@@ -548,7 +548,7 @@
   "linguagens_por_linhas_adicionadas": [
     {
       "linguagem": "JavaScript",
-      "linhas": 365678,
+      "linhas": 367963,
       "pct": 55.2
     },
     {
@@ -558,13 +558,13 @@
     },
     {
       "linguagem": "EJS",
-      "linhas": 69944,
+      "linhas": 70793,
       "pct": 10.6
     },
     {
       "linguagem": "CSS",
-      "linhas": 34357,
-      "pct": 5.2
+      "linhas": 35320,
+      "pct": 5.3
     },
     {
       "linguagem": "TypeScript",
@@ -574,17 +574,17 @@
     {
       "linguagem": "Markdown",
       "linhas": 29568,
-      "pct": 4.5
+      "pct": 4.4
     },
     {
       "linguagem": "JSON",
-      "linhas": 19954,
+      "linhas": 19964,
       "pct": 3.0
     },
     {
       "linguagem": "Python",
       "linhas": 12258,
-      "pct": 1.9
+      "pct": 1.8
     },
     {
       "linguagem": "HTML",

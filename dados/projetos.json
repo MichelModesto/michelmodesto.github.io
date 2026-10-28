@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-10-27",
+  "gerado_em": "2026-10-28",
   "total": 34,
   "projetos": [
     {
@@ -87,10 +87,10 @@
       "repo_publico": false,
       "git": {
         "primeiro_commit": "2024-12-02",
-        "ultimo_commit": "2026-10-23",
-        "commits": 896,
-        "linhas_adicionadas": 420064,
-        "linhas_removidas": 85936,
+        "ultimo_commit": "2026-10-27",
+        "commits": 898,
+        "linhas_adicionadas": 420174,
+        "linhas_removidas": 85967,
         "arquivos_tocados": 803
       },
       "destaque": "highlight",
@@ -168,11 +168,11 @@
       "repo_publico": false,
       "git": {
         "primeiro_commit": "2025-04-22",
-        "ultimo_commit": "2026-07-17",
-        "commits": 100,
-        "linhas_adicionadas": 44108,
-        "linhas_removidas": 6255,
-        "arquivos_tocados": 63
+        "ultimo_commit": "2026-10-27",
+        "commits": 101,
+        "linhas_adicionadas": 48105,
+        "linhas_removidas": 9394,
+        "arquivos_tocados": 69
       },
       "destaque": "showcase",
       "thumb": null,
