@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-10-28",
+  "gerado_em": "2026-10-29",
   "fonte": "git log --all --no-merges --numstat em repositórios locais (Dev/*) e clones dos repositórios do GitHub (MichelModesto, flexasealBR, r4mi-dev); commits deduplicados por SHA",
   "identidades": "8 e-mails/nomes do Michel (pessoal, Flexaseal, máquinas locais, noreply do GitHub, conta michelthedev)",
   "regras_limpeza": [
@@ -11,18 +11,18 @@
     "exclui dados gerados por script (pastas data/ ou dados/ com .json, games/geo/locais.json) e telas de referência de handoff"
   ],
   "total_bruto": {
-    "commits": 1582,
-    "linhas_adicionadas": 1704215,
-    "linhas_removidas": 7709673,
+    "commits": 1586,
+    "linhas_adicionadas": 1705207,
+    "linhas_removidas": 7709928,
     "arquivos_tocados": 52353,
-    "dias_ativos": 357
+    "dias_ativos": 358
   },
   "total_limpo": {
-    "commits": 1509,
-    "linhas_adicionadas": 666079,
-    "linhas_removidas": 120960,
+    "commits": 1511,
+    "linhas_adicionadas": 667070,
+    "linhas_removidas": 121214,
     "arquivos_tocados": 2594,
-    "dias_ativos": 352
+    "dias_ativos": 353
   },
   "usar": "total_limpo",
   "por_mes": [
@@ -172,9 +172,9 @@
     },
     {
       "mes": "2026-10",
-      "commits": 133,
-      "linhas_adicionadas": 78581,
-      "linhas_removidas": 12394
+      "commits": 135,
+      "linhas_adicionadas": 79572,
+      "linhas_removidas": 12648
     }
   ],
   "antes_de_2024_10": {
@@ -203,9 +203,9 @@
     },
     {
       "ano": "2026",
-      "commits": 990,
-      "linhas_adicionadas": 530854,
-      "linhas_removidas": 94026
+      "commits": 992,
+      "linhas_adicionadas": 531845,
+      "linhas_removidas": 94280
     }
   ],
   "por_projeto": [
@@ -213,9 +213,9 @@
       "id": "flexaseal-portal",
       "nome": "Portal Flexaseal",
       "tipo": "empresa",
-      "commits": 898,
-      "linhas_adicionadas": 420174,
-      "linhas_removidas": 85967,
+      "commits": 900,
+      "linhas_adicionadas": 421165,
+      "linhas_removidas": 86221,
       "arquivos_tocados": 803
     },
     {
@@ -524,8 +524,8 @@
     },
     "empresa": {
       "projetos": 7,
-      "commits": 1129,
-      "linhas_adicionadas": 521128
+      "commits": 1131,
+      "linhas_adicionadas": 522119
     },
     "estudo": {
       "projetos": 7,
@@ -548,8 +548,8 @@
   "linguagens_por_linhas_adicionadas": [
     {
       "linguagem": "JavaScript",
-      "linhas": 367963,
-      "pct": 55.2
+      "linhas": 368640,
+      "pct": 55.3
     },
     {
       "linguagem": "TypeScript (TSX)",
@@ -558,7 +558,7 @@
     },
     {
       "linguagem": "EJS",
-      "linhas": 70793,
+      "linhas": 70891,
       "pct": 10.6
     },
     {
@@ -578,7 +578,7 @@
     },
     {
       "linguagem": "JSON",
-      "linhas": 19964,
+      "linhas": 20180,
       "pct": 3.0
     },
     {
