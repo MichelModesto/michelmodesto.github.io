@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-10-29",
+  "gerado_em": "2026-10-30",
   "fonte": "git log --all --no-merges --numstat em repositórios locais (Dev/*) e clones dos repositórios do GitHub (MichelModesto, flexasealBR, r4mi-dev); commits deduplicados por SHA",
   "identidades": "8 e-mails/nomes do Michel (pessoal, Flexaseal, máquinas locais, noreply do GitHub, conta michelthedev)",
   "regras_limpeza": [
@@ -11,18 +11,18 @@
     "exclui dados gerados por script (pastas data/ ou dados/ com .json, games/geo/locais.json) e telas de referência de handoff"
   ],
   "total_bruto": {
-    "commits": 1586,
-    "linhas_adicionadas": 1705207,
-    "linhas_removidas": 7709928,
-    "arquivos_tocados": 52353,
-    "dias_ativos": 358
+    "commits": 1590,
+    "linhas_adicionadas": 1708456,
+    "linhas_removidas": 7710043,
+    "arquivos_tocados": 52365,
+    "dias_ativos": 359
   },
   "total_limpo": {
-    "commits": 1511,
-    "linhas_adicionadas": 667070,
-    "linhas_removidas": 121214,
-    "arquivos_tocados": 2594,
-    "dias_ativos": 353
+    "commits": 1515,
+    "linhas_adicionadas": 670319,
+    "linhas_removidas": 121329,
+    "arquivos_tocados": 2606,
+    "dias_ativos": 354
   },
   "usar": "total_limpo",
   "por_mes": [
@@ -172,9 +172,9 @@
     },
     {
       "mes": "2026-10",
-      "commits": 135,
-      "linhas_adicionadas": 79572,
-      "linhas_removidas": 12648
+      "commits": 139,
+      "linhas_adicionadas": 82821,
+      "linhas_removidas": 12763
     }
   ],
   "antes_de_2024_10": {
@@ -203,9 +203,9 @@
     },
     {
       "ano": "2026",
-      "commits": 992,
-      "linhas_adicionadas": 531845,
-      "linhas_removidas": 94280
+      "commits": 996,
+      "linhas_adicionadas": 535094,
+      "linhas_removidas": 94395
     }
   ],
   "por_projeto": [
@@ -213,10 +213,10 @@
       "id": "flexaseal-portal",
       "nome": "Portal Flexaseal",
       "tipo": "empresa",
-      "commits": 900,
-      "linhas_adicionadas": 421165,
-      "linhas_removidas": 86221,
-      "arquivos_tocados": 803
+      "commits": 903,
+      "linhas_adicionadas": 424166,
+      "linhas_removidas": 86330,
+      "arquivos_tocados": 812
     },
     {
       "id": "miniparke",
@@ -264,6 +264,15 @@
       "arquivos_tocados": 53
     },
     {
+      "id": "api-flexaseal",
+      "nome": "API Flexaseal",
+      "tipo": "empresa",
+      "commits": 36,
+      "linhas_adicionadas": 10228,
+      "linhas_removidas": 742,
+      "arquivos_tocados": 73
+    },
+    {
       "id": "studoworldcup",
       "nome": "StudoWorldCup",
       "tipo": "pessoal",
@@ -271,15 +280,6 @@
       "linhas_adicionadas": 14304,
       "linhas_removidas": 1131,
       "arquivos_tocados": 141
-    },
-    {
-      "id": "api-flexaseal",
-      "nome": "API Flexaseal",
-      "tipo": "empresa",
-      "commits": 35,
-      "linhas_adicionadas": 9980,
-      "linhas_removidas": 736,
-      "arquivos_tocados": 70
     },
     {
       "id": "opsprimer",
@@ -524,8 +524,8 @@
     },
     "empresa": {
       "projetos": 7,
-      "commits": 1131,
-      "linhas_adicionadas": 522119
+      "commits": 1135,
+      "linhas_adicionadas": 525368
     },
     "estudo": {
       "projetos": 7,
@@ -548,17 +548,17 @@
   "linguagens_por_linhas_adicionadas": [
     {
       "linguagem": "JavaScript",
-      "linhas": 368640,
-      "pct": 55.3
+      "linhas": 371509,
+      "pct": 55.4
     },
     {
       "linguagem": "TypeScript (TSX)",
       "linhas": 74400,
-      "pct": 11.2
+      "pct": 11.1
     },
     {
       "linguagem": "EJS",
-      "linhas": 70891,
+      "linhas": 71197,
       "pct": 10.6
     },
     {
@@ -569,7 +569,7 @@
     {
       "linguagem": "TypeScript",
       "linhas": 33081,
-      "pct": 5.0
+      "pct": 4.9
     },
     {
       "linguagem": "Markdown",
@@ -578,7 +578,7 @@
     },
     {
       "linguagem": "JSON",
-      "linhas": 20180,
+      "linhas": 20251,
       "pct": 3.0
     },
     {
@@ -598,7 +598,7 @@
     },
     {
       "linguagem": "Outros",
-      "linhas": 1944,
+      "linhas": 1947,
       "pct": 0.3
     },
     {
