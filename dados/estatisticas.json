@@ -11,18 +11,18 @@
     "exclui dados gerados por script (pastas data/ ou dados/ com .json, games/geo/locais.json) e telas de referência de handoff"
   ],
   "total_bruto": {
-    "commits": 1590,
-    "linhas_adicionadas": 1708456,
-    "linhas_removidas": 7710043,
-    "arquivos_tocados": 52365,
-    "dias_ativos": 359
+    "commits": 1598,
+    "linhas_adicionadas": 1708595,
+    "linhas_removidas": 7710065,
+    "arquivos_tocados": 52366,
+    "dias_ativos": 360
   },
   "total_limpo": {
-    "commits": 1515,
-    "linhas_adicionadas": 670319,
-    "linhas_removidas": 121329,
+    "commits": 1517,
+    "linhas_adicionadas": 670335,
+    "linhas_removidas": 121345,
     "arquivos_tocados": 2606,
-    "dias_ativos": 354
+    "dias_ativos": 355
   },
   "usar": "total_limpo",
   "por_mes": [
@@ -172,9 +172,9 @@
     },
     {
       "mes": "2026-10",
-      "commits": 139,
-      "linhas_adicionadas": 82821,
-      "linhas_removidas": 12763
+      "commits": 141,
+      "linhas_adicionadas": 82837,
+      "linhas_removidas": 12779
     }
   ],
   "antes_de_2024_10": {
@@ -203,9 +203,9 @@
     },
     {
       "ano": "2026",
-      "commits": 996,
-      "linhas_adicionadas": 535094,
-      "linhas_removidas": 94395
+      "commits": 998,
+      "linhas_adicionadas": 535110,
+      "linhas_removidas": 94411
     }
   ],
   "por_projeto": [
@@ -213,9 +213,9 @@
       "id": "flexaseal-portal",
       "nome": "Portal Flexaseal",
       "tipo": "empresa",
-      "commits": 903,
-      "linhas_adicionadas": 424166,
-      "linhas_removidas": 86330,
+      "commits": 905,
+      "linhas_adicionadas": 424182,
+      "linhas_removidas": 86346,
       "arquivos_tocados": 812
     },
     {
@@ -524,8 +524,8 @@
     },
     "empresa": {
       "projetos": 7,
-      "commits": 1135,
-      "linhas_adicionadas": 525368
+      "commits": 1137,
+      "linhas_adicionadas": 525384
     },
     "estudo": {
       "projetos": 7,
@@ -548,7 +548,7 @@
   "linguagens_por_linhas_adicionadas": [
     {
       "linguagem": "JavaScript",
-      "linhas": 371509,
+      "linhas": 371523,
       "pct": 55.4
     },
     {
@@ -558,7 +558,7 @@
     },
     {
       "linguagem": "EJS",
-      "linhas": 71197,
+      "linhas": 71199,
       "pct": 10.6
     },
     {
