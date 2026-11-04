@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-11-02",
+  "gerado_em": "2026-11-03",
   "total_projetos": 34,
   "categorias": {
     "linguagens": [
@@ -107,12 +107,13 @@
       },
       {
         "nome": "Python",
-        "projetos": 4,
+        "projetos": 5,
         "ids": [
           "flexaseal-portal",
           "analista-cambio",
           "instagram-daniela",
-          "financeiro"
+          "financeiro",
+          "perfil-github"
         ]
       },
       {
