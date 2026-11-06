@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-11-04",
+  "gerado_em": "2026-11-06",
   "total_projetos": 34,
   "categorias": {
     "linguagens": [
@@ -32,7 +32,7 @@
       },
       {
         "nome": "CSS",
-        "projetos": 18,
+        "projetos": 19,
         "ids": [
           "flexaseal-portal",
           "r4mi-portal",
@@ -42,6 +42,7 @@
           "studoworldcup",
           "miniparke",
           "projetoh",
+          "nickyfotografa",
           "tarso",
           "pathfinders",
           "opsprimer",
@@ -175,7 +176,7 @@
       },
       {
         "nome": "Lucide",
-        "projetos": 8,
+        "projetos": 9,
         "ids": [
           "flexaseal-portal",
           "app-r4mi",
@@ -183,6 +184,7 @@
           "planejador-viagens",
           "studoworldcup",
           "miniparke",
+          "nickyfotografa",
           "pathfinders",
           "pixel-architects"
         ]
@@ -275,6 +277,14 @@
         ]
       },
       {
+        "nome": "Motion",
+        "projetos": 2,
+        "ids": [
+          "flexaseal-portal",
+          "nickyfotografa"
+        ]
+      },
+      {
         "nome": "Phosphor Icons",
         "projetos": 2,
         "ids": [
@@ -332,13 +342,6 @@
         "projetos": 1,
         "ids": [
           "opsprimer"
-        ]
-      },
-      {
-        "nome": "Motion",
-        "projetos": 1,
-        "ids": [
-          "flexaseal-portal"
         ]
       },
       {

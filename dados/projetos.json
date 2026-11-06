@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-11-04",
+  "gerado_em": "2026-11-06",
   "total": 34,
   "projetos": [
     {
@@ -87,10 +87,10 @@
       "repo_publico": false,
       "git": {
         "primeiro_commit": "2024-12-02",
-        "ultimo_commit": "2026-11-04",
-        "commits": 911,
-        "linhas_adicionadas": 425591,
-        "linhas_removidas": 86758,
+        "ultimo_commit": "2026-11-05",
+        "commits": 915,
+        "linhas_adicionadas": 426145,
+        "linhas_removidas": 87040,
         "arquivos_tocados": 819
       },
       "destaque": "highlight",
@@ -586,10 +586,10 @@
       "repo_publico": false,
       "git": {
         "primeiro_commit": "2026-10-13",
-        "ultimo_commit": "2026-10-14",
-        "commits": 62,
-        "linhas_adicionadas": 19708,
-        "linhas_removidas": 2814,
+        "ultimo_commit": "2026-11-05",
+        "commits": 63,
+        "linhas_adicionadas": 19710,
+        "linhas_removidas": 2815,
         "arquivos_tocados": 177
       },
       "destaque": "highlight",
@@ -917,7 +917,10 @@
       },
       "plataforma": "web",
       "stack": [
+        "CSS",
         "ESLint",
+        "Lucide",
+        "Motion",
         "Next.js",
         "React",
         "Tailwind CSS",
@@ -937,11 +940,11 @@
       "repo_publico": false,
       "git": {
         "primeiro_commit": "2026-09-18",
-        "ultimo_commit": "2026-09-18",
-        "commits": 1,
-        "linhas_adicionadas": 308,
-        "linhas_removidas": 0,
-        "arquivos_tocados": 17
+        "ultimo_commit": "2026-11-05",
+        "commits": 2,
+        "linhas_adicionadas": 10538,
+        "linhas_removidas": 134,
+        "arquivos_tocados": 141
       },
       "destaque": "showcase",
       "thumb": null,

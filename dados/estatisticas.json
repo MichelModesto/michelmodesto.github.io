@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-11-04",
+  "gerado_em": "2026-11-06",
   "fonte": "git log --all --no-merges --numstat em repositórios locais (Dev/*) e clones dos repositórios do GitHub (MichelModesto, flexasealBR, r4mi-dev); commits deduplicados por SHA",
   "identidades": "8 e-mails/nomes do Michel (pessoal, Flexaseal, máquinas locais, noreply do GitHub, conta michelthedev)",
   "regras_limpeza": [
@@ -11,18 +11,18 @@
     "exclui dados gerados por script (pastas data/ ou dados/ com .json, games/geo/locais.json) e telas de referência de handoff"
   ],
   "total_bruto": {
-    "commits": 1610,
-    "linhas_adicionadas": 1726538,
-    "linhas_removidas": 7713352,
-    "arquivos_tocados": 52663,
-    "dias_ativos": 363
+    "commits": 1616,
+    "linhas_adicionadas": 1737569,
+    "linhas_removidas": 7713773,
+    "arquivos_tocados": 52843,
+    "dias_ativos": 364
   },
   "total_limpo": {
-    "commits": 1529,
-    "linhas_adicionadas": 675707,
-    "linhas_removidas": 122042,
-    "arquivos_tocados": 2891,
-    "dias_ativos": 358
+    "commits": 1535,
+    "linhas_adicionadas": 686493,
+    "linhas_removidas": 122459,
+    "arquivos_tocados": 3015,
+    "dias_ativos": 359
   },
   "usar": "total_limpo",
   "por_mes": [
@@ -178,9 +178,9 @@
     },
     {
       "mes": "2026-11",
-      "commits": 12,
-      "linhas_adicionadas": 5372,
-      "linhas_removidas": 697
+      "commits": 18,
+      "linhas_adicionadas": 16158,
+      "linhas_removidas": 1114
     }
   ],
   "antes_de_2024_10": {
@@ -209,9 +209,9 @@
     },
     {
       "ano": "2026",
-      "commits": 1010,
-      "linhas_adicionadas": 540482,
-      "linhas_removidas": 95108
+      "commits": 1016,
+      "linhas_adicionadas": 551268,
+      "linhas_removidas": 95525
     }
   ],
   "por_projeto": [
@@ -219,9 +219,9 @@
       "id": "flexaseal-portal",
       "nome": "Portal Flexaseal",
       "tipo": "empresa",
-      "commits": 911,
-      "linhas_adicionadas": 425591,
-      "linhas_removidas": 86758,
+      "commits": 915,
+      "linhas_adicionadas": 426145,
+      "linhas_removidas": 87040,
       "arquivos_tocados": 819
     },
     {
@@ -255,9 +255,9 @@
       "id": "planejador-viagens",
       "nome": "Planejador de Viagens",
       "tipo": "pessoal",
-      "commits": 62,
-      "linhas_adicionadas": 19708,
-      "linhas_removidas": 2814,
+      "commits": 63,
+      "linhas_adicionadas": 19710,
+      "linhas_removidas": 2815,
       "arquivos_tocados": 177
     },
     {
@@ -423,6 +423,15 @@
       "arquivos_tocados": 68
     },
     {
+      "id": "nickyfotografa",
+      "nome": "Nicky Fotógrafa",
+      "tipo": "cliente",
+      "commits": 2,
+      "linhas_adicionadas": 10538,
+      "linhas_removidas": 134,
+      "arquivos_tocados": 141
+    },
+    {
       "id": "financeiro",
       "nome": "Planilha financeira",
       "tipo": "pessoal",
@@ -430,15 +439,6 @@
       "linhas_adicionadas": 1087,
       "linhas_removidas": 7,
       "arquivos_tocados": 4
-    },
-    {
-      "id": "nickyfotografa",
-      "nome": "Nicky Fotógrafa",
-      "tipo": "cliente",
-      "commits": 1,
-      "linhas_adicionadas": 308,
-      "linhas_removidas": 0,
-      "arquivos_tocados": 17
     },
     {
       "id": "splend-closet",
@@ -525,13 +525,13 @@
   "por_tipo": {
     "cliente": {
       "projetos": 4,
-      "commits": 116,
-      "linhas_adicionadas": 32123
+      "commits": 117,
+      "linhas_adicionadas": 42353
     },
     "empresa": {
       "projetos": 7,
-      "commits": 1144,
-      "linhas_adicionadas": 526805
+      "commits": 1148,
+      "linhas_adicionadas": 527359
     },
     "estudo": {
       "projetos": 7,
@@ -540,8 +540,8 @@
     },
     "pessoal": {
       "projetos": 16,
-      "commits": 239,
-      "linhas_adicionadas": 109209
+      "commits": 240,
+      "linhas_adicionadas": 109211
     }
   },
   "maior_commit": {
@@ -554,38 +554,38 @@
   "linguagens_por_linhas_adicionadas": [
     {
       "linguagem": "JavaScript",
-      "linhas": 374355,
-      "pct": 55.4
+      "linhas": 374875,
+      "pct": 54.6
     },
     {
       "linguagem": "TypeScript (TSX)",
-      "linhas": 74400,
-      "pct": 11.0
+      "linhas": 78146,
+      "pct": 11.4
     },
     {
       "linguagem": "EJS",
-      "linhas": 71298,
-      "pct": 10.6
+      "linhas": 71332,
+      "pct": 10.4
     },
     {
       "linguagem": "CSS",
-      "linhas": 35327,
-      "pct": 5.2
-    },
-    {
-      "linguagem": "TypeScript",
-      "linhas": 33081,
-      "pct": 4.9
+      "linhas": 36173,
+      "pct": 5.3
     },
     {
       "linguagem": "Markdown",
-      "linhas": 29798,
-      "pct": 4.4
+      "linhas": 34600,
+      "pct": 5.0
+    },
+    {
+      "linguagem": "TypeScript",
+      "linhas": 33869,
+      "pct": 4.9
     },
     {
       "linguagem": "JSON",
-      "linhas": 20646,
-      "pct": 3.1
+      "linhas": 20674,
+      "pct": 3.0
     },
     {
       "linguagem": "Python",
@@ -604,7 +604,7 @@
     },
     {
       "linguagem": "Outros",
-      "linhas": 1958,
+      "linhas": 1980,
       "pct": 0.3
     },
     {
