@@ -11,18 +11,18 @@
     "exclui dados gerados por script (pastas data/ ou dados/ com .json, games/geo/locais.json) e telas de referência de handoff"
   ],
   "total_bruto": {
-    "commits": 1616,
-    "linhas_adicionadas": 1737569,
-    "linhas_removidas": 7713773,
-    "arquivos_tocados": 52843,
-    "dias_ativos": 364
+    "commits": 1618,
+    "linhas_adicionadas": 1741271,
+    "linhas_removidas": 7714576,
+    "arquivos_tocados": 52846,
+    "dias_ativos": 365
   },
   "total_limpo": {
-    "commits": 1535,
-    "linhas_adicionadas": 686493,
-    "linhas_removidas": 122459,
-    "arquivos_tocados": 3015,
-    "dias_ativos": 359
+    "commits": 1537,
+    "linhas_adicionadas": 690195,
+    "linhas_removidas": 123262,
+    "arquivos_tocados": 3018,
+    "dias_ativos": 360
   },
   "usar": "total_limpo",
   "por_mes": [
@@ -178,9 +178,9 @@
     },
     {
       "mes": "2026-11",
-      "commits": 18,
-      "linhas_adicionadas": 16158,
-      "linhas_removidas": 1114
+      "commits": 20,
+      "linhas_adicionadas": 19860,
+      "linhas_removidas": 1917
     }
   ],
   "antes_de_2024_10": {
@@ -209,9 +209,9 @@
     },
     {
       "ano": "2026",
-      "commits": 1016,
-      "linhas_adicionadas": 551268,
-      "linhas_removidas": 95525
+      "commits": 1018,
+      "linhas_adicionadas": 554970,
+      "linhas_removidas": 96328
     }
   ],
   "por_projeto": [
@@ -219,10 +219,10 @@
       "id": "flexaseal-portal",
       "nome": "Portal Flexaseal",
       "tipo": "empresa",
-      "commits": 915,
-      "linhas_adicionadas": 426145,
-      "linhas_removidas": 87040,
-      "arquivos_tocados": 819
+      "commits": 917,
+      "linhas_adicionadas": 429847,
+      "linhas_removidas": 87843,
+      "arquivos_tocados": 822
     },
     {
       "id": "miniparke",
@@ -530,8 +530,8 @@
     },
     "empresa": {
       "projetos": 7,
-      "commits": 1148,
-      "linhas_adicionadas": 527359
+      "commits": 1150,
+      "linhas_adicionadas": 531061
     },
     "estudo": {
       "projetos": 7,
@@ -554,22 +554,22 @@
   "linguagens_por_linhas_adicionadas": [
     {
       "linguagem": "JavaScript",
-      "linhas": 374875,
-      "pct": 54.6
+      "linhas": 377671,
+      "pct": 54.7
     },
     {
       "linguagem": "TypeScript (TSX)",
       "linhas": 78146,
-      "pct": 11.4
+      "pct": 11.3
     },
     {
       "linguagem": "EJS",
-      "linhas": 71332,
+      "linhas": 71789,
       "pct": 10.4
     },
     {
       "linguagem": "CSS",
-      "linhas": 36173,
+      "linhas": 36328,
       "pct": 5.3
     },
     {
@@ -584,7 +584,7 @@
     },
     {
       "linguagem": "JSON",
-      "linhas": 20674,
+      "linhas": 20968,
       "pct": 3.0
     },
     {
