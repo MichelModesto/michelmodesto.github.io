@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-11-06",
+  "gerado_em": "2026-11-08",
   "fonte": "git log --all --no-merges --numstat em repositórios locais (Dev/*) e clones dos repositórios do GitHub (MichelModesto, flexasealBR, r4mi-dev); commits deduplicados por SHA",
   "identidades": "8 e-mails/nomes do Michel (pessoal, Flexaseal, máquinas locais, noreply do GitHub, conta michelthedev)",
   "regras_limpeza": [
@@ -11,18 +11,18 @@
     "exclui dados gerados por script (pastas data/ ou dados/ com .json, games/geo/locais.json) e telas de referência de handoff"
   ],
   "total_bruto": {
-    "commits": 1618,
-    "linhas_adicionadas": 1741271,
-    "linhas_removidas": 7714576,
+    "commits": 1619,
+    "linhas_adicionadas": 1741284,
+    "linhas_removidas": 7714582,
     "arquivos_tocados": 52846,
-    "dias_ativos": 365
+    "dias_ativos": 366
   },
   "total_limpo": {
-    "commits": 1537,
-    "linhas_adicionadas": 690195,
-    "linhas_removidas": 123262,
+    "commits": 1538,
+    "linhas_adicionadas": 690208,
+    "linhas_removidas": 123268,
     "arquivos_tocados": 3018,
-    "dias_ativos": 360
+    "dias_ativos": 361
   },
   "usar": "total_limpo",
   "por_mes": [
@@ -178,9 +178,9 @@
     },
     {
       "mes": "2026-11",
-      "commits": 20,
-      "linhas_adicionadas": 19860,
-      "linhas_removidas": 1917
+      "commits": 21,
+      "linhas_adicionadas": 19873,
+      "linhas_removidas": 1923
     }
   ],
   "antes_de_2024_10": {
@@ -209,9 +209,9 @@
     },
     {
       "ano": "2026",
-      "commits": 1018,
-      "linhas_adicionadas": 554970,
-      "linhas_removidas": 96328
+      "commits": 1019,
+      "linhas_adicionadas": 554983,
+      "linhas_removidas": 96334
     }
   ],
   "por_projeto": [
@@ -228,9 +228,9 @@
       "id": "miniparke",
       "nome": "Carretinha Mini Parke",
       "tipo": "cliente",
-      "commits": 102,
-      "linhas_adicionadas": 19685,
-      "linhas_removidas": 5377,
+      "commits": 103,
+      "linhas_adicionadas": 19698,
+      "linhas_removidas": 5383,
       "arquivos_tocados": 179
     },
     {
@@ -525,8 +525,8 @@
   "por_tipo": {
     "cliente": {
       "projetos": 4,
-      "commits": 117,
-      "linhas_adicionadas": 42353
+      "commits": 118,
+      "linhas_adicionadas": 42366
     },
     "empresa": {
       "projetos": 7,
@@ -559,7 +559,7 @@
     },
     {
       "linguagem": "TypeScript (TSX)",
-      "linhas": 78146,
+      "linhas": 78159,
       "pct": 11.3
     },
     {

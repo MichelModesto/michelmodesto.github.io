@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-11-06",
+  "gerado_em": "2026-11-08",
   "total": 34,
   "projetos": [
     {
@@ -827,10 +827,10 @@
       "repo_publico": false,
       "git": {
         "primeiro_commit": "2026-07-24",
-        "ultimo_commit": "2026-10-21",
-        "commits": 102,
-        "linhas_adicionadas": 19685,
-        "linhas_removidas": 5377,
+        "ultimo_commit": "2026-11-07",
+        "commits": 103,
+        "linhas_adicionadas": 19698,
+        "linhas_removidas": 5383,
         "arquivos_tocados": 179
       },
       "destaque": "showcase",
