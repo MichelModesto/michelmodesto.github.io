@@ -11,18 +11,18 @@
     "exclui dados gerados por script (pastas data/ ou dados/ com .json, games/geo/locais.json) e telas de referência de handoff"
   ],
   "total_bruto": {
-    "commits": 1633,
-    "linhas_adicionadas": 1742111,
-    "linhas_removidas": 7714842,
+    "commits": 1634,
+    "linhas_adicionadas": 1742127,
+    "linhas_removidas": 7714849,
     "arquivos_tocados": 52846,
-    "dias_ativos": 367
+    "dias_ativos": 368
   },
   "total_limpo": {
-    "commits": 1542,
-    "linhas_adicionadas": 691030,
-    "linhas_removidas": 123523,
+    "commits": 1543,
+    "linhas_adicionadas": 691046,
+    "linhas_removidas": 123530,
     "arquivos_tocados": 3018,
-    "dias_ativos": 362
+    "dias_ativos": 363
   },
   "usar": "total_limpo",
   "por_mes": [
@@ -178,9 +178,9 @@
     },
     {
       "mes": "2026-11",
-      "commits": 25,
-      "linhas_adicionadas": 20695,
-      "linhas_removidas": 2178
+      "commits": 26,
+      "linhas_adicionadas": 20711,
+      "linhas_removidas": 2185
     }
   ],
   "antes_de_2024_10": {
@@ -209,9 +209,9 @@
     },
     {
       "ano": "2026",
-      "commits": 1023,
-      "linhas_adicionadas": 555805,
-      "linhas_removidas": 96589
+      "commits": 1024,
+      "linhas_adicionadas": 555821,
+      "linhas_removidas": 96596
     }
   ],
   "por_projeto": [
@@ -219,9 +219,9 @@
       "id": "flexaseal-portal",
       "nome": "Portal Flexaseal",
       "tipo": "empresa",
-      "commits": 921,
-      "linhas_adicionadas": 430669,
-      "linhas_removidas": 88098,
+      "commits": 922,
+      "linhas_adicionadas": 430685,
+      "linhas_removidas": 88105,
       "arquivos_tocados": 822
     },
     {
@@ -530,8 +530,8 @@
     },
     "empresa": {
       "projetos": 7,
-      "commits": 1154,
-      "linhas_adicionadas": 531883
+      "commits": 1155,
+      "linhas_adicionadas": 531899
     },
     "estudo": {
       "projetos": 7,
@@ -554,7 +554,7 @@
   "linguagens_por_linhas_adicionadas": [
     {
       "linguagem": "JavaScript",
-      "linhas": 378323,
+      "linhas": 378339,
       "pct": 54.7
     },
     {
