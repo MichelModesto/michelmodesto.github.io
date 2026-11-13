@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-11-11",
+  "gerado_em": "2026-11-13",
   "total": 34,
   "projetos": [
     {
@@ -87,10 +87,10 @@
       "repo_publico": false,
       "git": {
         "primeiro_commit": "2024-12-02",
-        "ultimo_commit": "2026-11-11",
-        "commits": 923,
-        "linhas_adicionadas": 437302,
-        "linhas_removidas": 88476,
+        "ultimo_commit": "2026-11-12",
+        "commits": 927,
+        "linhas_adicionadas": 438221,
+        "linhas_removidas": 89044,
         "arquivos_tocados": 831
       },
       "destaque": "highlight",
@@ -827,11 +827,11 @@
       "repo_publico": false,
       "git": {
         "primeiro_commit": "2026-07-24",
-        "ultimo_commit": "2026-11-07",
-        "commits": 103,
-        "linhas_adicionadas": 19698,
-        "linhas_removidas": 5383,
-        "arquivos_tocados": 179
+        "ultimo_commit": "2026-11-12",
+        "commits": 104,
+        "linhas_adicionadas": 20189,
+        "linhas_removidas": 5420,
+        "arquivos_tocados": 181
       },
       "destaque": "showcase",
       "thumb": "thumbs/miniparke.jpg",
