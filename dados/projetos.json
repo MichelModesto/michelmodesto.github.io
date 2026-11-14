@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-11-13",
+  "gerado_em": "2026-11-14",
   "total": 34,
   "projetos": [
     {
@@ -87,11 +87,11 @@
       "repo_publico": false,
       "git": {
         "primeiro_commit": "2024-12-02",
-        "ultimo_commit": "2026-11-12",
-        "commits": 927,
-        "linhas_adicionadas": 438221,
-        "linhas_removidas": 89044,
-        "arquivos_tocados": 831
+        "ultimo_commit": "2026-11-13",
+        "commits": 934,
+        "linhas_adicionadas": 440105,
+        "linhas_removidas": 89474,
+        "arquivos_tocados": 834
       },
       "destaque": "highlight",
       "thumb": null,
@@ -658,10 +658,10 @@
       "repo_publico": false,
       "git": {
         "primeiro_commit": "2026-10-16",
-        "ultimo_commit": "2026-11-04",
-        "commits": 25,
-        "linhas_adicionadas": 23535,
-        "linhas_removidas": 2730,
+        "ultimo_commit": "2026-11-13",
+        "commits": 26,
+        "linhas_adicionadas": 23555,
+        "linhas_removidas": 2734,
         "arquivos_tocados": 349
       },
       "destaque": "highlight",
@@ -895,10 +895,10 @@
       "repo_publico": false,
       "git": {
         "primeiro_commit": "2026-07-13",
-        "ultimo_commit": "2026-11-11",
-        "commits": 14,
-        "linhas_adicionadas": 15761,
-        "linhas_removidas": 3656,
+        "ultimo_commit": "2026-11-13",
+        "commits": 15,
+        "linhas_adicionadas": 15771,
+        "linhas_removidas": 3660,
         "arquivos_tocados": 134
       },
       "destaque": "showcase",
