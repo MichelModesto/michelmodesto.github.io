@@ -11,18 +11,18 @@
     "exclui dados gerados por script (pastas data/ ou dados/ com .json, games/geo/locais.json) e telas de referência de handoff"
   ],
   "total_bruto": {
-    "commits": 1653,
-    "linhas_adicionadas": 1756905,
-    "linhas_removidas": 7717838,
+    "commits": 1654,
+    "linhas_adicionadas": 1757054,
+    "linhas_removidas": 7717860,
     "arquivos_tocados": 52879,
-    "dias_ativos": 371
+    "dias_ativos": 372
   },
   "total_limpo": {
-    "commits": 1560,
-    "linhas_adicionadas": 705742,
-    "linhas_removidas": 126515,
+    "commits": 1561,
+    "linhas_adicionadas": 705891,
+    "linhas_removidas": 126537,
     "arquivos_tocados": 3049,
-    "dias_ativos": 366
+    "dias_ativos": 367
   },
   "usar": "total_limpo",
   "por_mes": [
@@ -178,9 +178,9 @@
     },
     {
       "mes": "2026-11",
-      "commits": 43,
-      "linhas_adicionadas": 35407,
-      "linhas_removidas": 5170
+      "commits": 44,
+      "linhas_adicionadas": 35556,
+      "linhas_removidas": 5192
     }
   ],
   "antes_de_2024_10": {
@@ -209,9 +209,9 @@
     },
     {
       "ano": "2026",
-      "commits": 1041,
-      "linhas_adicionadas": 570517,
-      "linhas_removidas": 99581
+      "commits": 1042,
+      "linhas_adicionadas": 570666,
+      "linhas_removidas": 99603
     }
   ],
   "por_projeto": [
@@ -219,9 +219,9 @@
       "id": "flexaseal-portal",
       "nome": "Portal Flexaseal",
       "tipo": "empresa",
-      "commits": 934,
-      "linhas_adicionadas": 440105,
-      "linhas_removidas": 89474,
+      "commits": 935,
+      "linhas_adicionadas": 440254,
+      "linhas_removidas": 89496,
       "arquivos_tocados": 834
     },
     {
@@ -530,8 +530,8 @@
     },
     "empresa": {
       "projetos": 7,
-      "commits": 1167,
-      "linhas_adicionadas": 541319
+      "commits": 1168,
+      "linhas_adicionadas": 541468
     },
     "estudo": {
       "projetos": 7,
@@ -554,7 +554,7 @@
   "linguagens_por_linhas_adicionadas": [
     {
       "linguagem": "JavaScript",
-      "linhas": 385175,
+      "linhas": 385318,
       "pct": 54.6
     },
     {
@@ -569,7 +569,7 @@
     },
     {
       "linguagem": "CSS",
-      "linhas": 36850,
+      "linhas": 36856,
       "pct": 5.2
     },
     {
