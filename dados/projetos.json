@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-11-24",
+  "gerado_em": "2026-11-25",
   "total": 34,
   "projetos": [
     {
@@ -87,11 +87,11 @@
       "repo_publico": false,
       "git": {
         "primeiro_commit": "2024-12-02",
-        "ultimo_commit": "2026-11-23",
-        "commits": 949,
-        "linhas_adicionadas": 444163,
-        "linhas_removidas": 90492,
-        "arquivos_tocados": 842
+        "ultimo_commit": "2026-11-24",
+        "commits": 950,
+        "linhas_adicionadas": 444555,
+        "linhas_removidas": 90617,
+        "arquivos_tocados": 843
       },
       "destaque": "highlight",
       "thumb": null,
@@ -962,6 +962,7 @@
       },
       "plataforma": "web",
       "stack": [
+        "CSS",
         "ESLint",
         "Framer Motion",
         "Next.js",
@@ -983,11 +984,11 @@
       "repo_publico": false,
       "git": {
         "primeiro_commit": "2026-08-18",
-        "ultimo_commit": "2026-08-18",
-        "commits": 1,
-        "linhas_adicionadas": 1124,
-        "linhas_removidas": 0,
-        "arquivos_tocados": 28
+        "ultimo_commit": "2026-11-24",
+        "commits": 3,
+        "linhas_adicionadas": 6742,
+        "linhas_removidas": 70,
+        "arquivos_tocados": 87
       },
       "destaque": "showcase",
       "thumb": null,

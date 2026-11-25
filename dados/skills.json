@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-11-24",
+  "gerado_em": "2026-11-25",
   "total_projetos": 34,
   "categorias": {
     "linguagens": [
@@ -32,7 +32,7 @@
       },
       {
         "nome": "CSS",
-        "projetos": 19,
+        "projetos": 20,
         "ids": [
           "flexaseal-portal",
           "r4mi-portal",
@@ -43,6 +43,7 @@
           "miniparke",
           "projetoh",
           "nickyfotografa",
+          "splend-closet",
           "tarso",
           "pathfinders",
           "opsprimer",

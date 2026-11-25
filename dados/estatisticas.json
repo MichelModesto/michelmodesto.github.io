@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-11-24",
+  "gerado_em": "2026-11-25",
   "fonte": "git log --all --no-merges --numstat em repositórios locais (Dev/*) e clones dos repositórios do GitHub (MichelModesto, flexasealBR, r4mi-dev); commits deduplicados por SHA",
   "identidades": "8 e-mails/nomes do Michel (pessoal, Flexaseal, máquinas locais, noreply do GitHub, conta michelthedev)",
   "regras_limpeza": [
@@ -11,18 +11,18 @@
     "exclui dados gerados por script (pastas data/ ou dados/ com .json, games/geo/locais.json) e telas de referência de handoff"
   ],
   "total_bruto": {
-    "commits": 1683,
-    "linhas_adicionadas": 1764028,
-    "linhas_removidas": 7718914,
-    "arquivos_tocados": 52904,
-    "dias_ativos": 378
+    "commits": 1686,
+    "linhas_adicionadas": 1770038,
+    "linhas_removidas": 7719109,
+    "arquivos_tocados": 53035,
+    "dias_ativos": 379
   },
   "total_limpo": {
-    "commits": 1578,
-    "linhas_adicionadas": 710040,
-    "linhas_removidas": 127575,
-    "arquivos_tocados": 3057,
-    "dias_ativos": 373
+    "commits": 1581,
+    "linhas_adicionadas": 716050,
+    "linhas_removidas": 127770,
+    "arquivos_tocados": 3117,
+    "dias_ativos": 374
   },
   "usar": "total_limpo",
   "por_mes": [
@@ -178,9 +178,9 @@
     },
     {
       "mes": "2026-11",
-      "commits": 61,
-      "linhas_adicionadas": 39705,
-      "linhas_removidas": 6230
+      "commits": 64,
+      "linhas_adicionadas": 45715,
+      "linhas_removidas": 6425
     }
   ],
   "antes_de_2024_10": {
@@ -209,9 +209,9 @@
     },
     {
       "ano": "2026",
-      "commits": 1059,
-      "linhas_adicionadas": 574815,
-      "linhas_removidas": 100641
+      "commits": 1062,
+      "linhas_adicionadas": 580825,
+      "linhas_removidas": 100836
     }
   ],
   "por_projeto": [
@@ -219,10 +219,10 @@
       "id": "flexaseal-portal",
       "nome": "Portal Flexaseal",
       "tipo": "empresa",
-      "commits": 949,
-      "linhas_adicionadas": 444163,
-      "linhas_removidas": 90492,
-      "arquivos_tocados": 842
+      "commits": 950,
+      "linhas_adicionadas": 444555,
+      "linhas_removidas": 90617,
+      "arquivos_tocados": 843
     },
     {
       "id": "miniparke",
@@ -387,6 +387,15 @@
       "arquivos_tocados": 148
     },
     {
+      "id": "splend-closet",
+      "nome": "Splend Closet",
+      "tipo": "cliente",
+      "commits": 3,
+      "linhas_adicionadas": 6742,
+      "linhas_removidas": 70,
+      "arquivos_tocados": 87
+    },
+    {
       "id": "tarso",
       "nome": "Camisas Sem Nome — votação",
       "tipo": "pessoal",
@@ -439,15 +448,6 @@
       "linhas_adicionadas": 1087,
       "linhas_removidas": 7,
       "arquivos_tocados": 4
-    },
-    {
-      "id": "splend-closet",
-      "nome": "Splend Closet",
-      "tipo": "cliente",
-      "commits": 1,
-      "linhas_adicionadas": 1124,
-      "linhas_removidas": 0,
-      "arquivos_tocados": 28
     },
     {
       "id": "instagram-daniela",
@@ -525,13 +525,13 @@
   "por_tipo": {
     "cliente": {
       "projetos": 4,
-      "commits": 123,
-      "linhas_adicionadas": 47644
+      "commits": 125,
+      "linhas_adicionadas": 53262
     },
     "empresa": {
       "projetos": 7,
-      "commits": 1182,
-      "linhas_adicionadas": 545377
+      "commits": 1183,
+      "linhas_adicionadas": 545769
     },
     "estudo": {
       "projetos": 7,
@@ -554,28 +554,28 @@
   "linguagens_por_linhas_adicionadas": [
     {
       "linguagem": "JavaScript",
-      "linhas": 388312,
-      "pct": 54.7
+      "linhas": 388521,
+      "pct": 54.3
     },
     {
       "linguagem": "TypeScript (TSX)",
-      "linhas": 81279,
-      "pct": 11.4
+      "linhas": 85649,
+      "pct": 12.0
     },
     {
       "linguagem": "EJS",
-      "linhas": 73395,
+      "linhas": 73548,
       "pct": 10.3
     },
     {
       "linguagem": "CSS",
-      "linhas": 37186,
-      "pct": 5.2
+      "linhas": 37720,
+      "pct": 5.3
     },
     {
       "linguagem": "TypeScript",
-      "linhas": 35717,
-      "pct": 5.0
+      "linhas": 36419,
+      "pct": 5.1
     },
     {
       "linguagem": "Markdown",
@@ -584,13 +584,13 @@
     },
     {
       "linguagem": "JSON",
-      "linhas": 22504,
-      "pct": 3.2
+      "linhas": 22534,
+      "pct": 3.1
     },
     {
       "linguagem": "Python",
       "linhas": 12488,
-      "pct": 1.8
+      "pct": 1.7
     },
     {
       "linguagem": "HTML",
@@ -604,7 +604,7 @@
     },
     {
       "linguagem": "Outros",
-      "linhas": 1986,
+      "linhas": 1998,
       "pct": 0.3
     },
     {
