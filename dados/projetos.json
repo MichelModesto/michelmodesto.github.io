@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-11-26",
+  "gerado_em": "2026-11-27",
   "total": 34,
   "projetos": [
     {
@@ -87,11 +87,11 @@
       "repo_publico": false,
       "git": {
         "primeiro_commit": "2024-12-02",
-        "ultimo_commit": "2026-11-26",
-        "commits": 952,
-        "linhas_adicionadas": 448196,
-        "linhas_removidas": 102422,
-        "arquivos_tocados": 851
+        "ultimo_commit": "2026-11-27",
+        "commits": 955,
+        "linhas_adicionadas": 450366,
+        "linhas_removidas": 102908,
+        "arquivos_tocados": 853
       },
       "destaque": "highlight",
       "thumb": null,
@@ -1246,7 +1246,11 @@
       "stack": [
         "Claude Code",
         "Cursor",
-        "Markdown"
+        "HTML",
+        "JavaScript",
+        "Markdown",
+        "Python",
+        "Shell"
       ],
       "tipo": "pessoal",
       "confidencial": true,
@@ -1256,11 +1260,11 @@
       "repo_publico": false,
       "git": {
         "primeiro_commit": "2026-07-29",
-        "ultimo_commit": "2026-10-19",
-        "commits": 5,
-        "linhas_adicionadas": 14066,
-        "linhas_removidas": 158,
-        "arquivos_tocados": 118
+        "ultimo_commit": "2026-11-27",
+        "commits": 93,
+        "linhas_adicionadas": 62115,
+        "linhas_removidas": 3398,
+        "arquivos_tocados": 604
       },
       "destaque": "showcase",
       "thumb": null,

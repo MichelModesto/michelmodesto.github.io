@@ -1,11 +1,11 @@
 {
-  "gerado_em": "2026-11-26",
+  "gerado_em": "2026-11-27",
   "total_projetos": 34,
   "categorias": {
     "linguagens": [
       {
         "nome": "JavaScript",
-        "projetos": 21,
+        "projetos": 22,
         "ids": [
           "flexaseal-portal",
           "r4mi-portal",
@@ -21,6 +21,7 @@
           "tarso",
           "pathfinders",
           "cotacoesmoedas",
+          "biblioteca-agentes",
           "perfil-github",
           "pixel-architects",
           "devlinks",
@@ -79,7 +80,7 @@
       },
       {
         "nome": "HTML",
-        "projetos": 12,
+        "projetos": 13,
         "ids": [
           "flexaseal-portal",
           "app-r4mi",
@@ -88,11 +89,24 @@
           "geoalmoco",
           "tarso",
           "cotacoesmoedas",
+          "biblioteca-agentes",
           "perfil-github",
           "pixel-architects",
           "devlinks",
           "calculadora",
           "chat-responsivo"
+        ]
+      },
+      {
+        "nome": "Python",
+        "projetos": 6,
+        "ids": [
+          "flexaseal-portal",
+          "analista-cambio",
+          "biblioteca-agentes",
+          "instagram-daniela",
+          "financeiro",
+          "perfil-github"
         ]
       },
       {
@@ -108,23 +122,13 @@
         ]
       },
       {
-        "nome": "Python",
-        "projetos": 5,
-        "ids": [
-          "flexaseal-portal",
-          "analista-cambio",
-          "instagram-daniela",
-          "financeiro",
-          "perfil-github"
-        ]
-      },
-      {
         "nome": "Shell",
-        "projetos": 4,
+        "projetos": 5,
         "ids": [
           "flexaseal-portal",
           "api-flexaseal",
           "cotacoesmoedas",
+          "biblioteca-agentes",
           "financeiro"
         ]
       },

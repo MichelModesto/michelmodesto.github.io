@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-11-26",
+  "gerado_em": "2026-11-27",
   "fonte": "git log --all --no-merges --numstat em repositórios locais (Dev/*) e clones dos repositórios do GitHub (MichelModesto, flexasealBR, r4mi-dev); commits deduplicados por SHA",
   "identidades": "8 e-mails/nomes do Michel (pessoal, Flexaseal, máquinas locais, noreply do GitHub, conta michelthedev)",
   "regras_limpeza": [
@@ -11,18 +11,18 @@
     "exclui dados gerados por script (pastas data/ ou dados/ com .json, games/geo/locais.json) e telas de referência de handoff"
   ],
   "total_bruto": {
-    "commits": 1694,
-    "linhas_adicionadas": 1773683,
-    "linhas_removidas": 7730918,
-    "arquivos_tocados": 53043,
-    "dias_ativos": 381
+    "commits": 1789,
+    "linhas_adicionadas": 1823931,
+    "linhas_removidas": 7734662,
+    "arquivos_tocados": 53536,
+    "dias_ativos": 382
   },
   "total_limpo": {
-    "commits": 1583,
-    "linhas_adicionadas": 719691,
-    "linhas_removidas": 139575,
-    "arquivos_tocados": 3125,
-    "dias_ativos": 376
+    "commits": 1674,
+    "linhas_adicionadas": 769910,
+    "linhas_removidas": 143301,
+    "arquivos_tocados": 3613,
+    "dias_ativos": 377
   },
   "usar": "total_limpo",
   "por_mes": [
@@ -178,9 +178,9 @@
     },
     {
       "mes": "2026-11",
-      "commits": 66,
-      "linhas_adicionadas": 49356,
-      "linhas_removidas": 18230
+      "commits": 157,
+      "linhas_adicionadas": 99575,
+      "linhas_removidas": 21956
     }
   ],
   "antes_de_2024_10": {
@@ -209,9 +209,9 @@
     },
     {
       "ano": "2026",
-      "commits": 1064,
-      "linhas_adicionadas": 584466,
-      "linhas_removidas": 112641
+      "commits": 1155,
+      "linhas_adicionadas": 634685,
+      "linhas_removidas": 116367
     }
   ],
   "por_projeto": [
@@ -219,10 +219,10 @@
       "id": "flexaseal-portal",
       "nome": "Portal Flexaseal",
       "tipo": "empresa",
-      "commits": 952,
-      "linhas_adicionadas": 448196,
-      "linhas_removidas": 102422,
-      "arquivos_tocados": 851
+      "commits": 955,
+      "linhas_adicionadas": 450366,
+      "linhas_removidas": 102908,
+      "arquivos_tocados": 853
     },
     {
       "id": "miniparke",
@@ -241,6 +241,15 @@
       "linhas_adicionadas": 48105,
       "linhas_removidas": 9394,
       "arquivos_tocados": 69
+    },
+    {
+      "id": "biblioteca-agentes",
+      "nome": "Biblioteca de agentes e skills",
+      "tipo": "pessoal",
+      "commits": 93,
+      "linhas_adicionadas": 62115,
+      "linhas_removidas": 3398,
+      "arquivos_tocados": 604
     },
     {
       "id": "app-r4mi",
@@ -367,15 +376,6 @@
       "linhas_adicionadas": 571,
       "linhas_removidas": 146,
       "arquivos_tocados": 5
-    },
-    {
-      "id": "biblioteca-agentes",
-      "nome": "Biblioteca de agentes e skills",
-      "tipo": "pessoal",
-      "commits": 5,
-      "linhas_adicionadas": 14066,
-      "linhas_removidas": 158,
-      "arquivos_tocados": 118
     },
     {
       "id": "pathfinders",
@@ -530,8 +530,8 @@
     },
     "empresa": {
       "projetos": 7,
-      "commits": 1185,
-      "linhas_adicionadas": 549410
+      "commits": 1188,
+      "linhas_adicionadas": 551580
     },
     "estudo": {
       "projetos": 7,
@@ -540,61 +540,62 @@
     },
     "pessoal": {
       "projetos": 16,
-      "commits": 243,
-      "linhas_adicionadas": 109449
+      "commits": 331,
+      "linhas_adicionadas": 157498
     }
   },
   "maior_commit": {
-    "projeto": "flexaseal-portal",
-    "data": "2026-04-09",
-    "linhas_adicionadas": 19333,
-    "linhas_removidas": 67,
-    "arquivos": 33
+    "projeto": "biblioteca-agentes",
+    "data": "2026-11-27",
+    "linhas_adicionadas": 23502,
+    "linhas_removidas": 0,
+    "arquivos": 108,
+    "mensagem": "Arquiva as 9 skills higgsfield-* globais (2.9, 2.10)"
   },
   "linguagens_por_linhas_adicionadas": [
     {
       "linguagem": "JavaScript",
-      "linhas": 391293,
-      "pct": 54.4
+      "linhas": 395574,
+      "pct": 51.4
     },
     {
       "linguagem": "TypeScript (TSX)",
       "linhas": 85649,
-      "pct": 11.9
+      "pct": 11.1
     },
     {
       "linguagem": "EJS",
-      "linhas": 74084,
-      "pct": 10.3
+      "linhas": 75289,
+      "pct": 9.8
+    },
+    {
+      "linguagem": "Markdown",
+      "linhas": 69111,
+      "pct": 9.0
     },
     {
       "linguagem": "CSS",
       "linhas": 37727,
-      "pct": 5.2
+      "pct": 4.9
     },
     {
       "linguagem": "TypeScript",
-      "linhas": 36419,
-      "pct": 5.1
-    },
-    {
-      "linguagem": "Markdown",
-      "linhas": 34788,
-      "pct": 4.8
+      "linhas": 36459,
+      "pct": 4.7
     },
     {
       "linguagem": "JSON",
-      "linhas": 22827,
-      "pct": 3.2
+      "linhas": 23538,
+      "pct": 3.1
     },
     {
       "linguagem": "Python",
-      "linhas": 12488,
-      "pct": 1.7
+      "linhas": 20388,
+      "pct": 2.6
     },
     {
       "linguagem": "HTML",
-      "linhas": 11633,
+      "linhas": 12573,
       "pct": 1.6
     },
     {
@@ -604,7 +605,7 @@
     },
     {
       "linguagem": "Outros",
-      "linhas": 1998,
+      "linhas": 2475,
       "pct": 0.3
     },
     {
@@ -623,18 +624,23 @@
       "pct": 0.1
     },
     {
+      "linguagem": "Shell",
+      "linhas": 764,
+      "pct": 0.1
+    },
+    {
       "linguagem": "JavaScript (JSX)",
       "linhas": 646,
       "pct": 0.1
     },
     {
-      "linguagem": "Shell",
-      "linhas": 507,
+      "linguagem": "Texto",
+      "linhas": 511,
       "pct": 0.1
     },
     {
-      "linguagem": "Texto",
-      "linhas": 477,
+      "linguagem": "CSV",
+      "linhas": 458,
       "pct": 0.1
     },
     {
@@ -643,23 +649,18 @@
       "pct": 0.1
     },
     {
-      "linguagem": "CSV",
-      "linhas": 439,
-      "pct": 0.1
+      "linguagem": "Swift",
+      "linhas": 280,
+      "pct": 0.0
     },
     {
       "linguagem": "YAML",
-      "linhas": 266,
+      "linhas": 274,
       "pct": 0.0
     },
     {
       "linguagem": "Gradle",
       "linhas": 262,
-      "pct": 0.0
-    },
-    {
-      "linguagem": "Swift",
-      "linhas": 256,
       "pct": 0.0
     },
     {
